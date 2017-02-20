@@ -5,6 +5,11 @@ $(document).ready(function() {
 		$("#menu").fadeToggle(300);
 		$(this).toggleClass("active")
 	});
+
+	$(".menu-trigg").click(function() {
+		$("#menuq").fadeToggle(300);
+		$(this).toggleClass("active")
+	});
 	
 	$('.info-request, .get-contact').fancybox();
 	
