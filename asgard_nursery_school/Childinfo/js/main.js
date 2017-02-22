@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	$('.bxslider').bxSlider();
 	
 	$(".menu-trigger").click(function() {
 		$("#menu").fadeToggle(300);
@@ -14,23 +13,6 @@ $(document).ready(function() {
 	$('.info-request, .get-contact').fancybox();
 	
 	$("select").crfs(); 
-	
-	
-	$(".table td").mouseenter(function(){    
-        $(this).find(".holder").stop(true, true).fadeIn(600);
-        $(this).find(">div").addClass('hover');
-        return false;
-     });
-      $('.table td').mouseleave(function(){  
-        $(this).find(".holder").stop(true, true).fadeOut(400);
-        $(this).find(">div").removeClass('hover');
-        return false;
-     });
-	$(".table td .holder").click(function() {
-        $(this).stop(true, true).fadeOut(400);
-        $(this).parent().parent().removeClass('hover');
-        return false;
-	});
 	
 	var isBrowserOs = {
 	    Windows: function() {

@@ -8,7 +8,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure, 
-footer, header, hgroup, menu, menuq, nav, section, summary,
+footer, header, head, hgroup, menu, menuq, nav, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -25,7 +25,7 @@ time, mark, audio, video {
 }
 
 article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+footer, header, head, hgroup, menu, menuq, nav, section {
 	display: block;
 }
 
@@ -174,7 +174,7 @@ a:hover {
 .container1 {
 	position: relative;
 	border:1px solid black;
-	width: 800px;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -183,6 +183,11 @@ a:hover {
 
 #header {
 	padding: 8px 0 20px 0;
+	z-index: 99;
+	position: relative;
+}
+#head {
+	padding: 10px 0 5px 0;
 	z-index: 99;
 	position: relative;
 }
@@ -233,7 +238,9 @@ a:hover {
 
 /*dsdsdsd*/
 #menuq {
+	width: 100%;
 	text-align: center;
+	background-color: #3399ff;
 }
 
 #menuq ul {
@@ -243,14 +250,15 @@ a:hover {
 
 #menuq li {
 	float: left;
-	padding: 0 24px;
+	padding: 0 20px;
 }
 
 #menuq a {
 	font-size: 21px;
 	line-height: 28px;
-	color: #8c929c;
+	color: white;
 	font-family: 'BebasNeue';
+	font-weight: bold;
 	display: block;
 }
 
@@ -1502,8 +1510,16 @@ a.btn.blue,
 	.container {
 		width: 100%;
 	}
+	.container1 {
+		width: 100%;
+	}
 
 	#header {
+		overflow: hidden;
+		padding-bottom: 60px;
+		margin-bottom: -40px;
+	}
+	#head {
 		overflow: hidden;
 		padding-bottom: 60px;
 		margin-bottom: -40px;
@@ -1517,11 +1533,11 @@ a.btn.blue,
 		padding: 0 10px;
 	}
 	#menuq {
-		margin: 0 -80px;
+		margin: 20 50px;
 	}
 	
 	#menuq li {
-		padding: 0 10px;
+		padding: 20 30px;
 	}
 	
 	.slider {
@@ -1896,6 +1912,10 @@ a.btn.blue,
 	}
 
 	#header {
+		padding-bottom: 0;
+		margin-bottom: -20px;
+	}
+	#head {
 		padding-bottom: 0;
 		margin-bottom: -20px;
 	}
