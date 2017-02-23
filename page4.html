@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Guardian Information </title>
+</head>
+<body>
+
+  <h4> Parent or Guardian Details </h4>
+
+  <form>
+    <div id = "guardian1">
+    <h3> <span style= 'color: blue'> Parent / Guardian 1 </span> </h3>
+      Title:
+      <input type="checkbox" id="option1" name="selector"><label for="option1">Mr</label>
+      <input type="checkbox" id="option2" name="selector"><label for="option2">Mrs</label>
+      <input type="checkbox" id="option3" name="selector"><label for="option3">Miss</label>
+      <input type="checkbox" id="option4" name="selector"><label for="option4">Dr</label>
+      <br><br>
+
+      Name: <input type = "text" placeholder = "First Name" id = "guard1fname">
+            <input type = "text" placeholder = "Last Name" id = "guard1lname">
+            <br><br>
+
+      Relationship to child: <input type = "text" maxlength = 30 id = "guard1relate"><br><br>
+
+      Nationality: <input type = "text" id = "guard1nationality"><br><br>
+
+      Country of permanent residence: <input type = "text" maxlength = 60 id = "guard1countryresidence"><br><br>
+
+      Occupation: <input type = "text" id = "guard1work"><br><br>
+
+      Home address: <input type = "text" id = "guard1home"><br><br>
+
+      Postal address: <select id = "guard1post1">
+        <option> Select... </option>
+        <option> Same as Home address </option>
+        <option> Different from home address </option>
+      </select> <br><br>
+
+      If different from home address, enter postal address here:
+      <input type = "text" id = "guard1post2"><br><br>
+
+      Telephone number: <input type = "tel" id = "guard1tel"><br><br>
+
+      E-mail address: <input type = "email" id = "guard1mail">
+</div>
+
+<br><br>
+
+<div id = "guardian2">
+  <h3> <span style= 'color: blue'>Parent / Guardian 2 </span> </h3>
+        Title:
+        <input type="checkbox" id="option1" name="selector"><label for="option1">Mr</label>
+        <input type="checkbox" id="option2" name="selector"><label for="option2">Mrs</label>
+        <input type="checkbox" id="option3" name="selector"><label for="option3">Miss</label>
+        <input type="checkbox" id="option4" name="selector"><label for="option4">Dr</label>
+        <br><br>
+
+        Name: <input type = "text" placeholder = "First Name" id = "guard2fname">
+              <input type = "text" placeholder = "Last Name" id = "guard2lname">
+              <br><br>
+
+        Relationship to child: <input type = "text" maxlength = 30 id = "guard2relate"><br><br>
+
+        Nationality: <input type = "text" id = "guard2nationality"><br><br>
+
+        Country of permanent residence: <input type = "text" maxlength = 50 id = "guard2countryresidence"><br><br>
+
+        Occupation: <input type = "text" id = "guard2work"><br><br>
+
+        Home address: <input type = "text" id = "guard2home"><br><br>
+
+        Postal address: <select id = "guard2post1">
+          <option> Select... </option>
+          <option> Same as Home address </option>
+          <option> Different from home address </option>
+        </select> <br><br>
+
+        If different from home address, enter postal address here:
+        <input type = "text" id = "guard2post2"><br><br>
+
+        Telephone number: <input type = "tel" id = "guard2tel"><br><br>
+
+        E-mail address: <input type = "email" id = "guard2mail"><br><br>
+</div>
+</form>
+
+<h3> <span style= 'color: teal'> * Next Page : Child's Health Information * </span> </h3>
+
+<form action = "page3.html">
+  <input type = "submit" value = "Previous Page" id = "previouspg1"><br><br>
+</form>
+
+<form action = "page5.html">
+  <input type = "submit" value = "Next Page" id = "next">
+</form>
+</body>
+</html>
