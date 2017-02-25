@@ -1,31 +1,35 @@
 $(document).ready(function() {
-	$('.bxslider').bxSlider();
 	
 	$(".menu-trigger").click(function() {
 		$("#menu").fadeToggle(300);
 		$(this).toggleClass("active")
 	});
+
+	$(".menu-trigg").click(function() {
+		$("#menuq").fadeToggle(300);
+		$(this).toggleClass("active")
+	});
+
+	// sticky nav
+	var navOffset = $("#menuq").offset().top;
+
+$("#menuq").wrap('<div class= "navtemp"></div>');
+$(".navtemp").height($("#menuq").outerHeight());
+
+$(window).scroll(function(){
+  var scpos = $(window).scrollTop();
+
+if(scpos >=navOffset){
+    $("#menuq").addClass("fixed-nav");
+  }
+  else {
+    $("#menuq").removeClass("fixed-nav");
+  }
+});
 	
 	$('.info-request, .get-contact').fancybox();
 	
 	$("select").crfs(); 
-	
-	
-	$(".table td").mouseenter(function(){    
-        $(this).find(".holder").stop(true, true).fadeIn(600);
-        $(this).find(">div").addClass('hover');
-        return false;
-     });
-      $('.table td').mouseleave(function(){  
-        $(this).find(".holder").stop(true, true).fadeOut(400);
-        $(this).find(">div").removeClass('hover');
-        return false;
-     });
-	$(".table td .holder").click(function() {
-        $(this).stop(true, true).fadeOut(400);
-        $(this).parent().parent().removeClass('hover');
-        return false;
-	});
 	
 	var isBrowserOs = {
 	    Windows: function() {
