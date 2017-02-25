@@ -1029,6 +1029,14 @@ a.btn.blue,
 	margin-bottom: 20px;
 }
 
+#footer .col-1 {
+	width: 50%;
+}
+
+#footer .col-3 {
+	width: 50%;
+}
+
 #footer .col-1 li a {
 	padding-left: 52px;
 	display: block;
@@ -1066,20 +1074,6 @@ a.btn.blue,
 	border: none !important;
 }
 
-#footer .col-2 li {
-	border-bottom: 1px solid #3c5177;
-	padding-bottom: 9px;
-	margin-bottom: 9px;
-}
-
-#footer .col-2 li a {
-	padding-left: 20px;
-	background: url(../images/bg_arrow_blue.png) no-repeat 0 50%;
-}
-
-#footer .col-2 li.last{
-	margin-bottom: 0;
-}
 
 #footer article p {
 	padding-bottom: 17px;
