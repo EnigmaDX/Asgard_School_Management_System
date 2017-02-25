@@ -9,6 +9,23 @@ $(document).ready(function() {
 		$("#menuq").fadeToggle(300);
 		$(this).toggleClass("active")
 	});
+
+	// sticky nav
+	var navOffset = $("#menuq").offset().top;
+
+$("#menuq").wrap('<div class= "navtemp"></div>');
+$(".navtemp").height($("#menuq").outerHeight());
+
+$(window).scroll(function(){
+  var scpos = $(window).scrollTop();
+
+if(scpos >=navOffset){
+    $("#menuq").addClass("fixed-nav");
+  }
+  else {
+    $("#menuq").removeClass("fixed-nav");
+  }
+});
 	
 	$('.info-request, .get-contact').fancybox();
 	
