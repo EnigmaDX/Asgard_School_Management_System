@@ -104,8 +104,7 @@ function validateIndex()
      alert('You must select one of the options under "\The applicant live with ...\".');
     // return false;
    }
-   else  (this.form.oneparent.checked || this.form.twoparents.checked || this.form.guardian.checked)
-   {
+   else if  (this.form.oneparent.checked || this.form.twoparents.checked || this.form.guardian.checked)
      window.location.href = "admissionspage2.html";
    }
   
