@@ -81,10 +81,12 @@ a:hover {
 	background: #3399ff url(../images/bg_white_arrow.png) no-repeat 50% 0;
 	height: 70px;
 	position: relative;
+	margin-top: 3px;
+	margin-bottom: 37px;
 }
 
 .divider:after {
-	background: url(../images/bg_white.png) no-repeat 50%;
+	background: url(../images/bg_white.png) no-repeat 50% 0;
 	height: 30px;
 	position: absolute;
 	content: "";
@@ -135,8 +137,8 @@ a:hover {
 }
 
 #menu a {
-	font-size: 21px;
-	line-height: 28px;
+	font-size: 30px;
+	line-height: 25px;
 	color: #8c929c;
 	font-family: 'BebasNeue';
 	display: block;
@@ -205,7 +207,8 @@ a:hover {
 }
 
 .bodym {
-	border: 5px solid blue;
+	margin: 0;
+	padding: 5px;
 }
 
 .profile-pic{
@@ -279,7 +282,17 @@ th {
 #title-aca {
 	color: white;
 	background-color: #3399ff;
-	padding-left: 40%;
+	padding-left: 43%;
+	line-height: 50px;
+	font-family: 'BebasNeue';
+	font-size: 230%;
+	width: 100%;
+}
+
+#title-finance {
+	color: white;
+	background-color: #3399ff;
+	padding-left: 43%;
 	line-height: 50px;
 	font-family: 'BebasNeue';
 	font-size: 230%;
@@ -388,7 +401,7 @@ th {
 
 #footer {
 	
-	background: #2c4167 url(../images/bg_white_arrow.png) no-repeat 20% 0;
+	background: #2c4167 url(../images/bg_white_arrow.png) no-repeat 50% 0;
 	overflow: hidden;
 	padding: 91px 0 0 0;
 	font-size: 14px;
@@ -892,7 +905,7 @@ th {
 		font-size: 36px;
 		line-height: 40px;
 	}
-	
+
 	.posts {
 		padding-bottom: 50px;
 	}
