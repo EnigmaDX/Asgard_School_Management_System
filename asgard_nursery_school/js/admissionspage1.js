@@ -1,7 +1,7 @@
 //personal information
-var childFname = document.getElementById("fname");
-var childLname = document.getElementById("lname");
-var childPrefname = document.getElementById("prefname");
+var firstName = document.getElementById("fname");
+var lastName = document.getElementById("lname");
+var preferredName = document.getElementById("prefname");
 var childAge = document.getElementById("age");
 var childSex = document.getElementById("sex");
 var childDOB = document.getElementById("dob");
@@ -24,17 +24,17 @@ var childReside = document.getElementsByName("selector");
 function validateIndex()
 {
   //personal information
-  if (childFname.value == "")
+  if (firstName.value == "")
   {
     alert("Please enter the applicant's first name");
   }
 
-  else if (childLname.value == "")
+  else if (lastName.value == "")
   {
     alert (" Please enter the applicant's last name or surname");
   }
 
-  else if (childPrefname.value == "")
+  else if (preferredName.value == "")
   {
     alert ("Please enter the name the applicant wants to be called by");
   }
@@ -101,10 +101,9 @@ function validateIndex()
   }
   else if(!(this.form.oneparent.checked || this.form.twoparents.checked || this.form.guardian.checked))
     {
-     alert('You must select one of the options under "\The applicant live with ...\".');
+     alert('You must select one of the options under "\The applicant lives with ...\".');
     // return false;
    }
    else if  (this.form.oneparent.checked || this.form.twoparents.checked || this.form.guardian.checked)
      window.location.href = "admissionspage2.html";
    }
-  
