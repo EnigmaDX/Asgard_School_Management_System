@@ -78,8 +78,8 @@ a:hover {
 
 /*AFTER HEADER NAV*/
 .divider {
-	background: #3399ff url(../images/bg_white_arrow.png) no-repeat 50% 0;
-	height: 70px;
+	background: #2c4167 url(../images/bg_white_arrow.png) no-repeat 50% 0;
+	height: 80px;
 	position: relative;
 	margin-top: 3px;
 	margin-bottom: 37px;
@@ -137,7 +137,7 @@ a:hover {
 }
 
 #menu a {
-	font-size: 30px;
+	font-size: 21px;
 	line-height: 25px;
 	color: #8c929c;
 	font-family: 'BebasNeue';
@@ -153,7 +153,7 @@ a:hover {
 #menuq {
 	width: 100%;
 	text-align: center;
-	background-color: #3399ff;
+	background-color: #2c4167;
 	/*border:1px solid black;*/
 	margin-top: 10px;
 	line-height: 5px;
@@ -173,9 +173,9 @@ a:hover {
 }
 
 #menuq a {
-	font-size: 30px;
+	font-size: 21px;
 	line-height: 28px;
-	color: white;
+	color: #8c929c;
 	font-family: 'BebasNeue';
 	font-weight: bold;
 	display: block;
@@ -281,7 +281,7 @@ th {
 /*SECTION IDENTIFIERS*/
 #title-aca {
 	color: white;
-	background-color: #3399ff;
+	background-color: #2c4167;
 	padding-left: 43%;
 	line-height: 50px;
 	font-family: 'BebasNeue';
@@ -291,7 +291,7 @@ th {
 
 #title-finance {
 	color: white;
-	background-color: #3399ff;
+	background-color: #2c4167;
 	padding-left: 43%;
 	line-height: 50px;
 	font-family: 'BebasNeue';
