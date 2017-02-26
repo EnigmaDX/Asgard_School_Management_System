@@ -18,13 +18,12 @@
 			<div class="menu-trigger"></div>
 			<nav id="menu">
 				<ul>
-					<li><a href="events.html">Courses</a></li>
-					<li><a href="gallery.html">Students</a></li>
-					<li><a href="events.html">Events</a></li>
+					<li><a href="../events.html">Our programs</a></li>
+					<li><a href="admissionspage1.html">Admission</a></li>
  				</ul>
 				<ul>
-					<li><a href="gallery.html">Teachers</a></li>
-					<li><a href="gallery.html">Gallery</a></li>
+					<li><a href="../ChildInfo/childinfo.html">Ward Info</a></li>
+					<li><a href="../events.html">Events</a></li>
 					<li><a href="#fancy" class="get-contact">Contact</a></li>
    				</ul>
 			</nav>
@@ -34,6 +33,7 @@
 
 	</header>
 	<!-- / header -->
+	<div class="divider"></div>
 
  <!-- beginning of body -->
 <div id = "midhead">
@@ -48,8 +48,8 @@
 		<form method = "post" action = "" name = "form">
 			<!-- basic student information -->
 			<span style= 'color:red'>*</span> Student Name:
-	   <input type = "text" placeholder = "Last name" id = "slname">
-	   <input type = "text" placeholder = "First name" id = "sfname">
+	   <input type = "text" placeholder = "Last name" id = "slname" class="input">
+	   <input type = "text" placeholder = "First name" id = "sfname" class="input">
 	   <br><br>
 
 	   <span style= 'color:red'>*</span> Gender:
@@ -57,48 +57,48 @@
 	   <input type = "checkbox" id = "female" name = "choose"><label for "female"> Female </label>
 	   <br><br>
 
-	   <span style= 'color:red'>*</span> Age: <input type = "number" maxlength = 2 id = "sage">
-	   <span style= 'color:red'>*</span> Date of Birth <input type = "date" id = "sdob"> <br><br>
+	   <span style= 'color:red'>*</span> Age: <input type = "number" maxlength = 2 id = "sage" class="input">
+	   <span style= 'color:red'>*</span> Date of Birth <input type = "date" id = "sdob" class="input"> <br><br>
 
-	   <span style= 'color:red'>*</span> Nationality: <input type = "text" id = "snationality"><br><br>
+	   <span style= 'color:red'>*</span> Nationality: <input type = "text" id = "snationality" class="input"><br><br>
 
 <!--contact information -->
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	 <h4> <span style = 'color: teal'> Contact Info </span></h4>
-	   <span style= 'color:red'>*</span> Mother's name: <input type = "text" id = "mname">
-	   Business Phone: <input type = "text" id = "mworktel">
-	   <span style= 'color:red'>*</span> Mobile Phone: <input type = "text" id = 'mtel'>
+	   <span style= 'color:red'>*</span> Mother's name: <input type = "text" id = "mname" class="input">
+	   Business Phone: <input type = "text" id = "mworktel" class="input">
+	   <span style= 'color:red'>*</span> Mobile Phone: <input type = "text" id = 'mtel' class="input">
 	   <br><br>
 
-	   <span style= 'color:red'>*</span> Father's name: <input type = "text" id = "fname">
-	   Business Phone: <input type = "text" id = "fworktel">
-	   <span style= 'color:red'>*</span> Mobile Phone: <input type = "text" id = "ftel">
+	   <span style= 'color:red'>*</span> Father's name: <input type = "text" id = "fname" class="input">
+	   Business Phone: <input type = "text" id = "fworktel" class="input">
+	   <span style= 'color:red'>*</span> Mobile Phone: <input type = "text" id = "ftel" class="input">
 	   <br><br>
 
-	   <span style= 'color:red'>*</span> Preferred Hospital: <input type = "text" id = "hosname">
-	   <span style= 'color:red'>*</span> Doctor's Name: <input type = "text" id = "docname">
-	   <span style= 'color:red'>*</span> Phone: <input type = "text" id = "doctel">
+	   <span style= 'color:red'>*</span> Preferred Hospital: <input type = "text" id = "hosname" class="input">
+	   <span style= 'color:red'>*</span> Doctor's Name: <input type = "text" id = "docname" class="input">
+	   <span style= 'color:red'>*</span> Phone: <input type = "text" id = "doctel" class="input">
 	   <br><br>
 
 <!--emergency contact information -->
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	   <h4> <span style = 'color: teal'> Emergency Contacts </span> </h4>
 	   <span style= 'color: blue'> 1st Contact </span> <br>
-	  <span style= 'color:red'>*</span>  Name: <input type = "text" id = "con1name">
-	  <span style= 'color:red'>*</span> Phone: <input type = "text" id = "con1tel">
-	   <span style= 'color:red'>*</span> Relationship to child : <input type = "text" id = "con1relate">
+	  <span style= 'color:red'>*</span>  Name: <input type = "text" id = "con1name" class="input">
+	  <span style= 'color:red'>*</span> Phone: <input type = "text" id = "con1tel" class="input">
+	   <span style= 'color:red'>*</span> Relationship to child : <input type = "text" id = "con1relate" class="input">
 	   <br><br>
 
 	   <span style= 'color: blue'> 2nd Contact </span> <br>
-	   Name: <input type = "text" id = "con2name">
-	   Phone: <input type = "text" id = "con2tel">
-	   Relationship to child : <input type = "text" id = "con2relate">
+	   Name: <input type = "text" id = "con2name" class="input">
+	   Phone: <input type = "text" id = "con2tel" class="input">
+	   Relationship to child : <input type = "text" id = "con2relate" class="input">
 	   <br><br>
 
 	 <span style= 'color: blue'>  3rd Contact </span> <br>
-	   Name: <input type = "text" id = "con3name">
-	   Phone: <input type = "text" id = "con3tel">
-	   Relationship to child : <input type = "text" id = "con3relate">
+	   Name: <input type = "text" id = "con3name" class="input">
+	   Phone: <input type = "text" id = "con3tel" class="input">
+	   Relationship to child : <input type = "text" id = "con3relate" class="input">
 	   <br><br>
 
 <!-- existing medical conditions -->
@@ -139,46 +139,46 @@
 		 <h4><span style = 'color: teal'> Allergies </span></h4>
 		  <span style = 'color: red'>Please enter any allergies your child might have below.</span><br><br>
 		<span style = 'color: blue'> 1. </span>
-			Allergy Type (e.g. Food, Medication, Insect bites): <input type = "text"><br>
-			Specify Allergy (eg. pineapple, dust): <input type = "text"><br>
-			Severity (e.g. Mild, Moderate, Severe): <input type = "text"><br>
-			Reaction (e.g. Hives, Coughing, difficulty breathing): <input type = "text"><br>
+			Allergy Type (e.g. Food, Medication, Insect bites): <input type = "text" class="input"><br>
+			Specify Allergy (eg. pineapple, dust): <input type = "text" class="input"><br>
+			Severity (e.g. Mild, Moderate, Severe): <input type = "text" class="input"><br>
+			Reaction (e.g. Hives, Coughing, difficulty breathing): <input type = "text" class="input"><br>
 			<span style = 'color: blue'>Treatment: </span> <br>
-			Name of Medication: <input type = "text"><br>
-			Dose: <input type = "text"><br>
-			How is medication to be taken: <textarea></textarea><br><br>
+			Name of Medication: <input type = "text" class="input"><br>
+			Dose: <input type = "text" class="input"><br>
+			How is medication to be taken: <textarea class="input"></textarea><br><br>
 
 
 		<span style = 'color: blue'> 2. </span>
-			Allergy Type (e.g. Food, Medication, Insect bites): <input type = "text"><br>
-			Specify Allergy (eg. pineapple, dust): <input type = "text"><br>
-			Severity (e.g. Mild, Moderate, Severe): <input type = "text"><br>
-			Reaction (e.g. Hives, Coughing, difficulty breathing): <input type = "text"><br>
+			Allergy Type (e.g. Food, Medication, Insect bites): <input type = "text" class="input"><br>
+			Specify Allergy (eg. pineapple, dust): <input type = "text" class="input"><br>
+			Severity (e.g. Mild, Moderate, Severe): <input type = "text" class="input"><br>
+			Reaction (e.g. Hives, Coughing, difficulty breathing): <input type = "text" class="input"><br>
 			<span style = 'color: blue'>Treatment: </span> <br>
-			Name of Medication: <input type = "text"><br>
-			Dose: <input type = "text"><br>
-			How is medication to be taken: <textarea></textarea><br><br>
+			Name of Medication: <input type = "text" class="input"><br>
+			Dose: <input type = "text" class="input"><br>
+			How is medication to be taken: <textarea class="input"></textarea><br><br>
 
 
 		<span style = 'color: blue'> 3. </span>
-			Allergy Type (e.g. Food, Medication, Insect bites): <input type = "text"><br>
-			Specify Allergy (eg. pineapple, dust): <input type = "text"><br>
-			Severity (e.g. Mild, Moderate, Severe): <input type = "text"><br>
-			Reaction (e.g. Hives, Coughing, difficulty breathing): <input type = "text"><br>
+			Allergy Type (e.g. Food, Medication, Insect bites): <input type = "text" class="input"><br>
+			Specify Allergy (eg. pineapple, dust): <input type = "text" class="input"><br>
+			Severity (e.g. Mild, Moderate, Severe): <input type = "text" class="input"><br>
+			Reaction (e.g. Hives, Coughing, difficulty breathing): <input type = "text" class="input"><br>
 			<span style = 'color: blue'>Treatment: </span> <br>
-			Name of Medication: <input type = "text"><br>
-			Dose: <input type = "text"><br>
-			How is medication to be taken: <textarea></textarea><br><br>
+			Name of Medication: <input type = "text" class="input"><br>
+			Dose: <input type = "text" class="input"><br>
+			How is medication to be taken: <textarea class="input"></textarea><br><br>
 
 <!--emergency medical information -->
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 				<h3> <span style= 'color:red'>*</span> <span style = 'color: teal'> Emergency Medical Authorisation </span> </h3>
 				 The school health office requires the following information.<br><br>
 
-				Name of Student: <input type = "text" id = "studentname">
-				Grade: <input type = "text" id = "studentgrade"><br>
-				Name of Parent / Guardian: <input type = "text" id = "parentname">
-				Phone number: <input type = "tel" id = "parentnumber"> <br><br>
+				Name of Student: <input type = "text" id = "studentname" class="input">
+				Grade: <input type = "text" id = "studentgrade" class="input"><br>
+				Name of Parent / Guardian: <input type = "text" id = "parentname" class="input">
+				Phone number: <input type = "tel" id = "parentnumber" class="input"> <br><br>
 
 				<span style = 'color:red'> PART 1 OR PART 2 must be completed.</span><br>
 				<span style = 'color: blue'> Part1: To Grant Consent </span> <br>
@@ -192,7 +192,7 @@
 				<span style = 'color:red'> I DO NOT give consent</span> to Asgardian Nursery School
 				for the emergency treatment of my child. <br> In the event of illness or injury
 				I wish the school authorities to take the following action: <br>
-				<textarea></textarea><br><br><br>
+				<textarea class="input"></textarea><br><br><br>
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <!---Insurance information -->
@@ -205,8 +205,8 @@
 						<option> No </option>
 					</select><br>
 
-					Name of Insurance Company: <input type = "text" id = "insurer"><br>
-					Insurance type: <input type = "text" id = "insurancetype"><br>
+					Name of Insurance Company: <input type = "text" id = "insurer" class="input"><br>
+					Insurance type: <input type = "text" id = "insurancetype" class="input"><br>
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <br>
 <!-- submit button -->
@@ -227,26 +227,14 @@
 				<article class="col-1">
 					<h3>Contact</h3>
 					<ul>
-						<li class="address"><a href="#">151 W Adams St<br>Detroit, MI 48226</a></li>
-						<li class="mail"><a href="#">contact@harrisonuniversity.com</a></li>
+						<li class="address"><a href="#">CT 3433<br>Cantonments, Accra</a></li>
+						<li class="mail"><a href="https://asgardnursery.wordpress.com/">sentinels@gmail.com</a></li>
 						<li class="phone last"><a href="#">(971) 536 845 924</a></li>
-					</ul>
-				</article>
-				<article class="col-2">
-					<h3>Forum topics</h3>
-					<ul>
-						<li><a href="#">Omnis iste natus error sit</a></li>
-						<li><a href="#">Nam libero tempore cum soluta</a></li>
-						<li><a href="#">Totam rem aperiam eaque </a></li>
-						<li><a href="#">Ipsa quae ab illo inventore veritatis </a></li>
-						<li class="last"><a href="#">Architecto beatae vitae dicta sunt </a></li>
 					</ul>
 				</article>
 				<article class="col-3">
 					<h3>Social media</h3>
-					<!--css class .container under the */container heading-->
-					<p>Temporibus autem quibusdam et aut debitis aut rerum necessitatibus saepe.</p>
-					<!--css class .container under the */container heading-->
+					<p>You can follow us on social media.</p>
 					<ul>
 						<li class="facebook"><a href="#">Facebook</a></li>
 						<li class="google-plus"><a href="#">Google+</a></li>
@@ -254,21 +242,8 @@
 						<li class="pinterest"><a href="#">Pinterest</a></li>
 					</ul>
 				</article>
-				<article class="col-4">
-					<h3>Newsletter</h3>
-					<!--css class .container under the */container heading-->
-					<p>Assumenda est omnis dolor repellendus temporibus autem quibusdam.</p>
-					<!--css class .container under the */container heading-->
-					<form action="#">
-						<input placeholder="Email address..." type="text">
-						<button type="submit">Subscribe</button>
-					</form>
-					<ul>
-						<li><a href="#"></a></li>
-					</ul>
-				</article>
 			</section>
-			<p class="copy">Copyright 2014 Harrison High School. Designed by <a href="http://www.vandelaydesign.com/" title="Designed by Vandelay Design" target="_blank">Vandelay Design</a>. All rights reserved.</p>
+			<p class="copy">Copyright 2017 Asgardian Nursery School. Created by <a href="https://asgardnursery.wordpress.com/" title="Designed by The Sentinels" target="_blank">The Sentinels</a>. All rights reserved.</p>
 		</div>
 		<!-- / container -->
 	</footer>

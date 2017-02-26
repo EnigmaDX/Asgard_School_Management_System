@@ -18,13 +18,12 @@
 			<div class="menu-trigger"></div>
 			<nav id="menu">
 				<ul>
-					<li><a href="events.html">Courses</a></li>
-					<li><a href="gallery.html">Students</a></li>
-					<li><a href="events.html">Events</a></li>
+					<li><a href="../events.html">Our Programs</a></li>
+					<li><a href="#">Admission</a></li>
  				</ul>
 				<ul>
-					<li><a href="gallery.html">Teachers</a></li>
-					<li><a href="gallery.html">Gallery</a></li>
+					<li><a href="../ChildInfo/childinfo.html">Ward Info</a></li>
+					<li><a href="../events.html">Events</a></li>
 					<li><a href="#fancy" class="get-contact">Contact</a></li>
    				</ul>
 			</nav>
@@ -34,6 +33,7 @@
 
 	</header>
 	<!-- / header -->
+	<div class="divider"></div>
 
 <div id = "midhead">
 	<h1> Hello! Welcome to the Online Admissions Page </h1>
@@ -46,14 +46,14 @@
 		<form method = "post" action = "admissionspage2.html" name = "form">
 
 <!--personal information -->
-		  <span style= 'color:red'>*</span> First Name: <input type = "text" id = "fname"></input>
-		  Middle Name: <input type = "text" id= "midname"></input>
-		  <span style= 'color:red'>*</span> Last Name: <input type = "text" id = "lname"></input>
+		  <span style= 'color:red'>*</span> First Name: <input type = "text" id = "fname;" class="input"></input>
+		  Middle Name: <input type = "text" id= "midname" class="input"></input>
+		  <span style= 'color:red'>*</span> Last Name: <input type = "text" id = "lname" class="input"></input>
 		  <br><br>
 
-			<span style= 'color:red'>*</span> Preferred Name: <input type = "text" id = "prefname"> <br><br>
+			<span style= 'color:red'>*</span> Preferred Name: <input type = "text" id = "prefname" class="input"> <br><br>
 
-		  <span style= 'color:red'>*</span> Age: <input type = "text" maxlength=2 id = "age"></input><br><br>
+		  <span style= 'color:red'>*</span> Age: <input type = "text" maxlength=2 id = "age"class="input"></input><br><br>
 
 		  <span style= 'color:red'>*</span> Sex: <select id = "sex">
 		    <option> Select... </option>
@@ -62,28 +62,22 @@
 		  </select> <br>
 		  <br>
 
-			<span style= 'color:red'>*</span> Date of Birth: <input type = "date" id = "dob">
+			<span style= 'color:red'>*</span> Date of Birth: <input type = "date" id = "dob" class="input">
 		  <br><br>
 
 		  <span style= 'color:red'>*</span> Place of Birth
-		  <input type =  "text" placeholder="City/Town" id = "city">
-		  <input type =  "text" placeholder="Region" id = "region">
-		  <input type =  "text" placeholder="Country" id = "country">
+		  <input type =  "text" placeholder="City/Town" id = "city" class="input">
+		  <input type =  "text" placeholder="Region" id = "region" class="input">
+		  <input type =  "text" placeholder="Country" id = "country" class="input">
 		  <br><br>
 
-		 <span style= 'color:red'>*</span> Nationality: <input type= "text" id = "nationality"><br><br>
+		 <span style= 'color:red'>*</span> Nationality: <input type= "text" id = "nationality" class="input"><br><br>
 
-		  <span style= 'color:red'>*</span> Home address <input type = "text" placeholder = "City/Town, Region, Country" id = "home"> <br><br>
+		  <span style= 'color:red'>*</span> Home address <input type = "text" placeholder = "City/Town, Region, Country" id = "home" class="input"> <br><br>
 
-		  <span style= 'color:red'>*</span> Postal address <input type = "text" id = "postaladdress"><br><br>
+		  <span style= 'color:red'>*</span> Postal address <input type = "text" id = "postaladdress" class="input"><br><br>
 
 		 <span style= 'color:red'>*</span>  The applicant lives with:
-			<!--<select id = "lives">
-		    <option> Select... </option>
-		    <option> One Parent </option>
-		    <option> Both Parents </option>
-				<option> Guardian </option>
-		  </select> <br> -->
 
 		  <input type = "radio" id = "oneparent" name = "selector">One parent </input>
 		  <input type = "radio" id = "twoparents" name = "selector">Two parents </input>
@@ -93,11 +87,11 @@
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  <!--contact information -->
 		   <h4>Contact Information</h4>
-		  <span style= 'color:red'>*</span> Contact Name: <input type = "text" id = "contactname"><br><br>
-		  <span style= 'color:red'>*</span> Relationship to Child: <input type = "text" id = "relationship"><br><br>
+		  <span style= 'color:red'>*</span> Contact Name: <input type = "text" id = "contactname" class="input"><br><br>
+		  <span style= 'color:red'>*</span> Relationship to Child: <input type = "text" id = "relationship" class="input"><br><br>
 		  <span style= 'color:red'>*</span>Phone Number:
-		  <input type = "tel" placeholder = "primary number" id = "pnumber">
-		  <input type = "tel" placeholder="secondary number" id = "snumber">
+		  <input type = "tel" placeholder = "primary number" id = "pnumber" class="input">
+		  <input type = "tel" placeholder="secondary number" id = "snumber" class="input">
 		<br><br>
 
 		<h3> <span style= 'color: teal'> * Next Page: Previous Schools Attended </span> <h3>
@@ -111,26 +105,14 @@
 				<article class="col-1">
 					<h3>Contact</h3>
 					<ul>
-						<li class="address"><a href="#">151 W Adams St<br>Detroit, MI 48226</a></li>
-						<li class="mail"><a href="#">contact@harrisonuniversity.com</a></li>
+						<li class="address"><a href="#">CT 3433<br>Cantonments, Accra</a></li>
+						<li class="mail"><a href="https://asgardnursery.wordpress.com/">sentinels@gmail.com</a></li>
 						<li class="phone last"><a href="#">(971) 536 845 924</a></li>
-					</ul>
-				</article>
-				<article class="col-2">
-					<h3>Forum topics</h3>
-					<ul>
-						<li><a href="#">Omnis iste natus error sit</a></li>
-						<li><a href="#">Nam libero tempore cum soluta</a></li>
-						<li><a href="#">Totam rem aperiam eaque </a></li>
-						<li><a href="#">Ipsa quae ab illo inventore veritatis </a></li>
-						<li class="last"><a href="#">Architecto beatae vitae dicta sunt </a></li>
 					</ul>
 				</article>
 				<article class="col-3">
 					<h3>Social media</h3>
-					<!--css class .container under the */container heading-->
-					<p>Temporibus autem quibusdam et aut debitis aut rerum necessitatibus saepe.</p>
-					<!--css class .container under the */container heading-->
+					<p>You can follow us on social media.</p>
 					<ul>
 						<li class="facebook"><a href="#">Facebook</a></li>
 						<li class="google-plus"><a href="#">Google+</a></li>
@@ -138,21 +120,8 @@
 						<li class="pinterest"><a href="#">Pinterest</a></li>
 					</ul>
 				</article>
-				<article class="col-4">
-					<h3>Newsletter</h3>
-					<!--css class .container under the */container heading-->
-					<p>Assumenda est omnis dolor repellendus temporibus autem quibusdam.</p>
-					<!--css class .container under the */container heading-->
-					<form action="#">
-						<input placeholder="Email address..." type="text">
-						<button type="submit">Subscribe</button>
-					</form>
-					<ul>
-						<li><a href="#"></a></li>
-					</ul>
-				</article>
 			</section>
-			<p class="copy">Copyright 2014 Harrison High School. Designed by <a href="http://www.vandelaydesign.com/" title="Designed by Vandelay Design" target="_blank">Vandelay Design</a>. All rights reserved.</p>
+			<p class="copy">Copyright 2017 Asgardian Nursery School. Created by <a href="https://asgardnursery.wordpress.com/" title="Designed by The Sentinels" target="_blank"> The Sentinels</a>. All rights reserved.</p>
 		</div>
 		<!-- / container -->
 	</footer>
