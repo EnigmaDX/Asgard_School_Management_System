@@ -6,6 +6,8 @@
 	<title>Asgardian Nursery School</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 	<link rel="stylesheet" media="all" href="../css/admissions.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -42,18 +44,29 @@
 	<span style= 'color:red'>*</span> Required Fields <br><br>
 	</div>
 
-	<div id = "mid">
+	<div id = "mid" class="panel">
 		<form method = "post" action = "admissionspage2.html" name = "form">
 
 <!--personal information -->
-		  <span style= 'color:red'>*</span> First Name: <input type = "text" id = "fname" class="input"></input>
-		  Middle Name: <input type = "text" id= "midname" class="input"></input>
-		  <span style= 'color:red'>*</span> Last Name: <input type = "text" id = "lname" class="input"></input>
+		<div class="input-group col-md-4">
+			<span style= 'color:red'>*</span> First Name: <input type = "text" id = "fname" class="form-control"></input>
+		</div>
+		<div class="input-group col-md-4">
+			Middle Name: <input type = "text" id= "midname" class="form-control"></input>
+		</div>
+		<div class="input-group col-md-4">
+			<span style= 'color:red'>*</span> Last Name: <input type = "text" id = "lname" class="form-control"></input>
 		  <br><br>
 
-			<span style= 'color:red'>*</span> Preferred Name: <input type = "text" id = "prefname" class="input"> <br><br>
-
-		  <span style= 'color:red'>*</span> Age: <input type = "text" maxlength=2 id = "age"class="input"></input><br><br>
+		</div>
+		<div class="input-group">
+			<span style= 'color:red'>*</span> Preferred Name: <input type = "text" id = "prefname" class="form-control"> <br><br>
+		</div>
+			
+		<div class="input-group">
+			<span style= 'color:red'>*</span> Age: <input type = "text" maxlength=2 id = "age"class="form-control"></input><br><br>
+		</div>
+		  
 
 		  <span style= 'color:red'>*</span> Sex: <select id = "sex">
 		    <option> Select... </option>
@@ -62,20 +75,31 @@
 		  </select> <br>
 		  <br>
 
-			<span style= 'color:red'>*</span> Date of Birth: <input type = "date" id = "dob" class="input">
+		<div class="input-group">
+			<span style= 'color:red'>*</span> Date of Birth: <input type = "date" id = "dob" class="form-control">
 		  <br><br>
-
-		  <span style= 'color:red'>*</span> Place of Birth
-		  <input type =  "text" placeholder="City/Town" id = "city" class="input">
-		  <input type =  "text" placeholder="Region" id = "region" class="input">
-		  <input type =  "text" placeholder="Country" id = "country" class="input">
+		</div>
+			
+		<div class="input-group">
+			<span style= 'color:red'>*</span> Place of Birth
+		  <input type =  "text" placeholder="City/Town" id = "city" class="form-control">
+		  <input type =  "text" placeholder="Region" id = "region" class="form-control">
+		  <input type =  "text" placeholder="Country" id = "country" class="form-control">
 		  <br><br>
-
-		 <span style= 'color:red'>*</span> Nationality: <input type= "text" id = "nationality" class="input"><br><br>
-
-		  <span style= 'color:red'>*</span> Home address <input type = "text" placeholder = "City/Town, Region, Country" id = "home" class="input"> <br><br>
-
-		  <span style= 'color:red'>*</span> Postal address <input type = "text" id = "postaladdress" class="input"><br><br>
+		</div>
+		  
+		<div class="input-group">
+			<span style= 'color:red'>*</span> Nationality: <input type= "text" id = "nationality" class="form-control"><br><br>
+		</div>
+		 
+		<div class="input-group">
+			<span style= 'color:red'>*</span> Home address <input type = "text" placeholder = "City/Town, Region, Country" id = "home" class="form-control"> <br><br>
+		</div>
+		  
+		<div class="input-group">
+			<span style= 'color:red'>*</span> Postal address <input type = "text" id = "postaladdress" class="form-control"><br><br>
+		</div>
+		  
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
