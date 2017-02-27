@@ -1,29 +1,95 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 8]> <html class="ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-	<title>Parent/Staff</title>
-	<link rel="stylesheet" media="all" href="css/style_homepage.css">
+	<meta charset="utf-8">
+	<title>AsgardSchool</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<link rel="stylesheet" media="all" href="css/style.css">
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 </head>
 <body>
-	<div id="fancy1">
-		<form action="#">
-				<div class="left">
-					<fieldset class="mail"><input placeholder="Parent/Staff ID" type="text"></fieldset>
-					<fieldset class="name"><input placeholder="Password" type="text"></fieldset>
-				</div>
-				<div class="right">
-					<fieldset class="question"><textarea placeholder="Question..."></textarea></fieldset>
-				</div>
-				<div class="btn-holder">
-					<button class="btn blue" type="submit">Send request</button>
-				</div>
-			</form>
-	</div>
+	<header id="header">
+		<div class="container">
+			<a href="index.html" id="logo" title="Asgardian Nursery School">Asgardian Nursery School</a>
+			<div class="menu-trigger"></div>
+			<nav id="menu">
+				<ul>
+					<li><a href="events.html">Our Programs</a></li>
+					<li><a href="./admissions/admissionspage1.html">Admission</a></li>
+				</ul>
+				<ul>
+					<li><a href="ChildInfo/childinfo.html">Ward Info</a></li>
+					<li><a href="events.html">Events</a></li>
+					<li><a href="#fancy" class="get-contact">Contact</a></li>
+				</ul>
+			</nav>
+			<!-- / navigation -->
+		</div>
+		<!-- / container -->
+		
+	</header>
+	<!-- / header -->
+
+	<div class="divider"></div>
+
+	<center>
+		<form action="ChildInfo/childinfo.html">
+			<div class="panel-body">
+				<input placeholder="Parent/Staff ID" type="text" class="input"> <br>
+				<input placeholder="Password" type="text" class="input">
+			</div>
+						
+			<div class="btn-holder">
+				<a href="ChildInfo/childinfo.html"><button class="btn blue" type="submit">Login</button></a>
+			</div>
+		</form>
+	</center>
+	<footer id="footer">
+		<div class="container">
+			<section>
+				<article class="col-1">
+					<h3>Contact</h3>
+					<ul>
+						<li class="address"><a href="#">CT 3433<br>Cantonments, Accra</a></li>
+						<li class="mail"><a href="https://asgardnursery.wordpress.com/">sentinels@gmail.com</a></li>
+						<li class="phone last"><a href="#">(971) 536 845 924</a></li>
+					</ul>
+				</article>
+				
+				<article class="col-3">
+					<h3>Social media</h3>
+					<p>Contact us through the following media.</p>
+					<ul>
+						<li class="facebook"><a href="#">Facebook</a></li>
+						<li class="google-plus"><a href="#">Google+</a></li>
+						<li class="twitter"><a href="#">Twitter</a></li>
+						<li class="pinterest"><a href="#">Pinterest</a></li>
+					</ul>
+				</article>
+
+				<article class="col-4">
+					<h3>Newsletter</h3>
+					<p>Subscribe if you want to receive letters from us.</p>
+					<form action="#">
+						<input placeholder="Email address..." type="text">
+						<button type="submit">Subscribe</button>
+					</form>
+					<ul>
+						<li><a href="#"></a></li>
+					</ul>
+				</article>
+			</section>
+			<p class="copy">Copyright 2017 Asgardian Nursery School. Created by <a href="https://asgardnursery.wordpress.com/" title="Designed by The Sentinels" target="_blank">The Sentinels</a>. All rights reserved.</p>
+		</div>
+		<!-- / container -->
+	</footer>
+	<!-- / footer -->
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script>window.jQuery || document.write("<script src='js/jquery-1.11.1.min.js'>\x3C/script>")</script>
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
-	<!-- <script src="js/slider.js"></script> -->
-
 </body>
 </html>
