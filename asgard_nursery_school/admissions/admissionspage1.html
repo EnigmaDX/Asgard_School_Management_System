@@ -46,7 +46,7 @@
 		<form method = "post" action = "admissionspage2.html" name = "form">
 
 <!--personal information -->
-		  <span style= 'color:red'>*</span> First Name: <input type = "text" id = "fname;" class="input"></input>
+		  <span style= 'color:red'>*</span> First Name: <input type = "text" id = "fname" class="input"></input>
 		  Middle Name: <input type = "text" id= "midname" class="input"></input>
 		  <span style= 'color:red'>*</span> Last Name: <input type = "text" id = "lname" class="input"></input>
 		  <br><br>
@@ -77,12 +77,6 @@
 
 		  <span style= 'color:red'>*</span> Postal address <input type = "text" id = "postaladdress" class="input"><br><br>
 
-		 <span style= 'color:red'>*</span>  The applicant lives with:
-
-		  <input type = "radio" id = "oneparent" name = "selector">One parent </input>
-		  <input type = "radio" id = "twoparents" name = "selector">Two parents </input>
-		  <input type = "radio" id = "guardian" name = "selector"> Guardian(s)</input>
-		  <br><br>
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  <!--contact information -->
@@ -93,6 +87,12 @@
 		  <input type = "tel" placeholder = "primary number" id = "pnumber" class="input">
 		  <input type = "tel" placeholder="secondary number" id = "snumber" class="input">
 		<br><br>
+
+		<span style= 'color:red'>*</span>  The applicant lives with:
+		 <input type = "radio" id = "oneparent" name = "selector">One parent </input>
+		 <input type = "radio" id = "twoparents" name = "selector">Two parents </input>
+		 <input type = "radio" id = "guardian" name = "selector"> Guardian(s)</input>
+		 <br><br>
 
 		<h3> <span style= 'color: teal'> * Next Page: Previous Schools Attended </span> <h3>
 			<input type = "button" value = "Next Page" id = "submit" onclick="validateIndex()">
