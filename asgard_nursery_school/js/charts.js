@@ -5,21 +5,20 @@
  */
 
     
-      google.charts.load("current", {packages: ["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
+google.charts.load("current", {packages: ["corechart"]});
+google.charts.setOnLoadCallback(drawChart);
       
-      /**
-       * Draws a donutchart for the breakdown of fees
-       * @returns {undefined}
-       */
+/**
+ * Draws a donutchart for the breakdown of fees
+ * @returns {undefined}
+ */
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
         ['Component', 'Amount (GH₵)'],
-        ['Tuition', 11],
-        ['Feeding',  2],
-        ['Medical',  2],
-        ['Watch TV', 2],
-        ['Sleep',    7]
+        ['Tuition',   11],
+        ['Feeding',    9],
+        ['Medical',    4],
+        ['Stationery', 6],
     ]);
 
     var options = {
