@@ -1471,6 +1471,17 @@ th {
 
 /* Charts
 ------------------------------------------------------------------------------*/
-.fchart{
+div .fchart{
     float: left;
+    width: 100%;
+}
+
+#flex-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box{
+    flex: 1 1 0;
+    flex-basis: 100%;
 }
