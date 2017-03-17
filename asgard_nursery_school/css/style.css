@@ -186,7 +186,7 @@ a:hover {
 	cursor: pointer;
 	margin: 0 auto -82px;
 	text-indent: -9999em;
-	background: url(../images/logo.png) no-repeat;
+	background: url(../images/fineLogo.png) no-repeat;
 	position: relative;
 	z-index: 3;
 }
@@ -2024,4 +2024,10 @@ a.btn.blue,
 	#footer article{
 		padding-bottom: 30px;
 	}
+}
+
+/* Charts
+------------------------------------------------------------------------------*/
+.fchart{
+    float: left;
 }

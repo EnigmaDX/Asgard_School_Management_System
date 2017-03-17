@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<title>Asgardian Nursery School</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-	<link rel="stylesheet" media="all" href="../css/admissions.css">
+	<link rel="stylesheet" media="all" href="css/ourPrograms.css">
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -14,19 +14,19 @@
 
 	<header id="header">
 		<div class="container">
-			<a href="../index.html" id="logo" title="ASGARDIAN NUSERY SCHOOL">ASGARDIAN NUSERY SCHOOL</a>
+			<a href="index.html" id="logo" title="ASGARDIAN NURSERY SCHOOL">ASGARDIAN NUSERY SCHOOL</a>
 			<div class="menu-trigger"></div>
 			<nav id="menu">
 				<ul>
-					<li><a href="../ourPrograms.html">Our programs</a></li>
-					<li><a href="admissionspage1.html">Admission</a></li>
- 				</ul>
-				<ul>
-					<li><a href="../parent_staff.html">Parent/Staff</a></li>
-					<li><a href="../events.html">Events</a></li>
-					<li><a href="#fancy" class="get-contact">Contact</a></li>
-   				</ul>
+					<li><a href="#">Our Programs</a></li>
+					<li><a href="./admissions/admissionspage1.html">Admission</a></li>
+					<!-- <li><a href="#fancy1" class="get-contact">Parent/Guardian</a></li> -->
 
+				</ul>
+				<ul>
+					<li><a href="parent_staff.html">Parent/Staff</a></li>
+					<li><a href="events.html">Events</a></li>
+					<li>
 			</nav>
 			<!-- / navigation -->
 		</div>
@@ -36,44 +36,29 @@
 	<!-- / header -->
 	<div class="divider"></div>
 
-<div id = "midhead">
-	<h1> Online Admissions Page <h1>
+	<div id = "programHead">
+		<span style = 'color:blue'> Our Programs </span>
+	</div> <br><br>
 
-	<h4> Previous Schools Attended </h4>
-	</div>
-
-	<div id = "mid">
-		<form method = "post" action = "admissionspage3.html" name = "form">
-		<h4> Has the child been to any other schools? </h4>
-		<span style= 'color:red'>* Required</span>
-		<input type="checkbox" id="schyes" name="selector"><label for="schyes">Yes</label>
-		<input type="checkbox" id="schno" name="selector"><label for="schno">No</label>
-
+	<div id = "programBody">
+		<p>
+			At Asgardian Nursery School, we offer a wide range of subjects to make your child an
+			all-round student. Aside the regular curriculum, we pay close attention to extra-curricular activities so that
+			your child can have skills in other areas aside from academics.
+			We teach Maths, Science and English, as required by the Ghanaian curriculum but some of the extra-curricular classes we offer here are:
+		</p>
+		<ul>
+			<li> Languages: French, Spanish, and German </li>
+			<li> Music: we teach your child how to play the violin, the piano and drums. We also offer special singing classes </li>
+			<li> Dance: we offer beginner dance classes. </li>
+			<li> Arts and Crafts: we help your children train the creative parts of their brains with this very special arts and crafts program </li>
+		</ul>
 		<br><br>
-		<span style = 'color: red' > If yes, please fill the form below: </span><br>
-		   Previous school(s) attended:<br><br>
 
-		  School Name <input type = "text" id = "schname1" class="input"><br><br>
-		  Name of Head <input type = "text" id = "headname1" class="input"><br><br>
-		  Telephone number <input type = "tel" id = "tel1" class="input"><br><br>
-		  <br><br>
-
-		  School Name <input type = "text" id = "schname2" class="input"><br><br>
-		  Name of Head <input type = "text" id = "headname2" class="input"><br><br>
-		  Telephone number <input type = "tel" id = "tel2" class="input"><br><br>
-		  <br><br>
-			 <input type = "button" value = "Next Page" id = "submit" onclick="validatePage2()">
-		</form>
-
-		<form action = "admissionspage1.html">
-		  <input type = "submit" value = "Previous Page">
-		</form>
-
-<h3> <span style= 'color: teal'> * Next Page: Sibling Information </span> <h3>
-
-	<!--	<form action = "admissionspage3.html">
-		  <input type = "button" value = "Next Page" id = "submit" onclick="validatePage2(), checkRadio2(document.getElementsByTagName("selector"))">
-		</form> -->
+		<span style = 'color: teal'> * All of these extra-curricular activites are a part of our after-school program </span><br>
+		Any parents interested in letting their child join in must sign up with their children's class teachers or at the receptionist's desk.
+		<br><br>
+		<a href = "index.html"> Back to Home Page </a>
 	</div>
 
 	<footer id="footer">
@@ -98,7 +83,7 @@
 					</ul>
 				</article>
 			</section>
-			<p class="copy">Copyright 2017 Asgardian Nursery School. Created by <a href="https://asgardnursery.wordpress.com/" title="Designed by The Sentinels" target="_blank">The Sentinels</a>. All rights reserved.</p>
+			<p class="copy">Copyright 2017 Asgardian Nursery School. Created by <a href="https://asgardnursery.wordpress.com/" title="Designed by The Sentinels" target="_blank"> The Sentinels</a>. All rights reserved.</p>
 		</div>
 		<!-- / container -->
 	</footer>
@@ -121,7 +106,6 @@
 		</form>
 	</div>
 
-	<script type = "text/javascript" src = "../js/admissionspage2.js">
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script>window.jQuery || document.write("<script src='../js/jquery-1.11.1.min.js'>\x3C/script>")</script>
 	<script src="../js/plugins.js"></script>
