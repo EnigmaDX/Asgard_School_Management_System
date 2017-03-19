@@ -48,39 +48,40 @@
 		<form method = "post" action = "admissionspage2.html" name = "form">
 
 <!--personal information -->
-		<div class="input-group col-md-4">
-			<span style= 'color:red'>*</span> First Name: <input type = "text" id = "fname" class="form-control"></input>
+		<div class="form-group col-md-4">
+			<span style= 'color:red'>*</span> First Name: <input type = "text" id = "fname" class="form-control">
 		</div>
-		<div class="input-group col-md-4">
-			Middle Name: <input type = "text" id= "midname" class="form-control"></input>
+		<div class="form-group col-md-4">
+			Middle Name: <input type = "text" id= "midname" class="form-control">
 		</div>
-		<div class="input-group col-md-4">
-			<span style= 'color:red'>*</span> Last Name: <input type = "text" id = "lname" class="form-control"></input>
+		<div class="form-group col-md-4">
+			<span style= 'color:red'>*</span> Last Name: <input type = "text" id = "lname" class="form-control">
 		  <br><br>
 
 		</div>
-		<div class="input-group">
+		<div class="form-group col-md-4">
 			<span style= 'color:red'>*</span> Preferred Name: <input type = "text" id = "prefname" class="form-control"> <br><br>
 		</div>
 			
-		<div class="input-group">
-			<span style= 'color:red'>*</span> Age: <input type = "text" maxlength=2 id = "age"class="form-control"></input><br><br>
+		<div class="form-group col-md-4">
+			<span style= 'color:red'>*</span> Age: <input type = "text" maxlength=2 id = "age"class="form-control"><br><br>
 		</div>
 		  
-
-		  <span style= 'color:red'>*</span> Sex: <select id = "sex">
+		<div class="form-group col-md-4">
+		  <span style= 'color:red'>*</span> Sex: <select id="sex">
 		    <option> Select... </option>
 		    <option> Male </option>
 		    <option> Female </option>
 		  </select> <br>
 		  <br>
+		  </div>
 
-		<div class="input-group">
+		<div class="form-group col-md-4">
 			<span style= 'color:red'>*</span> Date of Birth: <input type = "date" id = "dob" class="form-control">
 		  <br><br>
 		</div>
 			
-		<div class="input-group">
+		<div class="form-group col-md-4 ">
 			<span style= 'color:red'>*</span> Place of Birth
 		  <input type =  "text" placeholder="City/Town" id = "city" class="form-control">
 		  <input type =  "text" placeholder="Region" id = "region" class="form-control">
@@ -88,35 +89,45 @@
 		  <br><br>
 		</div>
 		  
-		<div class="input-group">
+		<div class="form-group col-md-4">
 			<span style= 'color:red'>*</span> Nationality: <input type= "text" id = "nationality" class="form-control"><br><br>
 		</div>
 		 
-		<div class="input-group">
+		<div class="form-group col-md-4">
 			<span style= 'color:red'>*</span> Home address <input type = "text" placeholder = "City/Town, Region, Country" id = "home" class="form-control"> <br><br>
 		</div>
 		  
-		<div class="input-group">
+		<div class="form-group col-md-4">
 			<span style= 'color:red'>*</span> Postal address <input type = "text" id = "postaladdress" class="form-control"><br><br>
 		</div>
 		  
 
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- <!--contact information -->
+-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ <!--contact information  -->
+ <div id="midhead">
 		   <h4>Contact Information</h4>
-		  <span style= 'color:red'>*</span> Contact Name: <input type = "text" id = "contactname" class="input"><br><br>
-		  <span style= 'color:red'>*</span> Relationship to Child: <input type = "text" id = "relationship" class="input"><br><br>
-		  <span style= 'color:red'>*</span>Phone Number:
-		  <input type = "tel" placeholder = "primary number" id = "pnumber" class="input">
-		  <input type = "tel" placeholder="secondary number" id = "snumber" class="input">
-		<br><br>
+		   </div>
+		<div class="form-group col-md-4">
+			  <span style= 'color:red'>*</span> Contact Name: <input type = "text" id = "contactname" class="input-group col-md-4"><br><br>
+			  </div>
 
-		<span style= 'color:red'>*</span>  The applicant lives with:
-		 <input type = "radio" id = "oneparent" name = "selector">One parent </input>
-		 <input type = "radio" id = "twoparents" name = "selector">Two parents </input>
-		 <input type = "radio" id = "guardian" name = "selector"> Guardian(s)</input>
-		 <br><br>
+			  <div class="form group col-md-4">
+			  <span style= 'color:red'>*</span> Relationship to Child: <input type = "text" id = "relationship" class="input"><br><br>
+			  </div>
+			  <div class="form group col-md-4">
+			  <span style= 'color:red'>*</span>Phone Number:
+			  <input type = "tel" placeholder = "primary number" id = "pnumber" class="input">
+			  <input type = "tel" placeholder="secondary number" id = "snumber" class="input">
+			<br><br>
+			</div>
+			<div class="form group col-md-4">
+			<span style= 'color:red'>*</span>  The applicant lives with:
+			 <input type = "radio" id = "oneparent" name = "selector">One parent 
+			 <input type = "radio" id = "twoparents" name = "selector">Two parents 
+			 <input type = "radio" id = "guardian" name = "selector"> Guardian(s)
+			 <br><br>
+		</div>
 
 		<h3> <span style= 'color: teal'> * Next Page: Previous Schools Attended </span> <h3>
 			<input type = "button" value = "Next Page" id = "submit" onclick="validateIndex()">
