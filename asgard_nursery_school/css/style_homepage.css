@@ -24,6 +24,10 @@ time, mark, audio, video {
 	box-sizing: border-box;
 }
 
+header {
+	height: 20%;
+}
+
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -206,7 +210,7 @@ a:hover {
 
 #menu li {
 	float: left;
-	padding: 0 80px;
+	padding: 0 24px;
 }
 
 #menu a {
