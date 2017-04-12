@@ -12,24 +12,10 @@
 </head>
 <body id="flex-container">
 
-    <header id="header" class="box">
-		<div class="container">
-			<a href="../index.html" id="logo" title="ASGARDIAN NUSERY SCHOOL">ASGARDIAN NUSERY SCHOOL</a>
-			<div class="menu-trigger"></div>
-			<nav id="menu">
-				<ul>
-					<li><a href="../index.html">Our programs</a></li>
-					<li><a href="../admissions/admissionspage1.html">Admission</a></li>
- 				</ul>
-				<ul>
-					<li><a href="childinfo.html">Ward Info</a></li>
-					<li><a href="../events.html">Events</a></li>
-   				</ul>
-			<!-- / navigation -->
-		</div>
-		<!-- / container -->
+    <?php
+			require_once('../layout/menu.html');
+		?>
 	
-	</header>
 	<div class="divider box">
 		<div class="menu-trigg"></div><br>
 			<nav id="menuq">

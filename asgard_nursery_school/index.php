@@ -11,30 +11,9 @@
 	<![endif]-->
 </head>
 <body>
-
-	<header id="header">
-		<div class="container">
-			<a href="index.html" id="logo" title="ASGARDIAN NUSERY SCHOOL">ASGARDIAN NUSERY SCHOOL</a>
-			<div class="menu-trigger"></div>
-			<nav id="menu">
-				<ul>
-					<li><a href="pages/ourPrograms.html">Our Programs</a></li>
-					<li><a href="admissions/admissionspage1.html">Admission</a></li>
-					<!-- <li><a href="#fancy1" class="get-contact">Parent/Guardian</a></li> -->
-
-				</ul>
-				<ul>
-					<li><a href="pages/parent_staff.html">Parent/Staff</a></li>
-					<li><a href="pages/events.html">Events</a></li>
-					<li><a href="#fancy" class="get-contact">Contact</a></li>
-				</ul>
-			</nav>
-			<!-- / navigation -->
-		</div>
-		<!-- / container -->
-	
-	</header>
-	<!-- / header -->
+		<?php
+			require_once('layout/menu.html');
+		?>
 	
 	<div class="slider">
 		<ul class="bxslider">

@@ -12,27 +12,9 @@
 </head>
 <body>
 
-	<header id="header">
-		<div class="container">
-			<a href="../index.html" id="logo" title="ASGARDIAN NUSERY SCHOOL">ASGARDIAN NUSERY SCHOOL</a>
-			<div class="menu-trigger"></div>
-			<nav id="menu">
-				<ul>
-					<li><a href="../ourPrograms.html">Our programs</a></li>
-					<li><a href="admissionspage1.html">Admission</a></li>
- 				</ul>
-				<ul>
-					<li><a href="../parent_staff.html">Parent/Staff</a></li>
-					<li><a href="../events.html">Events</a></li>
-					<li><a href="#fancy" class="get-contact">Contact</a></li>
-   				</ul>
-			</nav>
-			<!-- / navigation -->
-		</div>
-		<!-- / container -->
-
-	</header>
-	<!-- / header -->
+	<?php
+			require_once('../layout/menu.html');
+		?>
 	<div class="divider"></div>
 
 <div id = "midhead">
