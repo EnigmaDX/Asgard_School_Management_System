@@ -39,7 +39,7 @@
 			<div class="form-group">
 				<div class="input-group">
 					<span class="input-group-addon">Search</span>
-					<input type="text" name="search_text" id="search_text" placeholder="Search by Student Details" class="form-control" />
+					<input type="text" name="searchtxt" id="searchtxt" placeholder="Search by Student Details" class="form-control" />
 				</div>
 			</div>
 			<br />
@@ -49,7 +49,7 @@
 
 
 
-		<!-- / footer -->
+		
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script>window.jQuery || document.write("<script src='js/jquery-1.11.1.min.js'>\x3C/script>")</script>
 		<script src="../js/plugins.js"></script>
@@ -57,4 +57,36 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</body>
+	<!-- <script type="text/javascript" src="../js/ajaxrequest.js"></script> -->
 	</html>
+
+	<script>
+		$(document).ready(function(){
+
+   load_data();
+
+   function load_data(query)
+   {
+    $.ajax({
+     url:"../ajax/fetchdata.php",
+     method:"POST",
+     data:{query:query},
+     success:function(data)
+     {
+      $('#result').html(data);
+    }
+  });
+  }
+  $('#searchtxt').keyup(function(){
+    var search = $(this).val();
+    if(search != '')
+    {
+     load_data(search);
+   }
+   else
+   {
+     load_data();
+   }
+ });
+});
+	</script>
