@@ -15,7 +15,7 @@
 <body>
 
 	<?php
-			require_once('../layout/menu.html');
+			require_once ('../layout/menu.html');
 		?>
 	<div class="divider"></div>
 
