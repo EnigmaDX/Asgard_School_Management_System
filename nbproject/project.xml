@@ -3,11 +3,7 @@
     <type>org.netbeans.modules.web.clientproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/clientside-project/1">
-<<<<<<< OURS
             <name>asgard</name>
-=======
-            <name>asguard</name>
->>>>>>> THEIRS
         </data>
     </configuration>
 </project>
