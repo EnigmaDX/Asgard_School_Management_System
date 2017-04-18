@@ -9,6 +9,7 @@ require_once dirname(__FILE__) . "/../settings/core.php";
 require_once dirname(__FILE__) . "/../unsecure/retrieval_functions.php";
 require_once dirname(__FILE__) . "/../unsecure/form_validation.php";
 require_once dirname(__FILE__) . "/../controller/define.php";
+require_once dirname(__FILE__) . "/../database/Connection.php";
 
 
 /**
@@ -16,7 +17,7 @@ require_once dirname(__FILE__) . "/../controller/define.php";
  *
  * @author afadinsro
  */
-class User implements Serializable {
+class User extends Connection implements Serializable {
 
     //put your code here
     public $username;
@@ -127,7 +128,10 @@ class User implements Serializable {
      */
     private function email_exists(string $email) {
         $success = FALSE;
-        $existing = getEmails();
+        //$existing = getEmails();
+        $query = "SELECT email FROM useraccount";
+        $this->query($query);
+        $existing = $this->fetch_assoc();
 
         if ($existing != NULL) {
             foreach ($existing as $record) {
@@ -147,7 +151,10 @@ class User implements Serializable {
      */
     private function username_exists(string $username) {
         $success = FALSE;
-        $existing = getUsernames();
+        //$existing = getUsernames();
+        $query = "SELECT username FROM useraccount";
+        $this->query($query);
+        $existing = $this->fetch_assoc();
 
         if ($existing != NULL) {
             foreach ($existing as $record) {
@@ -160,25 +167,6 @@ class User implements Serializable {
         return $success;
     }
 
-    public function test($username, $email) {
-        switch ($this->username_exists($username)) {
-            case TRUE:
-                echo 'username exists';
-                break;
-            case FALSE:
-                echo 'username exists';
-                break;
-        }
-        switch ($this->username_exists($email)) {
-            case TRUE:
-                echo 'email exists';
-                break;
-            case FALSE:
-                echo 'email exists';
-                break;
-        }
-    }
-
     /**
      * 
      * @param int $per_id
@@ -186,7 +174,10 @@ class User implements Serializable {
      */
     private function per_exists(int $per_id) {
         $success = FALSE;
-        $existing = getPermissions();
+        //$existing = getPermissions();
+        $query = "SELECT perid FROM allpermission";
+        $this->query($query);
+        $existing = $this->fetch_assoc();
 
         if ($existing != NULL) {
             foreach ($existing as $record) {
@@ -206,7 +197,10 @@ class User implements Serializable {
      */
     private function major_exists(int $major_id) {
         $success = FALSE;
-        $existing = getMajors();
+        //$existing = getMajors();
+        $query = "SELECT majorid FROM allmajor WHERE majorid != 99";
+        $this->query($query);
+        $existing = $this->fetch_assoc();
 
         if ($existing != NULL) {
             foreach ($existing as $record) {
