@@ -6,5 +6,5 @@
 define('USERNAME', 'root');
 define('PASSWORD', '');
 define('SERVER', 'localhost');
-define('FINAL_PROJECT_DB', 'TS2018');
+define('FINAL_PROJECT_DB', 'ts2018');
 

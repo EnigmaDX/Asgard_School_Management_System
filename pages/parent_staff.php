@@ -12,9 +12,12 @@
 	<![endif]-->
 </head>
 <body>
+	<!-- include process file -->
 	<?php
 			require_once('../layout/menu.html');
+			include '../unsecure/retrieval_functions.php';
 		?>
+	
 	
 
 	<div class="divider"></div>
@@ -25,7 +28,7 @@
 			<h3>Parent/Staff Login</h3>
 		</div>
 		<div class="col-md-6 col-md-offset-3 panel-body">
-			<form>
+			<form method="POST">
 			    <div class="input-group">
 			      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
 			      <input id="id" type="text" class="form-control" name="Id" placeholder="Id">
@@ -37,7 +40,7 @@
 			    </div>
 			    <br>
 			    <!-- <div class="input-group"> -->
-			    	<a href="childinfo.html"><button type="button" class="btn btn-primary btn-block">Login</button></a>
+			    	<a href="childinfo.php"><button type="submit" class="btn btn-primary btn-block" name="login">Login</button></a>
 			    <!-- </div> -->
 	  		</form>
 		</div>

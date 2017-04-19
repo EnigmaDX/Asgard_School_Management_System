@@ -26,7 +26,7 @@ class Connection {
     function connect() {
         $connected = FALSE;
 
-        $this->link = new mysqli(SERVER, USERNAME, PASSWORD, CPROJECT_DATABASE);
+        $this->link = new mysqli(SERVER, USERNAME, PASSWORD, FINAL_PROJECT_DB);
         //check for errors
         if (!mysqli_connect_errno()) {
             $connected = TRUE;
