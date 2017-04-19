@@ -31,4 +31,4 @@ define("EMAIL_REGEX", "/^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\
 /*
  * Menu navigation
  */
-define("BASE_URL", "http://" . $_SERVER['SERVER_NAME'] . "/classproject2017"); 
+define("BASE_URL", "http://" . $_SERVER['SERVER_NAME'] . "/asgardschool/"); 

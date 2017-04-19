@@ -12,9 +12,7 @@
 </head>
 <body>
 
-	<?php
-			require_once('../layout/menu.html');
-		?>
+	<?php require_once('../layout/menu.php'); ?>
 	
 	
 	<div class="divider"></div>
