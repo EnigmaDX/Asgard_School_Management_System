@@ -12,7 +12,7 @@
 </head>
 <body>
 		<?php
-			require_once('layout/menu.html');
+			require_once('layout/menu.php');
 		?>
 	
 	<div class="slider">
@@ -69,6 +69,7 @@
 				</div>
 			</article>
 		</div>
+            
 		<!-- / container -->
 	</section>
 

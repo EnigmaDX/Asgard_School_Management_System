@@ -13,7 +13,7 @@
 <body id="flex-container">
 
     <?php
-			require_once('../layout/menu.html');
+			require_once('../layout/menu.php');
 		?>
 	
 	<div class="divider box">
