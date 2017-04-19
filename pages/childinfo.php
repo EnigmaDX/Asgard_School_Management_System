@@ -10,11 +10,9 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>
-<body id="flex-container">
+<body>
 
-    <?php
-			require_once('../layout/menu.php');
-		?>
+    <?php require_once('../layout/menu.php'); ?>
 	
 	<div class="divider box">
 		<div class="menu-trigg"></div><br>
