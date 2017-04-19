@@ -1,4 +1,4 @@
-<?php require '../controller/define.php'; ?>
+<?php require dirname(__FILE__).'/../controller/define.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
