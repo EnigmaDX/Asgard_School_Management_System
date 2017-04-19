@@ -11,9 +11,7 @@
 	<![endif]-->
 </head>
 <body>
-		<?php
-			require_once('layout/menu.html');
-		?>
+		<?php require_once('layout/menu.php'); ?>
 	
 	<div class="slider">
 		<ul class="bxslider">

@@ -14,8 +14,12 @@
 <body>
 	<!-- include process file -->
 	<?php
+<<<<<<< HEAD
 			require_once('../layout/menu.html');
 			include '../unsecure/retrieval_functions.php';
+=======
+			require_once('../layout/menu.php');
+>>>>>>> 29586e9a0f7d205a33f9d3b9d6f045809a9891d0
 		?>
 	
 	
