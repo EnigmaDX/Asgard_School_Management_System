@@ -26,7 +26,7 @@ class Connection {
     function connect() {
         $connected = FALSE;
 
-        $this->link = new mysqli(SERVER, USERNAME, PASSWORD, CPROJECT_DATABASE);
+        $this->link = new mysqli(SERVER, USERNAME, PASSWORD, FINAL_PROJECT_DB);
         //check for errors
         if (!mysqli_connect_errno()) {
             $connected = TRUE;
@@ -66,6 +66,18 @@ class Connection {
         return $success;
     }
 
+    public function query1($sql) 
+    {
+        if($this->connect())
+        {
+            //run query
+            $this->results = mysqli_query($this->link, $sql);
+
+            //confirm if record returns
+            return !($this->results == false);
+        }
+    }
+
     /**
      * Gets the string representation of the data types 
      * of the values to bind dynamically to a prepared statement
@@ -92,8 +104,18 @@ class Connection {
      * @return mysqli_result The result from query()
      */
     public function fetch() {
-        return $this->result;
+       {
+        //check if results has content
+        if($this->results == false){
+            return false;
+        }
+        else
+        {
+            //return one record
+            return mysqli_fetch_assoc($this->results);
+        }
     }
+}
 
     /**
      * Fetches an associative array of the SQL result
