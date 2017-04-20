@@ -1,9 +1,9 @@
 <?php
-/**
-@author Nana Adjoa S. Bentil
-@version 1.1
-**/
 
+/**
+  @author Nana Adjoa S. Bentil
+  @version 1.1
+ * */
 //include database file
 include_once("../database/Connection.php");
 
@@ -11,95 +11,86 @@ include_once("../database/Connection.php");
 include_once("courseTeacher.php");
 
 //class for courses
-class Courses extends Connection
-{
-  //properties
-  private $courseCode;
-  private $courseName;
-  private $courseTeacher;
-  private $courseVenue;
-  private $class;
-  private $grade;
+class Courses extends Connection {
 
-  //__constructor
-  //calling setter methods
-  $this->setCourseCode($courseCode);
-  $this->setCourseName($courseName);
-  $this->setCourseTeacher($courseTeacher);
-  $this->setCourseVenue($courseVenue);
-  $this->setClass($class);
-  $this->setGrade($grade);
+    //properties
+    private $courseCode;
+    private $courseName;
+    private $courseTeacher;
+    private $courseVenue;
+    private $class;
+    private $grade;
 
-  //calling getter methods
-  $this->getCourseCode();
-  $this->getCourseName();
-  $this->getCourseTeacher();
-  $this->getCourseVenue();
-  $this->getClass();
-  $this->getGrade();
+    //__constructor
+    //calling setter methods
+    public function __construct($courseCode, $courseName, $courseTeacher, $courseVenue, $class, $grade) {
+        $this->setCourseCode($courseCode);
+        $this->setCourseName($courseName);
+        $this->setCourseTeacher($courseTeacher);
+        $this->setCourseVenue($courseVenue);
+        $this->setClass($class);
+        $this->setGrade($grade);
+    }
 
-  //methods
-  //setter methods
-  public function setCourseCode($courseCode)
-  {
-    $this->courseCode = $courseCode;
-  }
+    //calling getter methods
+       /*$this->getCourseCode();
+      $this->getCourseName();
+      $this->getCourseTeacher();
+      $this->getCourseVenue();
+      $this->getClass();
+      $this->getGrade(); */
 
-  public function setCourseName($courseName)
-  {
-    $this->courseName = $courseName;
-  }
+    //methods
+    //setter methods
+    public function setCourseCode($courseCode) {
+        $this->courseCode = $courseCode;
+    }
 
-  public function setCourseTeacher($courseTeacher)
-  {
-    $this->courseTeacher = $courseTeacher->getStaffFname();
-  }
+    public function setCourseName($courseName) {
+        $this->courseName = $courseName;
+    }
 
-  public function setCourseVenue($courseVenue)
-  {
-    $this->courseVenue = $courseVenue;
-  }
+    public function setCourseTeacher($courseTeacher) {
+        $this->courseTeacher = $courseTeacher->getStaffFname();
+    }
 
-  public function setClass($class)
-  {
-    $this->class = $class;
-  }
+    public function setCourseVenue($courseVenue) {
+        $this->courseVenue = $courseVenue;
+    }
 
-  public function setGrade($grade)
-  {
-    $this->grade = $grade;
-  }
+    public function setClass($class) {
+        $this->class = $class;
+    }
 
-  //getter methods
-  public function getCourseCode()
-  {
-    return $this->courseCode;
-  }
+    public function setGrade($grade) {
+        $this->grade = $grade;
+    }
 
-  public function getCourseName()
-  {
-    return $this->courseName;
-  }
+    //getter methods
+    public function getCourseCode() {
+        return $this->courseCode;
+    }
 
-  public function getCourseTeacher()
-  {
-    return $this->courseTeacher;
-  }
+    public function getCourseName() {
+        return $this->courseName;
+    }
 
-  public function getCourseVenue()
-  {
-    return $this->courseVenue;
-  }
+    public function getCourseTeacher() {
+        return $this->courseTeacher;
+    }
 
-  public function getClass()
-  {
-    return $this->class;
-  }
+    public function getCourseVenue() {
+        return $this->courseVenue;
+    }
 
-  public function getGrade()
-  {
-    return $this->grade;
-  }
+    public function getClass() {
+        return $this->class;
+    }
+
+    public function getGrade() {
+        return $this->grade;
+    }
+
 }
 
 ?>
