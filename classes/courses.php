@@ -1,4 +1,8 @@
 <?php
+/**
+@author Nana Adjoa S. Bentil
+@version 1.1
+**/
 
 //include database file
 include_once("../database/Connection.php");
@@ -27,12 +31,12 @@ class Courses extends Connection
   $this->setGrade($grade);
 
   //calling getter methods
-  $this->getCourseCode($courseCode);
-  $this->getCourseName($courseName);
-  $this->getCourseTeacher($courseTeacher);
-  $this->getCourseVenue($courseVenue);
-  $this->getClass($class);
-  $this->getGrade($grade);
+  $this->getCourseCode();
+  $this->getCourseName();
+  $this->getCourseTeacher();
+  $this->getCourseVenue();
+  $this->getClass();
+  $this->getGrade();
 
   //methods
   //setter methods
