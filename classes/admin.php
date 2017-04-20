@@ -75,7 +75,7 @@ class Admin extends User
   //method to delete a child's information
   public function deleteChildInfo($sID)
   {
-    $sql = "DELETE FROM STUDENT WHERE STUDENT.sID = $sID";
+    $sql = "DELETE FROM STUDENT WHERE STUDENT.sID = '$sID'";
 
     $success = $this->query($sql, $sID);
 
@@ -85,8 +85,108 @@ class Admin extends User
   //method to delete parent or staff info
   public function deleteUser($id, $status_id)
   {
-    
+    if ($status_id == 1)
+    {
+      $sql = "DELETE FROM PARENT_OR_GUARDIAN WHERE PARENT_OR_GUARDIAN.pId = '$id'";
+
+      $success = $this->query($sql, $id, $status_id);
+
+      return $success;
+    }
+
+    else if ($status_id == 2)
+    {
+      $sql = "DELETE FROM STAFF WHERE STAFF.staffID = '$id'";
+
+      $success = $this->query($sql, $id, $status_id);
+
+      return $success;
+    }
   }
+
+  //method to edit a course
+  public function editCourseInfo($courseCode)
+  {
+    $sql = "UPDATE COURSES SET .... WHERE courses.courseCode = '$courseCode'";
+
+    $success = $this->query($sql, $courseCode);
+
+    return $success;
+  }
+
+  //method to edit child info
+  public function editChildInfo($sID)
+  {
+    $sql = "UPDATE STUDENT SET .... WHERE STUDENT.sID = '$sID'";
+
+    $success = $this->query($sql, $sID);
+
+    return $success;
+  }
+
+  //method to edit other user info
+  public function editUserInfo($id, $status_id)
+  {
+    if ($status_id == 1)
+    {
+      $sql = "UPDATE PARENT_OR_GUARDIAN SET .... WHERE PARENT_OR_GUARDIAN.pId = '$id'";
+
+      $success = $this->query($sql, $id, $status_id);
+
+      return $success;
+    }
+
+    else if ($status_id == 2)
+    {
+      $sql = "UPDATE STAFF SET .... WHERE STAFF.staffID = '$id'";
+
+      $success = $this->query($sql, $id, $status_id);
+
+      return $success;
+    }
+  }
+
+  //method to view all student info
+  public function viewAllStudents()
+  {
+    $sql = "SELECT * FROM STUDENT";
+
+    $success = $this->query($sql);
+
+    return $success;
+  }
+
+  //method to view all courses
+  public function viewAllCourses()
+  {
+    $sql = "SELECT * FROM COURSES";
+
+    $success = $this->query($sql);
+
+    return $success;
+  }
+
+  //method to view all staff info
+  public function viewAllStaff()
+  {
+    $sql = "SELECT * FROM STAFF";
+
+    $success = $this->query($sql);
+
+    return $success;
+  }
+
+  //method to view all parent info
+  public function viewAllParents()
+  {
+    $sql = "SELECT * FROM PARENT_OR_GUARDIAN";
+
+    $success = $this->query($sql);
+
+    return $success;
+  }
+
+
 }
 
 
