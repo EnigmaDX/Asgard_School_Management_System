@@ -117,11 +117,11 @@ class Connection {
     }
 }
 
-    /**
-     * Fetches an associative array of the SQL result
-     * @return Array An associative array of the results from query()
-     */
-    public function fetch_assoc() {
-        return mysqli_fetch_assoc($this->result);
-    }
+    // *
+    //  * Fetches an associative array of the SQL result
+    //  * @return Array An associative array of the results from query()
+     
+    // public function fetch_assoc() {
+    //     return mysqli_fetch_assoc($this->result);
+    // }
 }

@@ -75,7 +75,7 @@ function verifylogin()
     
         if($result)
         {
-            $row=$verlogin->fetch_assoc();
+            $row=$verlogin->fetch();
             $passwd=$row['Password'];
 
             if (password_verify($pass, $passwd))
