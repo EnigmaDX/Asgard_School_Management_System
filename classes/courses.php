@@ -1,7 +1,7 @@
 <?php
 /**
-@author Nana Adjoa S. Bentil
-@version 1.1
+*@author Nana Adjoa S. Bentil
+*@version 1.2
 **/
 
 //include database file
