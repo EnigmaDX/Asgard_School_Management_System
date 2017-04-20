@@ -1,4 +1,8 @@
 <?php
+/**
+*@author Nana Adjoa S. Bentil
+*@version 1.2
+**/
 
 /**
   @author Nana Adjoa S. Bentil
