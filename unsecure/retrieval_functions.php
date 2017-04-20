@@ -52,3 +52,36 @@ function selectUser(string $username) {
     //return assoc array
     return $assoc_array;
 }
+
+function validateLogin(){
+    $username= $_REQUEST['Username'];
+    $password= $_REQUEST['Password'];
+
+    $errors = array();
+
+    if (empty($username)||empty($password))
+    {
+        if (preg_match("/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i", $email) && preg_match("/^[a-zA-Z ]*$/",$firstname))
+        {
+
+            verifylogin($username,$password);
+        }
+
+        else {
+
+        }
+        
+    }
+    else
+    {
+        echo "Enter correct username and password";
+    }
+
+    if (empty($username))
+
+    if (empty($password))
+
+    if (preg_match("/^[a-zA-Z ]*$/",$firstname))
+
+}
+                                
