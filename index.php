@@ -86,6 +86,9 @@
 		</a>
 	</div>
 
+
+
+
 	<footer id="footer">
 		<div class="container">
 			<section>
@@ -179,3 +182,6 @@
 	<script src="js/slider.js"></script>
 </body>
 </html>
+
+
+

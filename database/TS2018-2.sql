@@ -26,6 +26,8 @@ SET time_zone = "+00:00";
 -- Table structure for table `ACADEMIC_RECORD`
 --
 
+CREATE DATABASE TS2018;
+
 CREATE TABLE `ACADEMIC_RECORD` (
   `sID` int(11) DEFAULT NULL,
   `courseCode` varchar(15) DEFAULT NULL,

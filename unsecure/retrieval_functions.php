@@ -6,8 +6,13 @@
  * and open the template in the editor.
  */
 
-require_once dirname(__FILE__) . "/../database/init.php";
+// require_once dirname(__FILE__) . "/../database/init.php";
 require_once dirname(__FILE__) . "/../database/Connection.php";
+
+//check for login registration
+if (isset($_POST['login'])) {
+    verifylogin();
+}
 
 /**
  * 
@@ -53,35 +58,68 @@ function selectUser(string $username) {
     return $assoc_array;
 }
 
+
 function validateLogin(){
+
     $username= $_REQUEST['Username'];
     $password= $_REQUEST['Password'];
 
     $errors = array();
-
-    if (empty($username)||empty($password))
-    {
-        if (preg_match("/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i", $email) && preg_match("/^[a-zA-Z ]*$/",$firstname))
-        {
-
-            verifylogin($username,$password);
-        }
-
-        else {
-
-        }
-        
-    }
-    else
-    {
-        echo "Enter correct username and password";
-    }
+    $string = "";
 
     if (empty($username))
 
+        $error[]= "enter a username";
+
     if (empty($password))
 
-    if (preg_match("/^[a-zA-Z ]*$/",$firstname))
+        $error[]= "enter a password";
+
+    if (preg_match("/^[a-zA-Z0-9]*\.[a-zA-Z0-9]*/",$firstname)!=1)
+
+        $error[] = "enter a valid username";
+
+    for ($i=0; $i<count($error); i++){
+
+        $string .= $error[i];
+    }
+
+    echo $string;
 
 }
-                                
+
+/**
+*verifies login for the staff and parent
+*/
+function verifylogin()
+{
+    global $staffId, $pass;
+    $staffId=$_REQUEST['Id'];
+    $pass=$_REQUEST['password'];
+
+    $sql="SELECT * FROM staff WHERE staffID=?";
+        
+        //create new instance
+    $verlogin=new Connection();
+    $result=$verlogin->query($sql, $staffId);
+    
+        if($result)
+        {
+            $row=$verlogin->fetch();
+            $passwd=$row['Password'];
+
+            if (password_verify($pass, $passwd))
+            {
+                session_start();
+                $_SESSION['userid']=$row['staffID'];
+                $_SESSION['per_id']=$row['per_id'];
+                header("location: ../index.php");
+            }
+            else
+            {
+                echo "login failed";
+            }
+
+        }
+    
+}
