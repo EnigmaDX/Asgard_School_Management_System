@@ -14,24 +14,8 @@
 		<![endif]-->
 	</head>
 	<body onload="loadDoc()">
-		<header id="header">
-			<div class="container">
-				<a href="../index.php" id="logo" title="Asgardian Nursery School">Asgardian Nursery School</a>
-				<div class="menu-trigger"></div>
-				<nav id="menu">
-					<ul>
-						<li><a href="ourPrograms.html">Our Programs</a></li>
-						<li><a href="../pages/admissionspage1.html">Admission</a></li>
-					</ul>
-					<ul>
-						<li><a href="../pages/childinfo.html">Ward Info</a></li>
-						<li><a href="../pages/events.html">Events</a></li>
-					</ul>
-				</nav>
-				<!-- / navigation -->
-			</div>
-			<!-- / container -->
-		</header>
+            <?php require_once '../layout/menu.php'; ?>
+		
 		<!-- / header -->
 		<div class="divider"></div>
 
