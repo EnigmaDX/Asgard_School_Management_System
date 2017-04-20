@@ -1,9 +1,6 @@
-<?php require dirname(__FILE__).'/../controller/define.php'; ?>
+<?php require_once dirname(__FILE__).'/../controller/define.php'; ?>
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
 <body>
 	<header id="header">
 		<div class="container">
