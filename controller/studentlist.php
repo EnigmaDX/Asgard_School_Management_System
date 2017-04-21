@@ -26,8 +26,8 @@ if(isset($_GET['searchtxt']))
 	{
 		//display list in a table
 		$output .= '
-		<div class="table-responsive">
-			<table class="table table bordered">
+		<div class="pp">
+			<table class="stable">
 				<tr>
 					<th>SID</th>
 					<th>First Name</th>
@@ -41,6 +41,7 @@ if(isset($_GET['searchtxt']))
 
 					$output .= '
 					<tr>
+					<a>
 						<td>'.$row["sID"].'</td>
 						<td>'.$row["sFirstName"].'</td>
 						<td>'.$row["sMiddleInitial"].'</td>
@@ -48,6 +49,7 @@ if(isset($_GET['searchtxt']))
 						<td>'.$row["sGender"].'</td>
 						<td>'.$row["sPlaceOfBirth"].'</td>
 						<td>'.$row["sNationality"].'</td>
+					</a>
 					</tr>
 					';
 				}

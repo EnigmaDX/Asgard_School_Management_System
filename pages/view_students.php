@@ -36,14 +36,15 @@
 		<div class="divider"></div>
 
 		<div class="container">
-			<h2 align="center">STUDENTS' LIST<br />
+			<h2 id="stlist" align="center">STUDENTS' LIST<br />
+
 			<div class="form-group">
 				<div class="input-group">
-					<span class="input-group-addon">Search</span>
-
+				<div id="ss">
 					<form method="GET" action=""> 
 						<input type="text" name="searchtxt" id="searchtxt" placeholder="Search by Student Name" onkeyup="loadDoc()" class="form-control"  autofocus />
 					</form>
+				</div>
 					
 				</div>
 			</div>

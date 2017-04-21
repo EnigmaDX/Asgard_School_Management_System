@@ -166,17 +166,19 @@ a:hover {
 #menuq ul {
 	padding: 0 80px;
 	display: inline-block;
+	color: white;
 }
 
 #menuq li {
 	float: left;
 	padding: 0 20px;
+	color: white;
 }
 
 #menuq a {
 	font-size: 21px;
 	line-height: 28px;
-	color: #8c929c;
+	color: white;
 	font-family: 'BebasNeue';
 	font-weight: bold;
 	display: block;
@@ -1218,6 +1220,7 @@ th {
 	.menu-trigg {
 		background-image: url(../images/bg_menu_trigger@2x.png) !important;
 		background-size: 10px 10px;
+		color: white;
 	}
 	
 }
