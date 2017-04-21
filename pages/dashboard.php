@@ -18,10 +18,10 @@
             <div>
                 <nav class="nav-sidebar left">
                     <ul>
-                        <li><a href="https://www.google.com">PROFILE</a></li>
-                        <li><a href="https://www.google.com">WARD(S)</a></li>
-                        <li><a href="https://www.google.com">FINANCIAL</a></li>
-                        <li><a href="https://www.google.com">INSTRUCTORS</a></li>
+                        <li><a href="https://www.google.com" id="profile">PROFILE</a></li>
+                        <li><a href="https://www.google.com" id="ward">WARD (S)</a></li>
+                        <li><a href="https://www.google.com" id="financial">FINANCIAL</a></li>
+                        <li><a href="https://www.google.com" id="instructors">INSTRUCTORS</a></li>
                     </ul>
                 </nav>
             </div>

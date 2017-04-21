@@ -212,8 +212,8 @@ a:hover {
 
 #menu a {
     font-size: 21px;
-    line-height: 28px;
     color: #8c929c;
+    line-height: 28px;
     font-family: 'BebasNeue';
     display: block;
 }
@@ -1640,12 +1640,15 @@ a.btn.blue,
     text-decoration: none;
     padding: 30px 0;
     text-align: center;
-    color: #fff;
-    /*flex: 1 0 20%;*/
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #8c929c;
     flex: 1 0 30%;
+    font-size: 21px;
+    color: #8c929c;
 }
 
+.nav-sidebar a:hover {
+    color: #008bc4;
+}
 .nav-sidebar li{
     list-style-type: none;
     display: flex;
@@ -1663,6 +1666,7 @@ a.btn.blue,
 #wrapper{
     display: flex;
     width: 100%;
+    font-family: 'BebasNeue';
 }
 
 .left, .right{
@@ -1678,4 +1682,9 @@ a.btn.blue,
 .right{
     flex: 1 0 70%;
     background: red;
+}
+
+.left #profile{
+    background: url(../images/profile_white_24dp_2x.png) no-repeat;
+    
 }
