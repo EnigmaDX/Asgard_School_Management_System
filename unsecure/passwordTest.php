@@ -1,5 +1,5 @@
 <?php
-	$pass=password_hash('Teacher', PASSWORD_DEFAULT);
+	$pass=password_hash('Parent', PASSWORD_DEFAULT);
 	echo $pass;
 
 	//everyone with status id=1 password is teacher

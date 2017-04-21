@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 07, 2017 at 08:53 PM
+-- Generation Time: Apr 20, 2017 at 08:05 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -15,7 +15,6 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
-
 
 --
 -- Database: `TS2018`
@@ -29,7 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `ACADEMIC_RECORD` (
   `sID` int(11) DEFAULT NULL,
-  `classCode` varchar(15) DEFAULT NULL,
+  `courseCode` varchar(15) DEFAULT NULL,
   `grade` varchar(2) DEFAULT NULL,
   `term` varchar(15) DEFAULT NULL,
   `year` int(4) DEFAULT NULL
@@ -38,15 +37,41 @@ CREATE TABLE `ACADEMIC_RECORD` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `CLASSES`
+-- Table structure for table `Classes`
 --
 
-CREATE TABLE `CLASSES` (
-  `classCode` varchar(20) NOT NULL,
-  `className` varchar(100) DEFAULT NULL,
-  `classTeacher` varchar(100) DEFAULT NULL,
-  `classVenue` varchar(100) DEFAULT NULL
+CREATE TABLE `Classes` (
+  `className` varchar(50) NOT NULL,
+  `total_no_of_students` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `courses`
+--
+
+CREATE TABLE `courses` (
+  `courseCode` varchar(20) NOT NULL,
+  `courseName` varchar(100) DEFAULT NULL,
+  `courseTeacher` varchar(100) DEFAULT NULL,
+  `courseVenue` varchar(100) DEFAULT NULL,
+  `class` varchar(50) NOT NULL,
+  `grade` varchar(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+
+--
+-- Dumping data for table `courses`
+--
+
+INSERT INTO `courses` (`courseCode`, `courseName`, `courseTeacher`, `courseVenue`, `class`, `grade`) VALUES
+('CS101', 'ICT', 'Mr. Spio', 'Room 8', 'nursery1', ''),
+('ENG111', 'Phonetics', 'Ms. Whyte', 'Room 12', '', ''),
+('ENG112', 'English Grammar', 'Ms. Kwarteng', 'Room 2', '', ''),
+('HIS111', 'Basic History', 'Mr. Higgins-Clark', 'Room 4', '', ''),
+('MATH111', 'Nursery Mathematics', 'Mr. Frenchie', 'Room 1', '', ''),
+('MATH112', 'Kindergarten Mathematics', 'Ms. Kingsley', 'Room 6', '', ''),
+('PE111', 'Physical Education', 'Mr. Owusu', 'Track Field 1', '', '');
 
 -- --------------------------------------------------------
 
@@ -55,7 +80,7 @@ CREATE TABLE `CLASSES` (
 --
 
 CREATE TABLE `COURSE_TEACHERS` (
-  `classCode` varchar(20) DEFAULT NULL,
+  `courseCode` varchar(20) DEFAULT NULL,
   `staffID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -98,9 +123,12 @@ CREATE TABLE `PARENT_OR_GUARDIAN` (
   `pId` int(11) NOT NULL,
   `firstName` varchar(20) DEFAULT NULL,
   `lastName` varchar(20) DEFAULT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
   `gender` varchar(2) DEFAULT NULL,
   `phoneNum` int(10) DEFAULT NULL,
-  `wardID` int(11) DEFAULT NULL
+  `wardID` int(11) DEFAULT NULL,
+  `status_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -111,6 +139,8 @@ CREATE TABLE `PARENT_OR_GUARDIAN` (
 
 CREATE TABLE `STAFF` (
   `staffID` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(100) NOT NULL,
   `staffFName` varchar(20) DEFAULT NULL,
   `staffLName` varchar(50) DEFAULT NULL,
   `staffNum` int(10) DEFAULT NULL,
@@ -143,8 +173,17 @@ CREATE TABLE `STUDENT` (
   `sGender` varchar(1) DEFAULT NULL,
   `sDateOfBirth` date DEFAULT NULL,
   `sPlaceOfBirth` varchar(150) DEFAULT NULL,
-  `sNationality` varchar(80) DEFAULT NULL
+  `sNationality` varchar(80) DEFAULT NULL,
+  `class` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `STUDENT`
+--
+
+INSERT INTO `STUDENT` (`sID`, `sFirstName`, `sMiddleInitial`, `sLastName`, `sGender`, `sDateOfBirth`, `sPlaceOfBirth`, `sNationality`, `class`) VALUES
+(0, 'Rita', 'F', 'Polinski', 'F', '2008-12-05', 'Arizona', 'French', ''),
+(1, 'Nana', 'S', 'Bentil', 'F', '0000-00-00', 'Accra', 'Ghanaian', 'kindergart');
 
 -- --------------------------------------------------------
 
@@ -154,8 +193,15 @@ CREATE TABLE `STUDENT` (
 
 CREATE TABLE `STUDENT_CLASSES` (
   `sID` int(11) DEFAULT NULL,
-  `classCode` varchar(20) DEFAULT NULL
+  `courseCode` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `STUDENT_CLASSES`
+--
+
+INSERT INTO `STUDENT_CLASSES` (`sID`, `courseCode`) VALUES
+(0, 'ENG112');
 
 --
 -- Indexes for dumped tables
@@ -166,20 +212,20 @@ CREATE TABLE `STUDENT_CLASSES` (
 --
 ALTER TABLE `ACADEMIC_RECORD`
   ADD KEY `sID` (`sID`),
-  ADD KEY `classCode` (`classCode`);
+  ADD KEY `academic_record_ibfk_2` (`courseCode`);
 
 --
--- Indexes for table `CLASSES`
+-- Indexes for table `courses`
 --
-ALTER TABLE `CLASSES`
-  ADD PRIMARY KEY (`classCode`);
+ALTER TABLE `courses`
+  ADD PRIMARY KEY (`courseCode`);
 
 --
 -- Indexes for table `COURSE_TEACHERS`
 --
 ALTER TABLE `COURSE_TEACHERS`
-  ADD KEY `classCode` (`classCode`),
-  ADD KEY `staffID` (`staffID`);
+  ADD KEY `staffID` (`staffID`),
+  ADD KEY `course_teachers_ibfk_1` (`courseCode`);
 
 --
 -- Indexes for table `HEALTH_RECORD`
@@ -200,7 +246,8 @@ ALTER TABLE `PARENT_CHILD`
 --
 ALTER TABLE `PARENT_OR_GUARDIAN`
   ADD PRIMARY KEY (`pId`),
-  ADD KEY `wardID` (`wardID`);
+  ADD KEY `wardID` (`wardID`),
+  ADD KEY `status_id` (`status_id`);
 
 --
 -- Indexes for table `STAFF`
@@ -227,7 +274,7 @@ ALTER TABLE `STUDENT`
 --
 ALTER TABLE `STUDENT_CLASSES`
   ADD KEY `sID` (`sID`),
-  ADD KEY `classCode` (`classCode`);
+  ADD KEY `student_classes_ibfk_2` (`courseCode`);
 
 --
 -- Constraints for dumped tables
@@ -238,13 +285,13 @@ ALTER TABLE `STUDENT_CLASSES`
 --
 ALTER TABLE `ACADEMIC_RECORD`
   ADD CONSTRAINT `academic_record_ibfk_1` FOREIGN KEY (`sID`) REFERENCES `STUDENT` (`sID`),
-  ADD CONSTRAINT `academic_record_ibfk_2` FOREIGN KEY (`classCode`) REFERENCES `CLASSES` (`classCode`);
+  ADD CONSTRAINT `academic_record_ibfk_2` FOREIGN KEY (`courseCode`) REFERENCES `courses` (`courseCode`);
 
 --
 -- Constraints for table `COURSE_TEACHERS`
 --
 ALTER TABLE `COURSE_TEACHERS`
-  ADD CONSTRAINT `course_teachers_ibfk_1` FOREIGN KEY (`classCode`) REFERENCES `CLASSES` (`classCode`),
+  ADD CONSTRAINT `course_teachers_ibfk_1` FOREIGN KEY (`courseCode`) REFERENCES `courses` (`courseCode`),
   ADD CONSTRAINT `course_teachers_ibfk_2` FOREIGN KEY (`staffID`) REFERENCES `STAFF` (`staffID`);
 
 --
@@ -264,7 +311,8 @@ ALTER TABLE `PARENT_CHILD`
 -- Constraints for table `PARENT_OR_GUARDIAN`
 --
 ALTER TABLE `PARENT_OR_GUARDIAN`
-  ADD CONSTRAINT `parent_or_guardian_ibfk_1` FOREIGN KEY (`wardID`) REFERENCES `STUDENT` (`sID`);
+  ADD CONSTRAINT `parent_or_guardian_ibfk_1` FOREIGN KEY (`wardID`) REFERENCES `STUDENT` (`sID`),
+  ADD CONSTRAINT `parent_or_guardian_ibfk_2` FOREIGN KEY (`status_id`) REFERENCES `STATUS` (`status_id`);
 
 --
 -- Constraints for table `STAFF`
@@ -277,7 +325,7 @@ ALTER TABLE `STAFF`
 --
 ALTER TABLE `STUDENT_CLASSES`
   ADD CONSTRAINT `student_classes_ibfk_1` FOREIGN KEY (`sID`) REFERENCES `STUDENT` (`sID`),
-  ADD CONSTRAINT `student_classes_ibfk_2` FOREIGN KEY (`classCode`) REFERENCES `CLASSES` (`classCode`);
+  ADD CONSTRAINT `student_classes_ibfk_2` FOREIGN KEY (`courseCode`) REFERENCES `courses` (`courseCode`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

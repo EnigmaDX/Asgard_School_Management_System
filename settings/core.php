@@ -8,8 +8,8 @@
 session_start();
 
 function verify_login() {
-    if (!isset($_SESSION['suser']) || empty($_SESSION['suser'])) {
-        header('Location: login/index.php');
+    if (!isset($_SESSION['userid']) || empty($_SESSION['userid'])) {
+        header('Location: ../index.php');
     }
 }
 
@@ -26,9 +26,9 @@ function getHeader($permission) {
         case 2:
             require_once $_SERVER['DOCUMENT_ROOT'] . 'classproject2017/layout/student_header.php';
             break;
-        case 3:
-            require_once $_SERVER['DOCUMENT_ROOT'] . 'classproject2017/layout/faculty_header.php';
-            break;
+        // case 3:
+        //     require_once $_SERVER['DOCUMENT_ROOT'] . 'classproject2017/layout/faculty_header.php';
+        //     break;
     }
 }
 

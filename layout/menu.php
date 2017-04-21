@@ -1,4 +1,6 @@
+
 <?php require_once dirname(__FILE__).'/../controller/define.php'; ?>
+
 <!DOCTYPE html>
 <html>
 <body>
@@ -21,11 +23,8 @@
 			<!-- / navigation -->
 		</div>
 		<!-- / container -->
-
 	</header>
 	<!-- / header -->
-	
-
 
 </body>
 </html>
