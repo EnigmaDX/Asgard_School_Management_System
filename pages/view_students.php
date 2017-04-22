@@ -24,9 +24,7 @@
 			<div class="form-group">
 				<div class="input-group">
 				<div id="ss">
-					<form method="GET" action=""> 
 					<input type="text" name="searchtxt" id="searchtxt" placeholder="search student by firstname" onkeyup="loadDoc()" class="form-control"  />
-					</form>
 			</div>
 			<br /><br>
 			<div id="result"></div>

@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Asgard School</title>
+        <title>Dashboard-Asgardian Nursery School</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
         <link rel="stylesheet" media="all" href="../css/style.css">
         <!--<link rel="stylesheet" media="all" href="../css/dashboard.css">-->
