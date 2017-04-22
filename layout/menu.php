@@ -18,6 +18,7 @@
 					<li><a href="#fancy" class="get-contact">Contact</a></li>
 
 					<li><a href="#login" class="get-contact">Login</a></li>
+
 				</ul>
 			</nav>
 			<!-- / navigation -->
