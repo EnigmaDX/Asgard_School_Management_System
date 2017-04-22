@@ -11,13 +11,14 @@
 			<nav id="menu">
 				<ul>
 					<li><a href="<?php echo BASE_URL; ?>pages/ourPrograms.php">Our Programs</a></li>
-					<li><a href="<?php echo BASE_URL; ?>pages/admissionspage1.php">Admission</a></li>
+					<li><a href="<?php echo BASE_URL; ?>pages/admissions_homepage.php">Admission</a></li>
 				</ul>
 				<ul>
 					<li><a href="<?php echo BASE_URL; ?>pages/events.php">Events</a></li>
 					<li><a href="#fancy" class="get-contact">Contact</a></li>
 
 					<li><a href="#login" class="get-contact">Login</a></li>
+
 				</ul>
 			</nav>
 			<!-- / navigation -->

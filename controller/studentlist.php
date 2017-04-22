@@ -1,4 +1,8 @@
 <?php
+/**
+*@author Derrick Noi Dowuona
+*@version 1.0
+**/
 
 require_once($_SERVER["DOCUMENT_ROOT"].'/asgardschool/database/Connection.php');
 
@@ -26,8 +30,8 @@ if(isset($_GET['searchtxt']))
 	{
 		//display list in a table
 		$output .= '
-		<div class="table-responsive">
-			<table class="table table bordered">
+		<div class="pp">
+			<table class="stable">
 				<tr>
 					<th>SID</th>
 					<th>First Name</th>
@@ -39,15 +43,18 @@ if(isset($_GET['searchtxt']))
 				</tr>';
 				while ($row = $dbconn->fetch()) {
 
-					$output .= '
-					<tr>
-						<td>'.$row["sID"].'</td>
+					$output .= 
+					'
+					<tr onclick = "move()">
+					
+						<td><a class="linkup">'.$row["sID"].'</a></td>
 						<td>'.$row["sFirstName"].'</td>
 						<td>'.$row["sMiddleInitial"].'</td>
 						<td>'.$row["sLastName"].'</td>
 						<td>'.$row["sGender"].'</td>
 						<td>'.$row["sPlaceOfBirth"].'</td>
-						<td>'.$row["sNationality"].'</td>
+						<td>'.$row["sNationality"].'</td></a>
+					
 					</tr>
 					';
 				}

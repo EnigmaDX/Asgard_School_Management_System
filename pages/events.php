@@ -102,6 +102,8 @@
 	</footer>
 	<!-- / footer -->
 
+
+<!-- pop up dialogue box -->
 	<div id="fancy">
 		<h2>Request information</h2>
 		<form action="#">
