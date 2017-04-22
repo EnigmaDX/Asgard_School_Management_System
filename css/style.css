@@ -260,7 +260,7 @@ a:hover {
     cursor: pointer;
     margin: 0 auto -82px;
     text-indent: -9999em;
-    background: url(../images/fineLogo.png) no-repeat;
+    background: url(../images/AsgrdLogo.png) no-repeat;
     position: relative;
     z-index: 3;
 }
@@ -1805,7 +1805,7 @@ a.btn.blue,
 }
 
 .left, .right{
-    height: 80%
+    height: 79%
 }
 
 .left{
@@ -1816,7 +1816,6 @@ a.btn.blue,
 
 .right{
     flex: 1 0 70%;
-    background: red;
 }
 
 .left #profile{
