@@ -139,11 +139,3 @@ function validateIndex()
      window.location.href = "../pages/admissionspage2.php";
    }
 
-
-
-
-
-   function validatePage2()
-   {
-
-    }
