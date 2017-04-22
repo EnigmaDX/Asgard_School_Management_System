@@ -47,7 +47,7 @@ q:before, q:after {
     content: none;
 }
 
-<<<<<<< HEAD
+
 
 
 #stlist {
@@ -56,11 +56,12 @@ q:before, q:after {
 	line-height: 30px;
 	color: white;
 	font-family: 'BebasNeue';
-=======
+}
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
->>>>>>> 81670d870754e52b33759753cf7e6b1fa829bddc
+
 }
 #searchtxt {
 	width: 100%;
@@ -82,15 +83,16 @@ table {
     width: 50%;
     }
 
-<<<<<<< HEAD
+
 /*------------------------student table---------------------*/
 #result {
 	font-family: 'BebasNeue';
-=======
+}
+
 a[href], label[for], select, 
 input[type=checkbox], input[type=radio] {
     cursor: pointer;
->>>>>>> 81670d870754e52b33759753cf7e6b1fa829bddc
+
 }
 .stable {
 	border: 2px solid red;
@@ -118,15 +120,15 @@ input[type=checkbox], input[type=radio] {
 	border: 2px solid white;
 	background-color: #b3b3b3;
 	border-right-color: white;
+}
 
-<<<<<<< HEAD
-=======
+
 button, input[type=button], input[type=image], 
 input[type=reset], input[type=submit] {
     padding: 0;
     overflow: visible;
     cursor: pointer;
->>>>>>> 81670d870754e52b33759753cf7e6b1fa829bddc
+
 }
 
 .linkup:hover {
@@ -1103,7 +1105,7 @@ a.btn.blue,
 }
 
 #login .cent {
-	padding: 30px, 60px;
+	padding: 30px 60px;
 	background-color: lightblue;
 }
 
