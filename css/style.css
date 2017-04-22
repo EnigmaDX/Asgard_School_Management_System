@@ -1685,6 +1685,18 @@ a.btn.blue,
 }
 
 .left #profile{
-    background: url(../images/profile_white_24dp_2x.png) no-repeat;
+    background: url(../images/ic_person_white_48dp_1x.png) 25px 20px no-repeat;
     
+}
+
+.left #financial{
+    background: url(../images/ic_monetization_on_white_48dp_1x.png) 20px 20px no-repeat;
+}
+
+.left #ward{
+    background: url(../images/ic_people_white_48dp_1x.png) 22px 20px no-repeat;
+}
+
+.left #instructors{
+    background: url(../images/ic_supervisor_account_white_48dp_1x.png) 21px 20px no-repeat;
 }

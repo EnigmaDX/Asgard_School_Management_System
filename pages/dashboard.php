@@ -21,7 +21,7 @@
                         <li><a href="https://www.google.com" id="profile">PROFILE</a></li>
                         <li><a href="https://www.google.com" id="ward">WARD (S)</a></li>
                         <li><a href="https://www.google.com" id="financial">FINANCIAL</a></li>
-                        <li><a href="https://www.google.com" id="instructors">INSTRUCTORS</a></li>
+                        <li><a href="https://www.google.com" id="instructors">TEACHER</a></li>
                     </ul>
                 </nav>
             </div>
