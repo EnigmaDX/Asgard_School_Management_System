@@ -28,7 +28,7 @@
 	</div>
 
 	<div id = "mid">
-		<form method = "post" action = "admissionSubmit.php" name = "form">
+		<form method = "post" action = "admissionsSubmit.php" name = "form">
 			Child's Blood Type: <input type = "text" name = "bloodType" class = "form-control">
 
 <!--contact information -->
