@@ -14,8 +14,6 @@
 	</head>
 	<body onload="loadDoc()">
 
-	 <?php require_once('../layout/menu.php'); ?>
-		<div class="divider"></div>
 
 		<div class="container">
 			<h2 id="stlist" align="center">STUDENTS' LIST</h2><br/>

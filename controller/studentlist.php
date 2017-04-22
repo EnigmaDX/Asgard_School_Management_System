@@ -35,7 +35,7 @@ if(isset($_GET['searchtxt']))
 				<tr>
 					<th>SID</th>
 					<th>First Name</th>
-					<th>Middle Name (Initial)</th>
+					<th>Middle Name (I)</th>
 					<th>Last Name</th>
 					<th>Gender</th>
 					<th>Place of Birth</th>
