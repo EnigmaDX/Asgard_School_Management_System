@@ -30,7 +30,7 @@
   <div>
     <p>
       We at Asgardian Nursery School would very much like to have you and your ward as part of our family. <br><br>
-      If you want to join us, you can apply online <a href = "<?php echo SERVER_BASE_URL; ?>pages/admissionspage1.php">here</a>
+      If you want to join us, you can apply online <a href = "<?php echo BASE_URL; ?>pages/admissionspage1.php">here</a>
     </p>
   </div>
 
