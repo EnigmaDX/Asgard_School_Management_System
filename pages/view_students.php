@@ -15,7 +15,6 @@
 	<body onload="loadDoc()">
 
 	 <?php require_once('../layout/menu.php'); ?>
-
 		<div class="divider"></div>
 
 		<div class="container">

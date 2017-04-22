@@ -64,7 +64,7 @@
 			<aside id="sidebar">
 				<h2>Event calendar</h2>
 				
-				<iframe src="https://calendar.google.com/calendar/embed?src=eegtmn9olipfpn0h139cb6qi4s%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="450" height="600" frameborder="0" scrolling="no" margin-right:"0px";>
+				<iframe src="https://calendar.google.com/calendar/embed?src=eegtmn9olipfpn0h139cb6qi4s%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="500" height="600" frameborder="0" scrolling="no" margin-right:"0px";>
 					
 				</iframe>
 			</aside>
