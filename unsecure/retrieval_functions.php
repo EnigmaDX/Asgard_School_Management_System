@@ -65,9 +65,10 @@ function verifylogin()
 {
     global $staffId, $pass;
     $staffId=$_REQUEST['Id'];
+    $parentId=$_REQUEST['Id'];
     $pass=$_REQUEST['password'];
 
-    $sql="SELECT * FROM staff WHERE staffID=?";
+    $sql="SELECT * FROM staff, parent_or_guardian WHERE staffID=? OR pId=? ";
         
         //create new instance
     $verlogin=new Connection();
@@ -81,9 +82,16 @@ function verifylogin()
             if (password_verify($pass, $passwd))
             {
                 session_start();
-                $_SESSION['userid']=$row['staffID'];
-                $_SESSION['per_id']=$row['per_id'];
-                header("location: ../index.php");
+                if($_SESSION['userid']=$row['staffID'] $$ $_SESSION['per_id']=$row['per_id'])
+                {
+                // $_SESSION['userid']=$row['staffID'];
+                // $_SESSION['per_id']=$row['per_id'];
+                    header("location: ../index.php");
+                }
+                else if($_SESSION['userid']=$row['pId'] $$ $_SESSION['per_id']=$row['per_id'])
+                {
+                    header("location: ../index.php");
+                }
             }
             else
             {
