@@ -12,44 +12,36 @@
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
+<!-- 		<style type="text/css">
+			.stable th {
+	background-color: #2c4167;
+	padding: 50px;
+	font-size: 250%;
+	border-right-color: white;
+	color: white;
+	font-family: 'BebasNeue';
+}
+		</style> -->
 	</head>
 	<body onload="loadDoc()">
-		<header id="header">
-			<div class="container">
-				<a href="../index.php" id="logo" title="Asgardian Nursery School">Asgardian Nursery School</a>
-				<div class="menu-trigger"></div>
-				<nav id="menu">
-					<ul>
-						<li><a href="ourPrograms.html">Our Programs</a></li>
-						<li><a href="../pages/admissionspage1.html">Admission</a></li>
-					</ul>
-					<ul>
-						<li><a href="../pages/childinfo.html">Ward Info</a></li>
-						<li><a href="../pages/events.html">Events</a></li>
-					</ul>
-				</nav>
-				<!-- / navigation -->
-			</div>
-			<!-- / container -->
-		</header>
-		<!-- / header -->
+
+	 <?php require_once('../layout/menu.php'); ?>
+	 
 		<div class="divider"></div>
 
 		<div class="container">
-			<h2 id="stlist" align="center">STUDENTS' LIST<br />
+			<h2 id="stlist" align="center">STUDENTS' LIST</h2><br/>
 
 			<div class="form-group">
 				<div class="input-group">
 				<div id="ss">
 					<form method="GET" action=""> 
-						<input type="text" name="searchtxt" id="searchtxt" placeholder="Search by Student Name" onkeyup="loadDoc()" class="form-control"  autofocus />
+					<input type="text" name="searchtxt" id="searchtxt" placeholder="search student by firstname" onkeyup="loadDoc()" class="form-control"  />
 					</form>
-				</div>
-					
-				</div>
 			</div>
-			<br />
+			<br /><br>
 			<div id="result"></div>
+		</div>
 		</div>
 
 
@@ -61,6 +53,14 @@
 		<script src="../js/main.js"></script>
 		
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<script>
+
+function move(){
+
+	window.location = 'childinfo.php';
+}
+		</script>
 
 	</body>
 	

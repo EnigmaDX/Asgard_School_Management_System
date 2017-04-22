@@ -12,3 +12,4 @@ function loadDoc()
 	xhttp.open('GET','../controller/studentlist.php?searchtxt=' + userInput, true);
 	xhttp.send();    
 }
+
