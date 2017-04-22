@@ -11,17 +11,16 @@
     <body>
 
 
-
-        <div style="height: 50px;"></div>
+        <div class="divider"></div>
         
         <div id="wrapper">
             <div>
                 <nav class="nav-sidebar left">
                     <ul>
-                        <li><a href="https://www.google.com" id="profile">PROFILE</a></li>
-                        <li><a href="https://www.google.com" id="ward">WARD (S)</a></li>
-                        <li><a href="https://www.google.com" id="financial">FINANCIAL</a></li>
-                        <li><a href="https://www.google.com" id="instructors">TEACHER</a></li>
+                        <li><a href="pdash/profile.php" id="profile">PROFILE</a></li>
+                        <li><a href="pdash/ward.php" id="ward">WARD (S)</a></li>
+                        <li><a href="pdash/financial.php" id="financial">FINANCIAL</a></li>
+                        <li><a href="pdash/teacher.php" id="teacher">TEACHER</a></li>
                     </ul>
                 </nav>
             </div>

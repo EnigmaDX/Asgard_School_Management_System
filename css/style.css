@@ -1795,6 +1795,7 @@ a.btn.blue,
 
 .right{
     flex: 1 0 70%;
+    font: 16px/30px Arial, Helvetica, sans-serif;
 }
 
 .left #profile{
