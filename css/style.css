@@ -64,10 +64,10 @@ table {
 
 }
 #searchtxt {
-	width: 100%;
-	font-size: 30px;
-	padding-left: 100px;
-	 width: 130px;
+    width: 100%;
+    font-size: 30px;
+    padding-left: 100px;
+    width: 130px;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
@@ -81,7 +81,7 @@ table {
 }
 #searchtxt:focus {
     width: 50%;
-    }
+}
 
 
 /*------------------------student table---------------------*/
@@ -95,24 +95,24 @@ input[type=checkbox], input[type=radio] {
 
 }
 .stable {
-	border: 2px solid red;
-	padding-left: 400px;
-	/*border-collapse: collapse;	*/
-	overflow: auto;
-	background-color: #2c4167;
+    border: 2px solid red;
+    padding-left: 400px;
+    /*border-collapse: collapse;	*/
+    overflow: auto;
+    background-color: #2c4167;
 }
 .stable th {
-	background-color: #2c4167;
-	padding: 100px;
-	font-size: 250%;
-	border: 2px solid white;	
-	color: white;
-	font-family: 'BebasNeue';
+    background-color: #2c4167;
+    padding: 100px;
+    font-size: 250%;
+    border: 2px solid white;	
+    color: white;
+    font-family: 'BebasNeue';
 }
 .stable th{
-	padding: 5px;
-	/*border-collapse: collapse;*/
-	border-right-color: white;
+    padding: 5px;
+    /*border-collapse: collapse;*/
+    border-right-color: white;
 }
 .stable td {
 	font-size: 210%;
@@ -132,7 +132,7 @@ input[type=reset], input[type=submit] {
 }
 
 .linkup:hover {
-cursor: pointer;
+    cursor: pointer;
 }
 
 
@@ -1094,14 +1094,14 @@ a.btn.blue,
 
 /*login pop-up box*/
 #login {
-	display: none;
-	padding: 19px 22px 26px 22px;
+    display: none;
+    padding: 19px 22px 26px 22px;
 }
 
 #login h2 {
-	font-size: 48px;
-	line-height: 48px;
-	padding-bottom: 33px;
+    font-size: 48px;
+    line-height: 48px;
+    padding-bottom: 33px;
 }
 
 #login .cent {
@@ -1112,48 +1112,48 @@ a.btn.blue,
 
 
 #login .subject {
-	background-position: 21px -85px;
+    background-position: 21px -85px;
 }
 
 #login .question {
-	background-position: 21px -137px;
-	height: 172px;
+    background-position: 21px -137px;
+    height: 172px;
 }
 
 #login input {
-	height: 52px;
-	font-size: 14px;
-	color: #7e8798;
-	border: none;
-	background: none;
-	width: 100%;
-	padding: 16px 10px 16px 60px;
+    height: 52px;
+    font-size: 14px;
+    color: #7e8798;
+    border: none;
+    background: none;
+    width: 100%;
+    padding: 16px 10px 16px 60px;
 }
 
 #login textarea {
-	height: 172px;
-	font-size: 14px;
-	color: #7e8798;
-	border: none;
-	background: none;
-	width: 100%;
-	padding: 18px 10px 18px 60px;
-	resize: none;
+    height: 172px;
+    font-size: 14px;
+    color: #7e8798;
+    border: none;
+    background: none;
+    width: 100%;
+    padding: 18px 10px 18px 60px;
+    resize: none;
 }
 
 #login textarea::-webkit-input-placeholder,
 #login input::-webkit-input-placeholder {
-	color:#7e8798;
+    color:#7e8798;
 }
 
 #login .btn-holder {
-	padding-top: 32px;
+    padding-top: 32px;
 }
 
 #login .btn {
-	width: 230px;
-	height: 52px;
-	line-height: 52px;
+    width: 230px;
+    height: 52px;
+    line-height: 52px;
 }
 
 
@@ -1795,7 +1795,7 @@ a.btn.blue,
 
 .main-content{
     /*The style of the content on the right goes here*/
-    
+
 }
 
 #wrapper{
@@ -1820,6 +1820,18 @@ a.btn.blue,
 }
 
 .left #profile{
-    background: url(../images/profile_white_24dp_2x.png) no-repeat;
-    
+    background: url(../images/ic_person_white_48dp_1x.png) 25px 20px no-repeat;
+
+}
+
+.left #financial{
+    background: url(../images/ic_monetization_on_white_48dp_1x.png) 20px 20px no-repeat;
+}
+
+.left #ward{
+    background: url(../images/ic_people_white_48dp_1x.png) 22px 20px no-repeat;
+}
+
+.left #instructors{
+    background: url(../images/profile_white_24dp_2x.png) 23px 20px no-repeat;
 }
