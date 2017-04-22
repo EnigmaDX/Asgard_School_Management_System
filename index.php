@@ -6,6 +6,8 @@
 	<title>Asgardian Nursery School</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 	<link rel="stylesheet" media="all" href="css/style_homepage.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -131,7 +133,7 @@
 			<div class="left">
 				<fieldset class="mail"><input placeholder="Email address..." type="text"></fieldset>
 				<fieldset class="name"><input placeholder="Name..." type="text"></fieldset>
-				<!--<fieldset class="subject"><select><option>Choose subject...</option><option>Choose subject...</option><option>Choose subject...</option></select></fieldset>-->
+				<fieldset class="subject"><select><option>Choose subject...</option><option>Choose subject...</option><option>Choose subject...</option></select></fieldset>
 			</div>
 			<div class="right">
 				<fieldset class="question"><textarea placeholder="Question..."></textarea></fieldset>
@@ -140,6 +142,34 @@
 				<button class="btn blue" type="submit">Send request</button>
 			</div>
 		</form>
+	</div>
+
+	<div id="login">
+		<div class="panel col-md-6 col-md-offset-3">
+			<div >
+			<h3>Parent/Staff Login</h3>
+		</div>
+		<div class="col-md-6 col-md-offset-3 panel-body">
+			<form>
+			    <div class="input-group">
+			      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+			      <input id="id" type="text" class="form-control" name="Id" placeholder="Id">
+			    </div>
+			    <br>
+			    <div class="input-group">
+			      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+			      <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+			    </div>
+			    <br>
+			    <!-- <div class="input-group"> -->
+			    	<a href="pages/childinfo.php"><button type="button" class="btn btn-primary btn-block">Login</button></a>
+			    <!-- </div> -->
+	  		</form>
+		</div>
+		<div class="panel-footer col-md-6 col-md-offset-3">
+			<a href="#">Forgot Passsword?</a>
+		</div>
+		</div>
 	</div>
 
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>

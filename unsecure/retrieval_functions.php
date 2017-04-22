@@ -6,8 +6,13 @@
  * and open the template in the editor.
  */
 
-require_once dirname(__FILE__) . "/../database/init.php";
+// require_once dirname(__FILE__) . "/../database/init.php";
 require_once dirname(__FILE__) . "/../database/Connection.php";
+
+//check for login registration
+if (isset($_POST['login'])) {
+    verifylogin();
+}
 
 /**
  * 
@@ -51,4 +56,40 @@ function selectUser(string $username) {
     mysqli_close($dbCon);
     //return assoc array
     return $assoc_array;
+}
+
+/**
+*verifies login for the staff and parent
+*/
+function verifylogin()
+{
+    global $staffId, $pass;
+    $staffId=$_REQUEST['Id'];
+    $pass=$_REQUEST['password'];
+
+    $sql="SELECT * FROM staff WHERE staffID=?";
+        
+        //create new instance
+    $verlogin=new Connection();
+    $result=$verlogin->query($sql, $staffId);
+    
+        if($result)
+        {
+            $row=$verlogin->fetch();
+            $passwd=$row['Password'];
+
+            if (password_verify($pass, $passwd))
+            {
+                session_start();
+                $_SESSION['userid']=$row['staffID'];
+                $_SESSION['per_id']=$row['per_id'];
+                header("location: ../index.php");
+            }
+            else
+            {
+                echo "login failed";
+            }
+
+        }
+    
 }

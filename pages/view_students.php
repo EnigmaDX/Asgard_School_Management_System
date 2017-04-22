@@ -12,27 +12,42 @@
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
+<!-- 		<style type="text/css">
+			.stable th {
+	background-color: #2c4167;
+	padding: 50px;
+	font-size: 250%;
+	border-right-color: white;
+	color: white;
+	font-family: 'BebasNeue';
+}
+		</style> -->
 	</head>
 	<body onload="loadDoc()">
+<<<<<<< HEAD
+
+	 <?php require_once('../layout/menu.php'); ?>
+	 
+=======
             <?php require_once '../layout/menu.php'; ?>
 		
 		<!-- / header -->
+>>>>>>> 81670d870754e52b33759753cf7e6b1fa829bddc
 		<div class="divider"></div>
 
 		<div class="container">
-			<h2 align="center">STUDENTS' LIST<br />
+			<h2 id="stlist" align="center">STUDENTS' LIST</h2><br/>
+
 			<div class="form-group">
 				<div class="input-group">
-					<span class="input-group-addon">Search</span>
-
+				<div id="ss">
 					<form method="GET" action=""> 
-						<input type="text" name="searchtxt" id="searchtxt" placeholder="Search by Student Name" onkeyup="loadDoc()" class="form-control"  autofocus />
+					<input type="text" name="searchtxt" id="searchtxt" placeholder="search student by firstname" onkeyup="loadDoc()" class="form-control"  />
 					</form>
-					
-				</div>
 			</div>
-			<br />
+			<br /><br>
 			<div id="result"></div>
+		</div>
 		</div>
 
 
@@ -44,6 +59,14 @@
 		<script src="../js/main.js"></script>
 		
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<script>
+
+function move(){
+
+	window.location = 'childinfo.php';
+}
+		</script>
 
 	</body>
 	
