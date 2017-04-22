@@ -24,15 +24,9 @@
 		</style> -->
 	</head>
 	<body onload="loadDoc()">
-<<<<<<< HEAD
 
 	 <?php require_once('../layout/menu.php'); ?>
 	 
-=======
-            <?php require_once '../layout/menu.php'; ?>
-		
-		<!-- / header -->
->>>>>>> 81670d870754e52b33759753cf7e6b1fa829bddc
 		<div class="divider"></div>
 
 		<div class="container">
