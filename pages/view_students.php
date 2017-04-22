@@ -6,33 +6,16 @@
 	<title>View Students</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 	<link rel="stylesheet" media="all" href="../css/style.css">
-	<link rel="icon" href="favicon.ico">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script type="text/javascript" src="../js/ajax.js"></script>
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-<!-- 		<style type="text/css">
-			.stable th {
-	background-color: #2c4167;
-	padding: 50px;
-	font-size: 250%;
-	border-right-color: white;
-	color: white;
-	font-family: 'BebasNeue';
-}
-		</style> -->
 	</head>
 	<body onload="loadDoc()">
-<<<<<<< HEAD
 
 	 <?php require_once('../layout/menu.php'); ?>
-	 
-=======
-            <?php require_once '../layout/menu.php'; ?>
-		
-		<!-- / header -->
->>>>>>> 81670d870754e52b33759753cf7e6b1fa829bddc
+
 		<div class="divider"></div>
 
 		<div class="container">
@@ -49,6 +32,50 @@
 			<div id="result"></div>
 		</div>
 		</div>
+		<div id="fancy">
+		<h2>Request information</h2>
+		<form action="#">
+			<div class="left">
+				<fieldset class="mail"><input placeholder="Email address..." type="text"></fieldset>
+				<fieldset class="name"><input placeholder="Name..." type="text"></fieldset>
+				<fieldset class="subject"><select><option>Choose subject...</option><option>Choose subject...</option><option>Choose subject...</option></select></fieldset>
+			</div>
+			<div class="right">
+				<fieldset class="question"><textarea placeholder="Question..."></textarea></fieldset>
+			</div>
+			<div class="btn-holder">
+				<button class="btn blue" type="submit">Send request</button>
+			</div>
+		</form>
+	</div>
+
+	<div id="login">
+		<div class="panel col-md-6 col-md-offset-3">
+			<div >
+			<h3>Parent/Staff Login</h3>
+		</div>
+		<div class="col-md-6 col-md-offset-3 panel-body">
+			<form>
+			    <div class="input-group">
+			      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+			      <input id="id" type="text" class="form-control" name="Id" placeholder="Id">
+			    </div>
+			    <br>
+			    <div class="input-group">
+			      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+			      <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+			    </div>
+			    <br>
+			    <!-- <div class="input-group"> -->
+			    	<a href="pages/childinfo.php"><button type="button" class="btn btn-primary btn-block">Login</button></a>
+			    <!-- </div> -->
+	  		</form>
+		</div>
+		<div class="panel-footer col-md-6 col-md-offset-3">
+			<a href="#">Forgot Passsword?</a>
+		</div>
+		</div>
+	</div>
 
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
