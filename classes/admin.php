@@ -39,6 +39,7 @@ class Admin extends User
     return $success;
   }
 
+
   //method to add parent or staff
   public function addUser1($id,$firstname,$lastname,$username,$password,$gender,$phone,$address,$status_id)
   {

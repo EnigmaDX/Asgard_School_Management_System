@@ -14,8 +14,11 @@
 	</head>
 	<body onload="loadDoc()">
 		<?php require_once('../controller/processcrud.php'); ?>
+		<br><br>
 
 		<div class="container">
+		<button class="btn"><a href="#addform">ADD STUDENT TO CLASS</a></button>
+				<button class="btn">REMOVE STUDENT FROM CLASS</button><br><br>
 			<h2 id="stlist" align="center">CURRENT STUDENTS</h2><br/>
 
 			<div class="form-group">
@@ -27,33 +30,6 @@
 			<div id="result"></div>
 		</div>
 		</div>
-		<div id="addform">
-		<h2>ADD STUDENT TO CLASS</h2>
-		<form action="" method="post">
-			<div class="left">
-				<fieldset><input placeholder="ID" type="text" name="id"></fieldset>
-				<fieldset><input placeholder="First Name" type="text" name="fname"></fieldset>
-				<fieldset><input placeholder="Middle Name Initial" type="text" name="mname"></fieldset>
-				<fieldset><input placeholder="Last Name" type="text" name="lname"></fieldset>
-			</div>
-			<div class="right">
-				<fieldset >
-					Gender..<br>
-					<input id="gender" type="radio" value="M" name="gender"<?php if
-					(isset($gender) && $gender=="female") echo "checked";?> value="M">Male
-					<input id="gender" type="radio" value="F" name="gender"<?php if (isset($gender) && $gender=="F") echo "checked";?> value="female">Female
-					<span id="gendEr"></span>
-				<fieldset><input placeholder="DOB" type="text" name="dob"></fieldset>
-				<fieldset><input placeholder="PlaceOB" type="text" name="pob"></fieldset>
-				<fieldset><input placeholder="Nationality" type="text" name="nation"></fieldset>
-				<fieldset><input placeholder="Class" type="text" name="class"></fieldset>
-			</fieldset>
-			</div>
-			<div class="btn-holder">
-				<button class="btn blue" name="add" type="submit">ADD STUDENT</button>
-			</div>
-		</form>
-	</div>
 
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

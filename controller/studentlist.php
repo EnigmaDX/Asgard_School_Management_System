@@ -30,7 +30,6 @@ if(isset($_GET['searchtxt']))
 	{
 		//display list in a table
 		$output .= '
-		<div class="table-responsive">
 			<table class="stable">
 				<tr>
 					<th>SID</th>
@@ -45,15 +44,15 @@ if(isset($_GET['searchtxt']))
 
 					$output .= 
 					'
-					<tr onclick = "move()" target="blank">
-					
+					<tr>
 						<td>'.$row["sID"].'</td>
 						<td>'.$row["sFirstName"].'</td>
 						<td>'.$row["sMiddleInitial"].'</td>
 						<td>'.$row["sLastName"].'</td>
 						<td>'.$row["sGender"].'</td>
 						<td>'.$row["sPlaceOfBirth"].'</td>
-						<td>'.$row["sNationality"].'</td></a>
+						<td>'.$row["sNationality"].'</td>
+						<td><button id="btnx" value>'.$row["sNationality"].'</td></a>
 					
 					</tr>
 					';

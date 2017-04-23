@@ -4,6 +4,7 @@
         <title>Admin-Asgardian Nursery School</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
         <link rel="stylesheet" media="all" href="../css/style.css">
+        <script src="../js/dashboard.js"></script>
         <!--<link rel="stylesheet" media="all" href="../css/dashboard.css">-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
@@ -19,9 +20,9 @@
                 <nav class="nav-sidebar left">
                     <ul>
                         <li><a href="https://www.google.com" id="profile">PROFILE</a></li>
-                        <li><a href="https://www.google.com" id="classinfo">PARENTS</a></li>
-                        <li><a id="students" onclick="studentsURL()">STAFF</a></li>
-                        <li><a href="https://www.google.com" id="instructors">COURSES</a></li>
+                        <li><a onclick="mgstudURL()" id="mgstud">MANAGE STUDENTS</a></li>
+                        <li><a id="mgstaff">MANAGE STAFF</a></li>
+                        <li><a  id="instructors">MANAGE COURSES</a></li>
                     </ul>
                 </nav>
             </div>
@@ -32,6 +33,7 @@
 
         <!-- /#wrapper -->
         <script src="../js/dashboard.js"></script>
+        <script src="../js/ajax.js"></script>
         <script src="../js/sidebar.js"></script>
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script>window.jQuery || document.write("<script src='js/jquery-1.11.1.min.js'>\x3C/script>")</script>

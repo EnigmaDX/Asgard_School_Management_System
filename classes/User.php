@@ -42,25 +42,25 @@ class User extends Connection implements Serializable {
      * @param int $major_id
      * @param int $per_id
      */
-    public function __construct(int $new, string $username, string $fname, string $lname, string $password, string $email, string $gender, int $major_id, int $per_id) {
+    // public function __construct(int $new, string $username, string $fname, string $lname, string $password, string $email, string $gender, int $major_id, int $per_id) {
 
 
-        //values given must be valid
-        $is_valid = $this->is_valid($new, $username, $fname, $lname, $password, $email, $gender, $major_id, $per_id);
-        if ($is_valid) {
-            //all usernames must be lowercase
-            $this->username = strtolower($username);
-            $this->fname = $fname;
-            $this->lname = $lname;
-            $this->password = $password;
-            $this->email = $email;
-            //gender should be uppercase
-            $this->gender = strtoupper($gender);
-            $this->major_id = $major_id;
-            $this->status = DEFAULT_STATUS;
-            $this->per_id = $per_id;
-        }
-    }
+    //     //values given must be valid
+    //     $is_valid = $this->is_valid($new, $username, $fname, $lname, $password, $email, $gender, $major_id, $per_id);
+    //     if ($is_valid) {
+    //         //all usernames must be lowercase
+    //         $this->username = strtolower($username);
+    //         $this->fname = $fname;
+    //         $this->lname = $lname;
+    //         $this->password = $password;
+    //         $this->email = $email;
+    //         //gender should be uppercase
+    //         $this->gender = strtoupper($gender);
+    //         $this->major_id = $major_id;
+    //         $this->status = DEFAULT_STATUS;
+    //         $this->per_id = $per_id;
+    //     }
+    // }
 
     /**
      * 

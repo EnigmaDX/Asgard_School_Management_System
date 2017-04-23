@@ -1439,7 +1439,86 @@ a.btn.blue,
 /***********add student form**********/
 #addform {
 	display: none;
+	padding: 19px 22px 26px 22px;
 }
+
+#addform h2 {
+	font-size: 48px;
+	line-height: 48px;
+	padding-bottom: 33px;
+}
+
+#addform .left {
+	float: left;
+	padding: 0 4px;
+}
+
+#addform .right {
+	float: right;
+	padding: 0 4px;
+}
+
+#addform fieldset {
+	width: 370px;
+	background: #e6e8ec url(../images/ico_form.png) no-repeat 21px 19px;
+	border-radius: 4px;
+	height: 52px;
+	margin-bottom: 8px;
+}
+
+#addform .name {
+	background-position: 21px -33px;
+}
+
+#addform .subject {
+	background-position: 21px -85px;
+}
+
+#addform .question {
+	background-position: 21px -137px;
+	height: 172px;
+}
+
+#addform input {
+	height: 52px;
+	font-size: 14px;
+	color: #7e8798;
+	border: none;
+	background: none;
+	width: 100%;
+	padding: 16px 10px 16px 60px;
+}
+
+#addform textarea {
+	height: 172px;
+	font-size: 14px;
+	color: #7e8798;
+	border: none;
+	background: none;
+	width: 100%;
+	padding: 18px 10px 18px 60px;
+	resize: none;
+}
+
+#addform textarea::-webkit-input-placeholder,
+#addform input::-webkit-input-placeholder {
+	color:#7e8798;
+}
+#addform textarea::-moz-placeholder,
+#addform input::-moz-placeholder {
+	color:#7e8798;
+}
+
+#addform .btn-holder {
+	padding-top: 32px;
+}
+
+#addform .btn {
+	width: 230px;
+	height: 52px;
+	line-height: 52px;
+}
+
 
 /*login pop-up box*/
 #login {
@@ -1513,6 +1592,20 @@ a.btn.blue,
 	font-family: 'BebasNeue';
 }
 
+.btn {
+	font-family: 'BebasNeue';
+	color: white;
+	background-color: #2c4167;
+	font-size: 120%;
+	transition: 0.3s;
+	border: 1px solid #2c4167;
+}
+.btn:hover {
+	color: #2c4167;
+	background-color: white;
+	border: 1px solid #2c4167;
+}
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -1555,6 +1648,7 @@ input[type=checkbox], input[type=radio] {
     /*border-collapse: collapse;	*/
     overflow: auto;
     background-color: #2c4167;
+    transition: 0.4s;
 }
 .stable th {
     background-color: #2c4167;
@@ -1571,9 +1665,10 @@ input[type=checkbox], input[type=radio] {
     border-right-color: white;
 }
 .stable td {
-	font-size: 160%;
+	font-size: 120%;
 	font-family: 'Arial';
 	text-transform: uppercase;
+	color: black;
 	text-align: center;
 	padding: 10px;
 	border: 2px solid white;
@@ -1581,8 +1676,13 @@ input[type=checkbox], input[type=radio] {
 	border-right-color: white;
 }
 
-.stable tr:hover{
+.stable td:hover{
 	background-color: white;
+	color: blue;
+}
+.stable th:hover{
+	background-color: white;
+	color: blue;
 }
 
 
@@ -1593,9 +1693,6 @@ input[type=reset], input[type=submit] {
     cursor: pointer;
 }
 
-.linkup:hover {
-    cursor: pointer;
-}
 
 
 /*------------------------student table---------------------*/
@@ -2278,7 +2375,7 @@ input[type=submit]::-moz-focus-inner {
      background: url(../images/ic_people_white_48dp_1x.png) 22px 20px no-repeat;
  }
  
- .left #teacher{
+ .left #instructors{
      background: url(../images/profile_white_24dp_2x.png) 23px 20px no-repeat;
  }
 
@@ -2297,50 +2394,23 @@ input[type=submit]::-moz-focus-inner {
  	background: url(../images/students2.png) 3px 15px no-repeat;
  }
 
+ /*------------ADMIN VIEW-----------------*/
+ .left #mgstud{
+     background: url(../images/mgst.png) 2px 20px no-repeat;
+ }
+ .left #mgstud:hover{
+     background: url(../images/mgst2.png) 2px 20px no-repeat;
+ }
+
+ .left #mgstaff{
+     background: url(../images/group.png) 0px 20px no-repeat;
+ }
+ .left #mgstaff:hover{
+     background: url(../images/group2.png) 0px 20px no-repeat;
+ }
+
 
  #frame {
  	height: 100%;
  	width: 100%;
  }
-
- /*----------------Parent View------------------*/
- .iframe-wrapper{
-     display: flex;
-     padding: 0 auto;
-     margin: 0 5%;
-     /*height: 100%;*/
-     background: red;
-     justify-content: center;
-     
-     /*flex-wrap: wrap;*/
-     flex-direction: column;
- }
- 
- .personal{
-     display: flex;
-     flex-direction: row;
-     justify-content: center;
-     align-content: space-around;
- }
- 
- .iframe-wrapper #iframe-title{
-     text-decoration: underline;
-     flex: 1 0 5%;
-     height: 30px;
-     border: 1px solid blue;
- }
- 
- .profile-pic{
-     height: 200px;
-     width: 200px;
-     border: 1px solid blue;
- }
- 
- #personal-details{
-     border: 1px solid blue;
-     flex: 1 0 60%;
- }
- 
- #personal-details .name {
-	background-position: 21px -33px;
-}

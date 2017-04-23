@@ -32,6 +32,7 @@
 
         <!-- /#wrapper -->
         <script src="../js/dashboard.js"></script>
+        <script src="../js/ajax.js"></script>
         <script src="../js/sidebar.js"></script>
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script>window.jQuery || document.write("<script src='js/jquery-1.11.1.min.js'>\x3C/script>")</script>
