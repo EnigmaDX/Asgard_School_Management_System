@@ -28,7 +28,7 @@
 	</div>
 
 	<div id = "mid" class="panel">
-		<form method = "post" action = "admissionspage2.php" name = "form">
+		<form method = "post" action = "" name = "form">
 
 <!--personal information -->
 		<div class="form-group col-md-4">
@@ -60,7 +60,7 @@
 		  </div>
 
 		<div class="form-group col-md-4">
-			<span style= 'color:red'>*</span> Date of Birth: <input type = "date" id = "dob" name = "sDateofBirth" class="form-control">
+			<span style= 'color:red'>*</span> Date of Birth: <input type = "date" id = "dob" name = "sDateofBirth" class="form-control" placeholder = "yyyy-mm-dd">
 		  <br><br>
 		</div>
 
