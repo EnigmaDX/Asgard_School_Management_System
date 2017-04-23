@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Asgardian Nursery School</title>
+	<title>Home-Asgardian Nursery School</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 	<link rel="stylesheet" media="all" href="css/style_homepage.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -86,6 +86,9 @@
 		</a>
 	</div>
 
+
+
+
 	<footer id="footer">
 		<div class="container">
 			<section>
@@ -97,10 +100,9 @@
 						<li class="phone last"><a href="#">(971) 536 845 924</a></li>
 					</ul>
 				</article>
-				
 				<article class="col-3">
 					<h3>Social media</h3>
-					<p>Contact us through the following media.</p>
+					<p>You can follow us on social media.</p>
 					<ul>
 						<li class="facebook"><a href="#">Facebook</a></li>
 						<li class="google-plus"><a href="#">Google+</a></li>
@@ -108,24 +110,11 @@
 						<li class="pinterest"><a href="#">Pinterest</a></li>
 					</ul>
 				</article>
-
-				<article class="col-4">
-					<h3>Newsletter</h3>
-					<p>Subscribe if you want to receive letters from us.</p>
-					<form action="#">
-						<input placeholder="Email address..." type="text">
-						<button type="submit">Subscribe</button>
-					</form>
-					<ul>
-						<li><a href="#"></a></li>
-					</ul>
-				</article>
 			</section>
-			<p class="copy">Copyright 2017 Asgardian Nursery School. Created by <a href="https://asgardnursery.wordpress.com/" title="Designed by The Sentinels" target="_blank">The Sentinels</a>. All rights reserved.</p>
+			<p class="copy">Copyright 2017 Asgardian Nursery School. Created by <a href="https://asgardnursery.wordpress.com/" title="Designed by The Sentinels" target="_blank"> The Sentinels</a>. All rights reserved.</p>
 		</div>
 		<!-- / container -->
 	</footer>
-	<!-- / footer -->
 
 	<div id="fancy">
 		<h2>Request information</h2>
@@ -179,3 +168,6 @@
 	<script src="js/slider.js"></script>
 </body>
 </html>
+
+
+

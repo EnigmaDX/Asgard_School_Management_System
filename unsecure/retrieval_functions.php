@@ -58,6 +58,36 @@ function selectUser(string $username) {
     return $assoc_array;
 }
 
+
+function validateLogin(){
+
+    $username= $_REQUEST['Username'];
+    $password= $_REQUEST['Password'];
+
+    $errors = array();
+    $string = "";
+
+    if (empty($username))
+
+        $error[]= "enter a username";
+
+    if (empty($password))
+
+        $error[]= "enter a password";
+
+    if (preg_match("/^[a-zA-Z0-9]*\.[a-zA-Z0-9]*/",$firstname)!=1)
+
+        $error[] = "enter a valid username";
+
+    for ($i=0; $i<count($error); i++){
+
+        $string .= $error[i];
+    }
+
+    echo $string;
+
+}
+
 /**
 *verifies login for the staff and parent
 */
@@ -82,13 +112,13 @@ function verifylogin()
             if (password_verify($pass, $passwd))
             {
                 session_start();
-                if($_SESSION['userid']=$row['staffID'] $$ $_SESSION['per_id']=$row['per_id'])
+                if($_SESSION['userid']=$row['staffID'] && $_SESSION['per_id']=$row['per_id'])
                 {
                 // $_SESSION['userid']=$row['staffID'];
                 // $_SESSION['per_id']=$row['per_id'];
                     header("location: ../index.php");
                 }
-                else if($_SESSION['userid']=$row['pId'] $$ $_SESSION['per_id']=$row['per_id'])
+                else if($_SESSION['userid']=$row['pId'] && $_SESSION['per_id']=$row['per_id'])
                 {
                     header("location: ../index.php");
                 }

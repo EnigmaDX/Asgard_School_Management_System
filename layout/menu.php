@@ -1,5 +1,7 @@
 
-<?php require_once dirname(__FILE__).'/../controller/define.php'; ?>
+<?php require_once dirname(__FILE__).'/../controller/define.php'; 
+$_SESSION['user'] = "user";
+?>
 
 <!DOCTYPE html>
 <html>
@@ -16,8 +18,14 @@
 				<ul>
 					<li><a href="<?php echo BASE_URL; ?>pages/events.php">Events</a></li>
 					<li><a href="#fancy" class="get-contact">Contact</a></li>
-
-					<li><a href="#login" class="get-contact">Login</a></li>
+                                        <?php 
+                                        $base = BASE_URL;
+					if(empty($_SESSION["user"])){
+                                            echo "<li><a href='#login' class='get-contact'>Login</a></li>";
+                                        }else {
+                                            echo "<li><a href='$base./login/logout.php' class='get-contact'>Logout</a></li>";
+                                        }
+                                        ?>
 
 				</ul>
 			</nav>
