@@ -15,10 +15,10 @@ google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
         ['Component', 'Amount (GH₵)'],
-        ['Tuition',   11],
-        ['Feeding',    9],
-        ['Medical',    4],
-        ['Stationery', 6],
+        ['Tuition',   300],
+        ['Feeding',    200],
+        ['Medical',    90],
+        ['Stationery', 50],
     ]);
 
     var options = {

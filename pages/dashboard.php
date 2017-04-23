@@ -29,6 +29,24 @@
             </div>
         </div>
 
+
+        <div id="fancy">
+            <h2>Request information</h2>
+            <form action="#">
+                <div class="left">
+                    <fieldset class="mail"><input placeholder="Email address..." type="text"></fieldset>
+                    <fieldset class="name"><input placeholder="Name..." type="text"></fieldset>
+                    <fieldset class="subject"><select><option>Choose subject...</option><option>Choose subject...</option><option>Choose subject...</option></select></fieldset>
+                </div>
+                <div class="right">
+                    <fieldset class="question"><textarea placeholder="Question..."></textarea></fieldset>
+                </div>
+                <div class="btn-holder">
+                    <button class="btn blue" type="submit">Send request</button>
+                </div>
+            </form>
+        </div>
+
         <!-- /#wrapper -->
         <script src="../js/sidebar.js"></script>
         <script src="../js/dashboard.js"></script>
