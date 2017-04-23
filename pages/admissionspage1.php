@@ -16,41 +16,42 @@
 
 	<?php
 			require_once ('../layout/menu.php');
+			require_once('../classes/admissions.php');
 		?>
 	<div class="divider"></div>
 
 <div id = "midhead">
 	<h1> Hello! Welcome to the Online Admissions Page </h1>
 
-	<h4> Child's Personal Information </h4>
+	<h4><span style= 'color: blue'> Child's Personal Information </span> </h4>
 	<span style= 'color:red'>*</span> Required Fields <br><br>
 	</div>
 
 	<div id = "mid" class="panel">
-		<form method = "post" action = "admissionspage2.html" name = "form">
+		<form method = "post" action = "admissionspage2.php" name = "form">
 
 <!--personal information -->
 		<div class="form-group col-md-4">
-			<span style= 'color:red'>*</span> First Name: <input type = "text" id = "fname" class="form-control">
+			<span style= 'color:red'>*</span> First Name: <input type = "text" id = "fname" name = "sFirstName" class="form-control">
 		</div>
 		<div class="form-group col-md-4">
-			Middle Name: <input type = "text" id= "midname" class="form-control">
+			Middle Name: <input type = "text" id= "midname" name = "sMiddleInitial" class="form-control">
 		</div>
 		<div class="form-group col-md-4">
-			<span style= 'color:red'>*</span> Last Name: <input type = "text" id = "lname" class="form-control">
+			<span style= 'color:red'>*</span> Last Name: <input type = "text" id = "lname" name = "sLastName" class="form-control">
 		  <br><br>
 
 		</div>
 		<div class="form-group col-md-4">
 			<span style= 'color:red'>*</span> Preferred Name: <input type = "text" id = "prefname" class="form-control"> <br><br>
 		</div>
-			
+
 		<div class="form-group col-md-4">
 			<span style= 'color:red'>*</span> Age: <input type = "text" maxlength=2 id = "age"class="form-control"><br><br>
 		</div>
-		  
+
 		<div class="form-group col-md-4">
-		  <span style= 'color:red'>*</span> Sex: <select id="sex">
+		  <span style= 'color:red'>*</span> Sex: <select id="sex" name = "sGender">
 		    <option> Select... </option>
 		    <option> Male </option>
 		    <option> Female </option>
@@ -59,61 +60,89 @@
 		  </div>
 
 		<div class="form-group col-md-4">
-			<span style= 'color:red'>*</span> Date of Birth: <input type = "date" id = "dob" class="form-control">
+			<span style= 'color:red'>*</span> Date of Birth: <input type = "date" id = "dob" name = "sDateofBirth" class="form-control">
 		  <br><br>
 		</div>
-			
+
 		<div class="form-group col-md-8 ">
 			<span style= 'color:red'>*</span> Place of Birth
-		  <input type =  "text" placeholder="City/Town" id = "city" class="form-control">
-		  <input type =  "text" placeholder="Region" id = "region" class="form-control">
-		  <input type =  "text" placeholder="Country" id = "country" class="form-control">
+		  <input type =  "text" placeholder="City/Town/Region/Country" id = "pob" name = "sPlaceofBirth" class="form-control">
 		  <br><br>
 		</div>
-		  
+
 		<div class="form-group col-md-4">
-			<span style= 'color:red'>*</span> Nationality: <input type= "text" id = "nationality" class="form-control"><br><br>
+			<span style= 'color:red'>*</span> Nationality: <input type= "text" id = "nationality" name = "sNationality" class="form-control"><br><br>
 		</div>
-		 
+
 		<div class="form-group col-md-4">
-			<span style= 'color:red'>*</span> Home address <input type = "text" placeholder = "City/Town, Region, Country" id = "home" class="form-control"> <br><br>
+			<span style= 'color:red'>*</span> Home address <input type = "text" placeholder = "City/Town, Region, Country" id = "home"  name = "sHomeAddress" class="form-control"> <br><br>
 		</div>
-		  
+
 		<div class="form-group col-md-4">
-			<span style= 'color:red'>*</span> Postal address <input type = "text" id = "postaladdress" class="form-control"><br><br>
+			<span style= 'color:red'>*</span> Postal address <input type = "text" id = "postaladdress" name = "sPostalAddress" class="form-control"><br><br>
 		</div>
-		  
 
 
--- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- <!--contact information  -->
- <div id="midhead">
-		   <h4>Contact Information</h4>
-		   </div>
-		<div class="form-group col-md-3">
-			  <span style= 'color:red'>*</span> Contact Name: <input type = "text" id = "contactname" class="form-control col-md-4"><br><br>
-			  </div>
 
-			  <div class="form group col-md-3">
-			  <span style= 'color:red'>*</span> Relationship to Child: <input type = "text" id = "relationship" class="form-control"><br><br>
-			  </div>
-			  <div class="form group col-md-3">
-			  <span style= 'color:red'>*</span>Phone Number:
-			  <input type = "tel" placeholder = "primary number" id = "pnumber" class="form-control">
-			  <input type = "tel" placeholder="secondary number" id = "snumber" class="form-control">
-			<br><br>
-			</div>
-			<div class="form group col-md-3">
-			<span style= 'color:red'>*</span>  The applicant lives with:
-			 <input type = "radio" id = "oneparent" name = "selector" >One parent 
-			 <input type = "radio" id = "twoparents" name = "selector" >Two parents 
-			 <input type = "radio" id = "guardian" name = "selector" > Guardian(s)
-			 <br><br>
-			</div>
-		<div class="form group col-md-4">
-		<h4> <span style= 'color: teal'> * Next Page: Previous Schools Attended </span> <h4>
-			<input type = "button" value = "Next Page" id = "submit" onclick="validateIndex()" class=" btn btn-primary form-control">
-			</div>
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ <!--parent information  -->
+			 <div id = "guardian1">
+					 <h3> <span style= 'color: blue'> Parent / Guardian </span> </h3>
+
+						 <div class="form-group col-md-4">
+					 <span style= 'color:red'>*</span>  First Name: <input type = "text" placeholder = "First Name" id = "guard1fname" name = "firstName" class="form-control">
+				 </div>
+
+					 <div class="form-group col-md-4">
+						 <span style= 'color:red'>*</span> Last Name: <input type = "text" placeholder = "Last Name" id = "guard1lname" name = "lastName" class="form-control">
+						 <br><br>
+					 </div>
+
+					 <div class="form-group col-md-4">
+						 <span style= 'color:red'>*</span> Username: <input type = "text" id = "guardUsername" name = "username" class="form-control">
+					 </div>
+						<br>
+
+					 <div class="form-group col-md-4">
+						 <span style= 'color:red'>*</span> Password: <input type = "password" id = "guardPassword" name = "password" class="form-control">
+					 </div>
+
+						 <div class="form-group col-md-4">
+							 <span style= 'color:red'>*</span> Sex: <select id="sex" name = "sex">
+								 <option> Select... </option>
+								 <option> Male </option>
+								 <option> Female </option>
+							 </select> <br>
+							 <br>
+						 </div>
+
+						 <div class="form-group col-md-4">
+						 <span style= 'color:red'>*</span> Postal address: <input type = "text" id = "guard1home" name = "address" class="form-control"><br><br>
+						 <br><br>
+					 </div>
+
+					 <div class="form-group col-md-4">
+						 <span style= 'color:red'>*</span> Telephone number: <input type = "tel" id = "guard1tel" name = "phoneNum" class="form-control"><br><br>
+					 </div>
+
+					 <div class="form-group col-md-4">
+						 <span style= 'color:red'>*</span> E-mail address: <input type = "email" id = "guard1mail" name = "email" class="form-control">
+					 </div>
+			 </div>
+		 </div>
+	 <br><br>
+
+	 <div class="form group col-md-4">
+	 <h4> <span style= 'color: teal'> * Next Page: Child Health Information </span> <h4>
+		 <input type = "submit" value = "Next Page" id = "submit" name = "page1button" onclick="validateIndex()" class=" btn btn-primary form-control">
+ <br><br>
+
+		 <form action = "admissions_homepage.php">
+			 <input type = "submit" value = "Previous Page" id = "submit" class = "btn btn-primary form-control">
+		 </form>
+	 </div>
+
+
 		</form>
 	</div>
 

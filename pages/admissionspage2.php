@@ -6,6 +6,7 @@
 	<title>Asgardian Nursery School</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 	<link rel="stylesheet" media="all" href="../css/admissions.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -17,46 +18,66 @@
 		?>
 	<div class="divider"></div>
 
+ <!-- beginning of body -->
 <div id = "midhead">
 	<h1> Online Admissions Page <h1>
 
-	<h4> Previous Schools Attended </h4>
+	<h4>  <span style = 'color: teal'> Health Information </span> </h4>
+	<h4> <span style= 'color: red'> To be Completed by Parent or Guardian </span> </h4>
+	<span style= 'color:red'>*</span> Required Fields <br><br>
 	</div>
 
 	<div id = "mid">
-		<form method = "post" action = "admissionspage3.html" name = "form">
-		<h4> Has the child been to any other schools? </h4>
-		<span style= 'color:red'>* Required</span>
-		<input type="checkbox" id="schyes" name="selector"><label for="schyes">Yes</label>
-		<input type="checkbox" id="schno" name="selector"><label for="schno">No</label>
+		<form method = "post" action = "admissionsSubmit.php" name = "form">
+			Child's Blood Type: <input type = "text" name = "bloodType" class = "form-control">
 
-		<br><br>
-		<span style = 'color: red' > If yes, please fill the form below: </span><br>
-		   Previous school(s) attended:<br><br>
+<!--contact information -->
 
-		  School Name <input type = "text" id = "schname1" class="input"><br><br>
-		  Name of Head <input type = "text" id = "headname1" class="input"><br><br>
-		  Telephone number <input type = "tel" id = "tel1" class="input"><br><br>
-		  <br><br>
+	 <h4> <span style = 'color: teal'> Contact Info </span></h4>
+	   <span style= 'color:red'>*</span> Parent's name: <input type = "text" id = "mname" name = "parentName" class="form-control">
+	   <span style= 'color:red'>*</span> Mobile Phone: <input type = "text" id = 'mtel' name = "parentNumber" class="form-control">
+	   <br><br>
 
-		  School Name <input type = "text" id = "schname2" class="input"><br><br>
-		  Name of Head <input type = "text" id = "headname2" class="input"><br><br>
-		  Telephone number <input type = "tel" id = "tel2" class="input"><br><br>
-		  <br><br>
-			 <input type = "button" value = "Next Page" id = "submit" onclick="validatePage2()">
+	   <span style= 'color:red'>*</span> Preferred Hospital: <input type = "text" id = "hosname" name = "hospital" class="form-control">
+	   <span style= 'color:red'>*</span> Doctor's Name: <input type = "text" id = "docname" name = "doctorName" class="form-control">
+	   <span style= 'color:red'>*</span> Phone: <input type = "text" id = "doctel" name = "doctorPhone" class="form-control">
+	   <br><br>
+
+<!--emergency medical authorisation -->
+
+				<h3> <span style= 'color:red'>*</span> <span style = 'color: teal'> Emergency Medical Authorisation </span> </h3>
+				 The school health office requires the following information.<br><br>
+
+				<span style = 'color:red'> PART 1 OR PART 2 must be completed.</span><br>
+				<span style = 'color: blue'> Part1: To Grant Consent </span> <br>
+				<input type = "checkbox" id = "part1" value = "yes" name = "consent">
+				<span style = 'color:red'> I hereby give consent</span> to Asgardian Nursery School for: <br>
+				1. The administration of emergency treatment and medication deemed necessary.<br>
+				2. Transfer my child to a hospital reasonably accessible for advanced care.<br><br>
+
+				<span style = 'color: blue'> Part 2: Refusal To Grant Consent </span> <br>
+				<input type = "checkbox" id = "part2" value = "no" name = "consent2">
+				<span style = 'color:red'> I DO NOT give consent</span> to Asgardian Nursery School
+				for the emergency treatment of my child. <br> In the event of illness or injury
+				I wish the school authorities to take the following action: <br>
+				<textarea class="form-control"></textarea><br><br><br>
+
+
+<br>
+<!-- submit button -->
+ <div class="form group col-md-4">
+ 		 <input type = "submit" value = "Submit" id = "next" name = "page2button" class = "btn btn-primary form-control" onclick = "validatePage2()">
 		</form>
-
-		<form action = "admissionspage1.html">
-		  <input type = "submit" value = "Previous Page">
+<br><br>
+<!-- previous page buton -->
+		<form action = "admissionspage1.php">
+		  <input type = "submit" value = "Previous Page" id = "submit" class = "btn btn-primary form-control">
 		</form>
-
-<h3> <span style= 'color: teal'> * Next Page: Sibling Information </span> <h3>
-
-	<!--	<form action = "admissionspage3.html">
-		  <input type = "button" value = "Next Page" id = "submit" onclick="validatePage2(), checkRadio2(document.getElementsByTagName("selector"))">
-		</form> -->
 	</div>
+	</div>
+<!-- end of body -->
 
+<!--footer: from template -->
 	<footer id="footer">
 		<div class="container">
 			<section>

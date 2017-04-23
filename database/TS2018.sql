@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `TS2018`
 --
-
+-- CREATE DATABASE TS2018;
 -- --------------------------------------------------------
 
 --
@@ -156,7 +156,7 @@ CREATE TABLE `STAFF` (
 
 CREATE TABLE `STATUS` (
   `status_id` int(11) NOT NULL,
-  `status_name` int(11) NOT NULL
+  `status_name` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

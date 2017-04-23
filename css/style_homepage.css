@@ -1010,7 +1010,7 @@ a.btn.blue,
 ------------------------------------------------------------------------------*/
 
 #footer {
-	clear: both;
+	
 	background: #2c4167 url(../images/bg_white_arrow.png) no-repeat 50% 0;
 	overflow: hidden;
 	padding: 91px 0 0 0;
@@ -1044,6 +1044,10 @@ a.btn.blue,
 	padding-top: 1px;
 	padding-bottom: 16px;
 	margin-bottom: 20px;
+}
+
+#footer .col-1 {
+	width: 50%;
 }
 
 #footer .col-1 li a {
@@ -1083,20 +1087,7 @@ a.btn.blue,
 	border: none !important;
 }
 
-#footer .col-2 li {
-	border-bottom: 1px solid #3c5177;
-	padding-bottom: 9px;
-	margin-bottom: 9px;
-}
 
-#footer .col-2 li a {
-	padding-left: 20px;
-	background: url(../images/bg_arrow_blue.png) no-repeat 0 50%;
-}
-
-#footer .col-2 li.last{
-	margin-bottom: 0;
-}
 
 #footer article p {
 	padding-bottom: 17px;
@@ -1105,6 +1096,9 @@ a.btn.blue,
 #footer .col-3 li {
 	padding: 0 10px 10px 0;
 	float: left;
+}
+#footer .col-3 {
+	width: 50%;
 }
 
 #footer .col-3 li a {

@@ -1,8 +1,33 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
+?>
+
+<table width="398" border="0" align="center" cellpadding="0">
+  <tr>
+    <td height="26" colspan="2">Your Profile Information </td>
+	<td><div align="right"><a href="index.php">logout</a></div></td>
+  </tr>
+  <tr>
+    <td width="129" rowspan="5"><img src="" width="129" height="129" alt="no image found"/></td>
+    <td width="82" valign="top"><div align="left">FirstName:</div></td>
+    <td width="165" valign="top"></td>
+  </tr>
+  <tr>
+    <td valign="top"><div align="left">LastName:</div></td>
+    <td valign="top"></td>
+  </tr>
+  <tr>
+    <td valign="top"><div align="left">Gender:</div></td>
+    <td valign="top"></td>
+  </tr>
+  <tr>
+    <td valign="top"><div align="left">Address:</div></td>
+    <td valign="top"></td>
+  </tr>
+  <tr>
+    <td valign="top"><div align="left">Contact No.: </div></td>
+    <td valign="top"></td>
+  </tr>
+</table>
+<p align="center"><a href="index.php"></a></p>
