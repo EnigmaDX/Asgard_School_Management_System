@@ -20,3 +20,7 @@ function financialURL() {
 function teacherURL() {
     iframe.src = 'pdash/teacher.php';
 }
+
+function mgstudURL() {
+	iframe.src = 'admin_stud.php';
+}
