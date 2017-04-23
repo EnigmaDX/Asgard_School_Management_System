@@ -11,28 +11,27 @@
     <body>
 
 
+        <div class="divider"></div>
 
-        <div style="height: 50px;"></div>
-        
         <div id="wrapper">
             <div>
                 <nav class="nav-sidebar left">
                     <ul>
-                        <li><a href="https://www.google.com" id="profile">PROFILE</a></li>
-                        <li><a href="https://www.google.com" id="ward">WARD (S)</a></li>
-                        <li><a href="https://www.google.com" id="financial">FINANCIAL</a></li>
-                        <li><a href="https://www.google.com" id="instructors">TEACHER</a></li>
+                        <li><a id="profile" onclick="parentProfileURL()" >PROFILE</a></li>
+                        <li><a id="ward" onclick="wardURL()" >WARD (S)</a></li>
+                        <li><a id="financial" onclick="financialURL()" >FINANCIAL</a></li>
+                        <li><a id="teacher" onclick="teacherURL()" >TEACHER</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="main-content right">
-                Content by the side.
-                Testing for my contribution to show
+                <iframe id="frame" src="pdash/profile.php"></iframe>
             </div>
         </div>
 
         <!-- /#wrapper -->
         <script src="../js/sidebar.js"></script>
+        <script src="../js/dashboard.js"></script>
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script>window.jQuery || document.write("<script src='js/jquery-1.11.1.min.js'>\x3C/script>")</script>
         <script src="../js/plugins.js"></script>
