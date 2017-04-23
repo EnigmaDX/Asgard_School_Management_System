@@ -1,6 +1,5 @@
 
 <?php require_once dirname(__FILE__).'/../controller/define.php'; 
-$_SESSION['user'] = "user";
 ?>
 
 <!DOCTYPE html>
