@@ -9,9 +9,9 @@
 </head>
 <body>
     <div class="iframe-wrapper">
-        <h3 id="iframe-title">PROFILE</h3>
+        <h3 id="iframe-title" style="text-align: center;">PROFILE</h3>
         <div class="personal">
-            <img src="" class="profile-pic">
+            <img src="../../images/ic_person_black_48dp_2x.png" class="profile-pic">
             <div id="personal-details">
                 Personal details here
                 <fieldset class="name"><label placeholder="First name..." type="text">label 1</label></fieldset>
