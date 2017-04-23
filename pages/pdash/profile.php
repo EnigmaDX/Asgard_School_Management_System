@@ -10,12 +10,14 @@
 <body>
     <div class="iframe-wrapper">
         <h3 id="iframe-title" style="text-align: center;">PROFILE</h3>
-        <div class="personal">
-            <img src="../../images/ic_person_black_48dp_2x.png" class="profile-pic">
+        <div class="personal" style="align-content: center;">
+            <img style="alignment-adjust: central;" src="../../images/ic_person_black_48dp_2x.png" class="profile-pic">
             <div id="personal-details">
-                Personal details here
-                <fieldset class="name"><label placeholder="First name..." type="text">label 1</label></fieldset>
-                <fieldset class="name"><label placeholder="Last name..." type="text">label 2</label></fieldset>
+                <fieldset class="name"  >
+                    <label placeholder="First name..." type="text"></label>
+                    
+                </fieldset>
+                <fieldset class="name"><label placeholder="Last name..." type="text"></label></fieldset>
             </div>
         </div>
         <div class="details">

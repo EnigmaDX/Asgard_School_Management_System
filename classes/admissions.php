@@ -1,7 +1,7 @@
 <?php
 /**
 *@author Nana Adjoa S. Bentil
-*@version 1.0
+*@version 1.4
 **/
 
 //include database class
@@ -11,15 +11,14 @@ include_once("../database/Connection.php");
 if (isset($_POST['page1button']))
 {
   registerStudent();
-  registerParent();
 }
 else if (isset($_POST['page2button']))
 {
   registerHealth();
 }
 
-class Admissions extends Connection
-{
+// class Admissions extends Connection
+// {
   function registerStudent()
   {
     $sID;
@@ -34,12 +33,16 @@ class Admissions extends Connection
     $sPostalAddress = $_POST['sPostalAddress'];
     $state = "APPLIED";
 
+    $run = new Connection;
+
     $sql = "INSERT INTO STUDENT(sID,sFirstName,sMiddleInitial,sLastName,sGender,sDateofBirth,sPlaceofBirth,
       sNationality,sHomeAddress,sPostalAddress,state) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
 
-    $success = $this->query($sql, $sID,$sFirstName,$sMiddleInitial,$sLastName,$sGender,
+    $success = $run->query($sql, $sFirstName,$sMiddleInitial,$sLastName,$sGender,
     $sDateofBirth,$sPlaceofBirth,$sNationality,$sHomeAddress,$sPostalAddress,$state);
-    
+
+    //var_dump($success);
+
     if($success)
     {
       registerParent();
@@ -50,27 +53,29 @@ class Admissions extends Connection
     {
       $firstName = $_POST['firstName'];
       $lastName = $_POST['lastName'];
-      $userName = $_POST['userName'];
+      $userName = $_POST['username'];
       $password = $_POST['password'];
       $email = $_POST['email'];
       $gender = $_POST['sex'];
       $phone = $_POST['phoneNum'];
       $address = $_POST['address'];
-      $status_id = 1;
+      // $status_id = 1;
 
-      $sql = "INSERT INTO PARENT_OR_GUARDIAN(pId,firstName,lastName,username,password,gender,phoneNum,address,status_id)
-      VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+      $run = new Connection;
 
-      $success = $this->query($sql, $firstName, $lastName, $userName, $password, $email, $gender, $phone, $address, $status_id);
+      $sql = "INSERT INTO PARENT_OR_GUARDIAN(pId,firstName,lastName,email,username,password,gender,phoneNum,address)
+      VALUES (?,?,?,?,?,?,?,?,?)";
+
+      $success = $run->query($sql, $firstName, $lastName,$email, $userName, $password,$gender, $phone, $address);
 
       if($success)
       {
-        echo "works";
-        // header("location: ../pages/admissionspage2.php")
+        // echo "works";
+        header("location: ../pages/admissionspage2.php");
       }
       else
       {
-        echo "Error";
+        echo "Error: Sorry, we could not register your child. Try again later";
       }
   }
 
@@ -84,66 +89,20 @@ class Admissions extends Connection
     $doctorPhone = $_POST['doctorPhone'];
     $consent = $_POST['consent'];
 
-    $sql = "INSERT INTO HEALTH_RECORD(bloodType,Parent_or_Guardian_name,Parent_or_Guardian_number,Hospital,
-    DoctorName,DoctorPhone,consent) VALUES (?,?,?,?,?,?,?)";
+    $run = new Connection;
 
-    $success = $this->query($sql, $bloodType,$parentName,$parentNumber,$hospital,$doctorName,$doctorPhone,$consent);
+    $sql = "INSERT INTO HEALTH_RECORD(bloodType,Parent_or_Guardian_name,Parent_or_Guardian_number,Hospital,DoctorName,DoctorPhone,consent)
+    VALUES (?,?,?,?,?,?,?)";
 
+    $success = $run->query($sql, $bloodType,$parentName,$parentNumber,$hospital,$doctorName,$doctorPhone,$consent);
+// var_dump($success);
     if($success)
     {
-      header("location: ../pages/admissionSubmit.php");
+      header("location: ../pages/admissionsSubmit.php");
     }
     else
     {
       echo "Error during registration";
     }
   }
-}
-
-//
-// class Admissions extends Connection
-// {
-//   //properties
-//   private $sID;
-//   private $sFirstName;
-//   private $sMiddleInitial;
-//   private $sLastName;
-//   private $sGender;
-//   private $sDateofBirth;
-//   private $sPlaceofBirth;
-//   private $sNationality;
-//   private $sHomeAddress;
-//   private $sPostalAddress;
-//   private $state;
-//
-//   // for parent function
-//   private $pID;
-//   private $firstName;
-//   private $lastName;
-//   public $username;
-//   private $password;
-//   private $sex;
-//   private $address;
-//   private $phoneNum;
-//   private $email;
-//   private $status_id;
-//
-//   //methods
-//   public function registerStudent($sID, $sFirstName, $sMiddleInitial, $sLastName, $sGender, $sDateofBirth, $sPlaceofBirth, $sNationality, $sHomeAddress, $sPostalAddress, $state)
-//   {
-//     $sql = "INSERT INTO STUDENT(sID, sFirstName, sMiddleInitial, sLastName, sGender, sDateofBirth, sPlaceofBirth, sNationality, homeAddress, postalAddress, state)
-//     VALUES (?,?,?,?,?,?,?,?,?,?,?)";
-//
-//     $success = $this->query($sql,$sID, $sFirstName, $sMiddleInitial, $sLastName, $sGender, $sDateofBirth, $sPlaceofBirth, $sNationality, $sHomeAddress, $sPostalAddress, $state);
-//
-//     return $success;
-//   }
-//
-//   public function parentInfo()
-//   {
-//
-//   }
-// }
-
-
  ?>
