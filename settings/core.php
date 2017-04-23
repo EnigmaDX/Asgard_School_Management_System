@@ -9,7 +9,7 @@ session_start();
 
 function verify_login() {
     if (!isset($_SESSION['userid']) || empty($_SESSION['userid'])) {
-        header('Location: ../index.php');
+        // header('Location: ../index.php');
     }
 }
 
@@ -17,19 +17,19 @@ function getCurrentPage() {
     return basename($_SERVER['PHP_SELF']);
 }
 
-function getHeader($permission) {
-
-    switch ($permission) {
-        case 1:
-            require_once $_SERVER['DOCUMENT_ROOT'] . 'classproject2017/layout/admin_header.php';
-            break;
-        case 2:
-            require_once $_SERVER['DOCUMENT_ROOT'] . 'classproject2017/layout/student_header.php';
-            break;
-        // case 3:
-        //     require_once $_SERVER['DOCUMENT_ROOT'] . 'classproject2017/layout/faculty_header.php';
-        //     break;
+//get user specific template
+function getuserheader()
+{
+    //check user permission
+    if($_SESSION['per_id']==1)
+    {
+        require_once $_SERVER['DOCUMENT_ROOT']."/asgardschool/pages/staff_dashboard.php";
     }
+    else if ($_SESSION['per_id']==2 && ) 
+    {
+        require_once $_SERVER['DOCUMENT_ROOT']."/asgardschool/pages/dashboard.php";
+    }
+    //include the right header
 }
 
 function unserializeUser($session) {

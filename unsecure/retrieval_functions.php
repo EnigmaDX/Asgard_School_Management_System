@@ -8,23 +8,15 @@
 
 // require_once dirname(__FILE__) . "/../database/init.php";
 require_once dirname(__FILE__) . "/../database/Connection.php";
-
+$username="";
+$password="";
+echo "hi";
 //check for login registration
-if (isset($_POST['login'])) {
+if (isset($_REQUEST['login'])) {
+    echo "hii";
     verifylogin();
-}
 
-/**
- * 
- * @return result
- */
-function fetchMajors() {
-    $sql = "SELECT majorname FROM allmajor WHERE majorid != 99";
-    $con = new Connection();
-    $con->query($sql);
-    return $con->fetch();
 }
-
 
 /**
  * 
@@ -60,9 +52,9 @@ function selectUser(string $username) {
 
 
 function validateLogin(){
-
-    $username= $_REQUEST['Username'];
-    $password= $_REQUEST['Password'];
+    global $username, $password;
+    $username= $_REQUEST['username'];
+    $password= $_REQUEST['password'];
 
     $errors = array();
     $string = "";
@@ -75,13 +67,14 @@ function validateLogin(){
 
         $error[]= "enter a password";
 
-    if (preg_match("/^[a-zA-Z0-9]*\.[a-zA-Z0-9]*/",$firstname)!=1)
+    if (preg_match("/^[a-zA-Z0-9]*\.[a-zA-Z0-9]*/",$username)!=1)
 
         $error[] = "enter a valid username";
 
-    for ($i=0; $i<count($error); i++){
+    for ($i=0; $i<count($error); $i++){
 
         $string .= $error[i];
+        $string .= "<br>";
     }
 
     echo $string;
@@ -93,34 +86,36 @@ function validateLogin(){
 */
 function verifylogin()
 {
-    global $staffId, $pass;
-    $staffId=$_REQUEST['Id'];
-    $parentId=$_REQUEST['Id'];
+    global $username, $password;
+    $username=$_REQUEST['username'];
+    // $parentId=$_REQUEST['Id'];
     $pass=$_REQUEST['password'];
 
-    $sql="SELECT * FROM staff, parent_or_guardian WHERE staffID=? OR pId=? ";
-        
+    $sql="SELECT * FROM staff WHERE username=?";
+    echo $sql;
         //create new instance
     $verlogin=new Connection();
-    $result=$verlogin->query($sql, $staffId);
-    
+    $result=$verlogin->query($sql,$username);
+    echo $result;
         if($result)
         {
             $row=$verlogin->fetch();
-            $passwd=$row['Password'];
+            $passwd=$row['password'];
 
+            echo "man";
             if (password_verify($pass, $passwd))
             {
+                echo "Hi";
                 session_start();
-                if($_SESSION['userid']=$row['staffID'] && $_SESSION['per_id']=$row['per_id'])
+                if($_SESSION['userid']=$row['staffID'])
                 {
-                // $_SESSION['userid']=$row['staffID'];
-                // $_SESSION['per_id']=$row['per_id'];
-                    header("location: ../index.php");
+                    echo "hello";
+                    header("location: ../pages/staff_dashboard.php");
                 }
-                else if($_SESSION['userid']=$row['pId'] && $_SESSION['per_id']=$row['per_id'])
+                else if($_SESSION['userid']=$row['pId'])
                 {
-                    header("location: ../index.php");
+                    echo "hey";
+                    header("location: ../pages/dashboard.php");
                 }
             }
             else
@@ -129,5 +124,4 @@ function verifylogin()
             }
 
         }
-    
-}
+    }

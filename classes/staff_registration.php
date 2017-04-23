@@ -4,7 +4,7 @@
 *@version 1.0
 **/
 //connect to db class
-require_once("../database/connection.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/asgardschool/database/connection.php");
 
 class Staff extends Connection
 {
@@ -24,17 +24,12 @@ class Staff extends Connection
 
     if(empty($this->registered) || $this->registered == NULL)
     {
-      //run query
-      //return results
-      return $this->query($sql);
+      return $this->query($sql);//run query
     }
     else
     {
-      //get user course ids
-      $courseIDs = implode(',', $this->registered);
-
-      //append to sql
-      $sql = $sql. " AND cl.classCode NOT IN ($courseIDs)";
+      $courseIDs = implode(',', $this->registered); //get userids
+      $sql = $sql. " AND cl.classCode NOT IN ($courseIDs)";//append to sql
 
       //run query
       //return results
@@ -52,10 +47,6 @@ class Staff extends Connection
     $results=$this->query1($sql);
     if($results)
       {
-        
-        
-          // $sql="SELECT parent_child.parentID, parent_child.studentID FROM parent_child,";
-         // echo $row['sID'] . " " . $row['courseCode'] . " ". $row['courseName'] ." " . $row['grade'] . " " . $row['term'] ;
   $output .= '
     <div class="pp">
       <table class="stable">
@@ -76,8 +67,6 @@ class Staff extends Connection
             <td>'.$row["term"].'</td></a>
           
           </tr>
-          </table
-          </div>
           ';
         
       }
@@ -88,7 +77,7 @@ class Staff extends Connection
 
   /**
   *@param sID 
-  *This method gets the ids and names for registered courses of the ward
+  *This method gets the ids and names for registered courses of the specific ward
   **/
   function registeredCoursIds($sID)
   {

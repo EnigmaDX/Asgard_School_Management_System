@@ -14,7 +14,7 @@
         
         <?php 
             require_once('../layout/menu.php'); 
-            require_once ('../classes/staff_registration.php');
+            require_once ('../controller/staff_regController.php');
         ?>
 
         <div class="divider box">
@@ -92,8 +92,7 @@
             <div class="fchart" id="dchart" style="width: 100%; height: 500px;"></div>
 
             <?php
-                $staff=new Staff(); 
-                $staff->registeredcourses();
+                listRegisteredCourses();
             ?>
         </div><br>
         <!-- end of bodym -->

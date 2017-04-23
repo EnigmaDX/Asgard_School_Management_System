@@ -27,6 +27,7 @@
 			<div id="result"></div>
 		</div>
 		</div>
+		</div>
 		<div id="fancy">
 		<h2>Request information</h2>
 		<form action="#">

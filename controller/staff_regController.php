@@ -1,29 +1,26 @@
 <?php
-//call the class
+/**
+*@author Yvette Umutari
+*@version 1.0
+**/
 
-require_once("../classes/staff_registration.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/asgardschool/classes/staff_registration.php");
 
 $sID="";
 $pID="";
 
-//get unregistered courses for display
+/*
+*This method gets unregistered courses for display
+**/
 function listUnregisteredCourses()
 {
   //get user major
   global $sID;
-  //global $user_id;
 
   //create a new instance of the class
   $unregistered = new Courses;
-
   $unregistered->registeredCourseIds($sID);
-
-  //var_dump($unregistered->regcourses);
-
   $runQuery = $unregistered->getUnregisteredCourses($sID);
-
-  //var_dump($runQuery);
-
   if($runQuery = true)
   {
     while($row = $unregistered->fetch())
@@ -32,14 +29,15 @@ function listUnregisteredCourses()
     }
   }
 
-  //var_dump($unregistered->fetch());
 }
-
+/**
+*This method lists the registered courses. It connects the registered course class to the childinfo page
+**/
 function listRegisteredCourses()
 {
-  global $sID, $pID;
+  // global $sID, $pID;
   $registerd=new Staff();
-  // $registerd->regcourses
+  $registerd->registeredcourses();
 }
-
+/*SELECT DISTINCT academic_record.sID, courses.courseCode, courses.courseName, academic_record.grade, academic_record.term FROM parent_child, academic_record, courses, student, parent_or_guardian WHERE academic_record.courseCode=courses.courseCode AND parent_child.sID=student.sID AND parent_child.parentID=parent_or_guardian.pId*/
 ?>

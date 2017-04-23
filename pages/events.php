@@ -6,6 +6,7 @@
 <title>Events-Agardian Nursery School</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 <link rel="stylesheet" media="all" href="../css/style.css">
+<!-- <link rel="stylesheet" media="all" href="css/style_homepage.css"> -->
 <!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -64,7 +65,7 @@
 			<aside id="sidebar">
 				<h2>Event calendar</h2>
 				
-				<iframe src="https://calendar.google.com/calendar/embed?src=eegtmn9olipfpn0h139cb6qi4s%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="500" height="600" frameborder="0" scrolling="no" margin-right:"0px";>
+				<iframe src="https://calendar.google.com/calendar/embed?src=eegtmn9olipfpn0h139cb6qi4s%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="450" height="600" frameborder="0" scrolling="no" margin-right:"0px";>
 					
 				</iframe>
 			</aside>
@@ -100,6 +101,7 @@
 		</div>
 		<!-- / container -->
 	</footer>
+
 	<!-- / footer -->
 
 

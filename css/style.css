@@ -1046,6 +1046,10 @@ a.btn.blue,
 	margin-bottom: 20px;
 }
 
+#footer .col-1 {
+	width: 50%;
+}
+
 #footer .col-1 li a {
 	padding-left: 52px;
 	display: block;
@@ -1105,6 +1109,10 @@ a.btn.blue,
 #footer .col-3 li {
 	padding: 0 10px 10px 0;
 	float: left;
+}
+
+#footer .col-3 {
+	width: 50%;
 }
 
 #footer .col-3 li a {
