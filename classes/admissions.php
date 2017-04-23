@@ -1,7 +1,7 @@
 <?php
 /**
 *@author Nana Adjoa S. Bentil
-*@version 1.0
+*@version 1.4
 **/
 
 //include database class
@@ -11,7 +11,6 @@ include_once("../database/Connection.php");
 if (isset($_POST['page1button']))
 {
   registerStudent();
-  registerParent();
 }
 else if (isset($_POST['page2button']))
 {
@@ -42,7 +41,7 @@ else if (isset($_POST['page2button']))
     $success = $run->query($sql, $sFirstName,$sMiddleInitial,$sLastName,$sGender,
     $sDateofBirth,$sPlaceofBirth,$sNationality,$sHomeAddress,$sPostalAddress,$state);
 
-    var_dump($success);
+    //var_dump($success);
 
     if($success)
     {
@@ -106,52 +105,4 @@ else if (isset($_POST['page2button']))
       echo "Error during registration";
     }
   }
-//}
-
-//
-// class Admissions extends Connection
-// {
-//   //properties
-//   private $sID;
-//   private $sFirstName;
-//   private $sMiddleInitial;
-//   private $sLastName;
-//   private $sGender;
-//   private $sDateofBirth;
-//   private $sPlaceofBirth;
-//   private $sNationality;
-//   private $sHomeAddress;
-//   private $sPostalAddress;
-//   private $state;
-//
-//   // for parent function
-//   private $pID;
-//   private $firstName;
-//   private $lastName;
-//   public $username;
-//   private $password;
-//   private $sex;
-//   private $address;
-//   private $phoneNum;
-//   private $email;
-//   private $status_id;
-//
-//   //methods
-//   public function registerStudent($sID, $sFirstName, $sMiddleInitial, $sLastName, $sGender, $sDateofBirth, $sPlaceofBirth, $sNationality, $sHomeAddress, $sPostalAddress, $state)
-//   {
-//     $sql = "INSERT INTO STUDENT(sID, sFirstName, sMiddleInitial, sLastName, sGender, sDateofBirth, sPlaceofBirth, sNationality, homeAddress, postalAddress, state)
-//     VALUES (?,?,?,?,?,?,?,?,?,?,?)";
-//
-//     $success = $this->query($sql,$sID, $sFirstName, $sMiddleInitial, $sLastName, $sGender, $sDateofBirth, $sPlaceofBirth, $sNationality, $sHomeAddress, $sPostalAddress, $state);
-//
-//     return $success;
-//   }
-//
-//   public function parentInfo()
-//   {
-//
-//   }
-// }
-
-
  ?>
