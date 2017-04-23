@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 20, 2017 at 04:32 PM
+-- Generation Time: Apr 20, 2017 at 08:05 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `TS2018`
 --
-
+-- CREATE DATABASE TS2018;
 -- --------------------------------------------------------
 
 --
@@ -34,6 +34,17 @@ CREATE TABLE `ACADEMIC_RECORD` (
   `grade` varchar(2) DEFAULT NULL,
   `term` varchar(15) DEFAULT NULL,
   `year` int(4) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Classes`
+--
+
+CREATE TABLE `Classes` (
+  `className` varchar(50) NOT NULL,
+  `total_no_of_students` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -56,6 +67,7 @@ CREATE TABLE `courses` (
 --
 
 INSERT INTO `courses` (`courseCode`, `courseName`, `courseTeacher`, `courseVenue`, `class`, `grade`) VALUES
+('CS101', 'ICT', 'Mr. Spio', 'Room 8', 'nursery1', ''),
 ('ENG111', 'Phonetics', 'Ms. Whyte', 'Room 12', '', ''),
 ('ENG112', 'English Grammar', 'Ms. Kwarteng', 'Room 2', '', ''),
 ('HIS111', 'Basic History', 'Mr. Higgins-Clark', 'Room 4', '', ''),
@@ -129,6 +141,7 @@ CREATE TABLE `PARENT_OR_GUARDIAN` (
 
 CREATE TABLE `STAFF` (
   `staffID` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
   `password` varchar(100) NOT NULL,
   `staffFName` varchar(20) DEFAULT NULL,
   `staffLName` varchar(50) DEFAULT NULL,
@@ -145,7 +158,7 @@ CREATE TABLE `STAFF` (
 
 CREATE TABLE `STATUS` (
   `status_id` int(11) NOT NULL,
-  `status_name` int(11) NOT NULL
+  `status_name` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -171,7 +184,8 @@ CREATE TABLE `STUDENT` (
 --
 
 INSERT INTO `STUDENT` (`sID`, `sFirstName`, `sMiddleInitial`, `sLastName`, `sGender`, `sDateOfBirth`, `sPlaceOfBirth`, `sNationality`, `class`) VALUES
-(0, 'Rita', 'F', 'Polinski', 'F', '2008-12-05', 'Arizona', 'French', '');
+(0, 'Rita', 'F', 'Polinski', 'F', '2008-12-05', 'Arizona', 'French', ''),
+(1, 'Nana', 'S', 'Bentil', 'F', '0000-00-00', 'Accra', 'Ghanaian', 'kindergart');
 
 -- --------------------------------------------------------
 
@@ -200,7 +214,7 @@ INSERT INTO `STUDENT_CLASSES` (`sID`, `courseCode`) VALUES
 --
 ALTER TABLE `ACADEMIC_RECORD`
   ADD KEY `sID` (`sID`),
-  ADD KEY `classCode` (`courseCode`);
+  ADD KEY `academic_record_ibfk_2` (`courseCode`);
 
 --
 -- Indexes for table `courses`
@@ -212,8 +226,8 @@ ALTER TABLE `courses`
 -- Indexes for table `COURSE_TEACHERS`
 --
 ALTER TABLE `COURSE_TEACHERS`
-  ADD KEY `classCode` (`courseCode`),
-  ADD KEY `staffID` (`staffID`);
+  ADD KEY `staffID` (`staffID`),
+  ADD KEY `course_teachers_ibfk_1` (`courseCode`);
 
 --
 -- Indexes for table `HEALTH_RECORD`
@@ -262,7 +276,7 @@ ALTER TABLE `STUDENT`
 --
 ALTER TABLE `STUDENT_CLASSES`
   ADD KEY `sID` (`sID`),
-  ADD KEY `classCode` (`courseCode`);
+  ADD KEY `student_classes_ibfk_2` (`courseCode`);
 
 --
 -- Constraints for dumped tables
@@ -273,13 +287,13 @@ ALTER TABLE `STUDENT_CLASSES`
 --
 ALTER TABLE `ACADEMIC_RECORD`
   ADD CONSTRAINT `academic_record_ibfk_1` FOREIGN KEY (`sID`) REFERENCES `STUDENT` (`sID`),
-  ADD CONSTRAINT `academic_record_ibfk_2` FOREIGN KEY (`courseCode`) REFERENCES `courses` (`classCode`);
+  ADD CONSTRAINT `academic_record_ibfk_2` FOREIGN KEY (`courseCode`) REFERENCES `courses` (`courseCode`);
 
 --
 -- Constraints for table `COURSE_TEACHERS`
 --
 ALTER TABLE `COURSE_TEACHERS`
-  ADD CONSTRAINT `course_teachers_ibfk_1` FOREIGN KEY (`courseCode`) REFERENCES `courses` (`classCode`),
+  ADD CONSTRAINT `course_teachers_ibfk_1` FOREIGN KEY (`courseCode`) REFERENCES `courses` (`courseCode`),
   ADD CONSTRAINT `course_teachers_ibfk_2` FOREIGN KEY (`staffID`) REFERENCES `STAFF` (`staffID`);
 
 --
@@ -313,7 +327,7 @@ ALTER TABLE `STAFF`
 --
 ALTER TABLE `STUDENT_CLASSES`
   ADD CONSTRAINT `student_classes_ibfk_1` FOREIGN KEY (`sID`) REFERENCES `STUDENT` (`sID`),
-  ADD CONSTRAINT `student_classes_ibfk_2` FOREIGN KEY (`courseCode`) REFERENCES `courses` (`classCode`);
+  ADD CONSTRAINT `student_classes_ibfk_2` FOREIGN KEY (`courseCode`) REFERENCES `courses` (`courseCode`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

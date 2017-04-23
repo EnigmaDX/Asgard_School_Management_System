@@ -71,10 +71,10 @@ class Connection {
         if($this->connect())
         {
             //run query
-            $this->results = mysqli_query($this->link, $sql);
+            $this->result = mysqli_query($this->link, $sql);
 
             //confirm if record returns
-            return !($this->results == false);
+            return !($this->result == false);
         }
     }
 
@@ -105,23 +105,23 @@ class Connection {
      */
     public function fetch() {
        {
-        //check if results has content
-        if($this->results == false){
+        //check if result has content
+        if($this->result == false){
             return false;
         }
         else
         {
             //return one record
-            return mysqli_fetch_assoc($this->results);
+            return mysqli_fetch_assoc($this->result);
         }
     }
 }
 
-    // *
-    //  * Fetches an associative array of the SQL result
-    //  * @return Array An associative array of the results from query()
-     
-    // public function fetch_assoc() {
-    //     return mysqli_fetch_assoc($this->result);
-    // }
+    /**
+     * Fetches an associative array of the SQL result
+     * @return Array An associative array of the result from query()
+     */
+    public function fetch_assoc() {
+        return mysqli_fetch_assoc($this->result);
+    }
 }

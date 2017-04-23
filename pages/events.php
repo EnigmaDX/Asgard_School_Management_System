@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Agardian Nursery School</title>
+<title>Events-Agardian Nursery School</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 <link rel="stylesheet" media="all" href="../css/style.css">
 <!--[if lt IE 9]>
@@ -64,7 +64,7 @@
 			<aside id="sidebar">
 				<h2>Event calendar</h2>
 				
-				<iframe src="https://calendar.google.com/calendar/embed?src=eegtmn9olipfpn0h139cb6qi4s%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="450" height="600" frameborder="0" scrolling="no" margin-right:"0px";>
+				<iframe src="https://calendar.google.com/calendar/embed?src=eegtmn9olipfpn0h139cb6qi4s%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="500" height="600" frameborder="0" scrolling="no" margin-right:"0px";>
 					
 				</iframe>
 			</aside>
@@ -74,7 +74,7 @@
 		<!-- / container -->
 	</div>
 	
-	<footer id="footer" class="box">
+	<footer id="footer">
 		<div class="container">
 			<section>
 				<article class="col-1">
@@ -87,7 +87,7 @@
 				</article>
 				<article class="col-3">
 					<h3>Social media</h3>
-					<p>You can follow us on social media</p>
+					<p>You can follow us on social media.</p>
 					<ul>
 						<li class="facebook"><a href="#">Facebook</a></li>
 						<li class="google-plus"><a href="#">Google+</a></li>
@@ -96,12 +96,14 @@
 					</ul>
 				</article>
 			</section>
-			<p class="copy">Copyright 2017 Asgardian Nursery School. Created by <a href="https://asgardnursery.wordpress.com/" title="Designed by The Sentinels" target="_blank">The Sentinels</a>. All rights reserved.</p>
+			<p class="copy">Copyright 2017 Asgardian Nursery School. Created by <a href="https://asgardnursery.wordpress.com/" title="Designed by The Sentinels" target="_blank"> The Sentinels</a>. All rights reserved.</p>
 		</div>
 		<!-- / container -->
 	</footer>
 	<!-- / footer -->
 
+
+<!-- pop up dialogue box -->
 	<div id="fancy">
 		<h2>Request information</h2>
 		<form action="#">
