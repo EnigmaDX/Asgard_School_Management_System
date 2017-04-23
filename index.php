@@ -20,7 +20,10 @@
 	<![endif]-->
 </head>
 <body>
-		<?php require_once('layout/menu.php'); ?>
+		<?php 
+			require_once('layout/menu.php'); 
+			require_once('unsecure/retrieval_functions.php');
+		?>
 	
 	<div class="slider">
 		<ul class="bxslider">
@@ -143,10 +146,10 @@
 			<h3>Parent/Staff Login</h3>
 		</div>
 		<div class="col-md-6 col-md-offset-3 panel-body">
-			<form>
+			<form action="unsecure/retrieval_functions.php" method="POST">
 			    <div class="input-group">
 			      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-			      <input id="id" type="text" class="form-control" name="Id" placeholder="Id">
+			      <input id="username" type="text" class="form-control" name="username" placeholder="username">
 			    </div>
 			    <br>
 			    <div class="input-group">
@@ -155,7 +158,7 @@
 			    </div>
 			    <br>
 			    <!-- <div class="input-group"> -->
-			    	<a href="pages/childinfo.php"><button type="button" class="btn btn-primary btn-block">Login</button></a>
+			    	<button type="submit" class="btn btn-primary btn-block" name="login">Login</button>
 			    <!-- </div> -->
 	  		</form>
 		</div>
