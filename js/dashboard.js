@@ -2,21 +2,21 @@ var iframe = document.getElementById('frame');
 
 function studentsURL()
 {
-	iframe.src = 'view_students.php';
+    iframe.src = 'view_students.php';
 }
 
-function parentProfileURL(){
+function parentProfileURL() {
     iframe.src = 'pdash/profile.php';
 }
 
-function wardURL(){
+function wardURL() {
     iframe.src = 'pdash/ward.php';
 }
 
-function financialURL(){
+function financialURL() {
     iframe.src = 'pdash/financial.php';
 }
 
-function teacherURL(){
+function teacherURL() {
     iframe.src = 'pdash/teacher.php';
 }
