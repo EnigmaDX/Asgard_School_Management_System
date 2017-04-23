@@ -15,7 +15,7 @@ require_once dirname(__FILE__) . "/../database/Connection.php";
 /**
  * Description of User
  *
- * @author afadinsro
+ * @author Joseph Mills
  */
 class User extends Connection implements Serializable {
 

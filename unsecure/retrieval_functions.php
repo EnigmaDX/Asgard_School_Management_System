@@ -1,10 +1,12 @@
 <?php
 
-/*
+/**
+ *@author Nana Kwame Oteng Darkwah
+ *@version 1.0
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- */
+ **/
 
 // require_once dirname(__FILE__) . "/../database/init.php";
 require_once dirname(__FILE__) . "/../database/Connection.php";
@@ -87,6 +89,18 @@ function validateLogin(){
     // }
 
     echo $string;
+
+    for ($i=0; $i<count($error); $i++){
+
+        $string .= $error[i];
+    }
+
+    if (count($string)==0)
+
+        return true;
+    else
+
+        return false;
 
 }
 
