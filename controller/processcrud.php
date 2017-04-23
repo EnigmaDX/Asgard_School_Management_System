@@ -20,31 +20,60 @@ $dbconn = new Connection;
 if(isset($_POST['add'])){
 	addchild();
 }
+else if (isset($_POST['delbtn'])) {
+	delChild();
+}
 
 function addchild(){
 	$admin = new Admin;
 
-$id 		 = $_REQUEST['id'];
-$fname  	 = $_REQUEST['fname'];
-$mname  	 = $_REQUEST['mname'];
-$lname  	 = $_REQUEST['lname'];
-$gender 	 = $_REQUEST['gender'];
-$dob         = $_REQUEST['dob'];
-$pob         = $_REQUEST['pob'];
-$nationality = $_REQUEST['nation'];
-$class       = $_REQUEST['class'];
+	$id 		 = $_REQUEST['id'];
+	$fname  	 = $_REQUEST['fname'];
+	$mname  	 = $_REQUEST['mname'];
+	$lname  	 = $_REQUEST['lname'];
+	$gender 	 = $_REQUEST['gender'];
+	$dob         = $_REQUEST['dob'];
+	$pob         = $_REQUEST['pob'];
+	$nationality = $_REQUEST['nation'];
+	$class       = $_REQUEST['class'];
 
-$execute = $admin->addChild($id,$fname,$mname, $lname, $gender,$dob, $pob,$nationality,$class);
+	$execute = $admin->addChild($id,$fname,$mname, $lname, $gender,$dob, $pob,$nationality,$class);
 
-if (!$execute) {
-	echo '<script>alert("Error!");</script>';
+	if (!$execute) {
+		echo '<script>alert("Error!");</script>';
+	}
+	else {
+		echo '<script>alert("Success!");</script>';
+	}
+
+
 }
-else {
-	echo '<script>alert("Success!");</script>';
+
+function delChild(){
+	$admin = new Admin;
+
+	$id 		 = $_REQUEST['id'];
+	$fname  	 = $_REQUEST['fname'];
+	$mname  	 = $_REQUEST['mname'];
+	$lname  	 = $_REQUEST['lname'];
+	$gender 	 = $_REQUEST['gender'];
+	$dob         = $_REQUEST['dob'];
+	$pob         = $_REQUEST['pob'];
+	$nationality = $_REQUEST['nation'];
+	$class       = $_REQUEST['class'];
+	$delbtn      = $_REQUEST['delbtn'];
+
+	$execute = $admin->deleteChildInfo($delbtn);
+
+	if (!$execute) {
+		echo '<script>alert("Error!");</script>';
+	}
+	else {
+		echo '<script>alert("Success!");</script>';
+	}
+
 }
 
-
-}
 
 
 

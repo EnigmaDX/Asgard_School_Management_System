@@ -67,22 +67,24 @@ function validateLogin(){
     $errors = array();
     $string = "";
 
-    if (empty($username))
+    if (empty($username)){
 
         $error[]= "enter a username";
+    }
 
-    if (empty($password))
+    if (empty($password)){
 
         $error[]= "enter a password";
+    }
 
-    if (preg_match("/^[a-zA-Z0-9]*\.[a-zA-Z0-9]*/",$firstname)!=1)
+    if (preg_match("/^[a-zA-Z0-9]*\.[a-zA-Z0-9]*/",$firstname)!=1){
 
         $error[] = "enter a valid username";
-
-    for ($i=0; $i<count($error); i++){
-
-        $string .= $error[i];
     }
+
+    // for ($i=0; $i<count($error); i++){
+    //     $string .= $error[i];
+    // }
 
     echo $string;
 
