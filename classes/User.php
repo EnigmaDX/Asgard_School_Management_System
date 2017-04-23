@@ -388,13 +388,13 @@ class User extends Connection implements Serializable {
      * @param User $user
      * @return boolean
      */
-    public function addUser(User $user) {
-        $success = FALSE;
-        //user has to be admin before they can add another user
-        if ($this->per_id === 1) {
-            register($user);
-        }
-        return $success;
-    }
+    // public function addUser(User $user) {
+    //     $success = FALSE;
+    //     //user has to be admin before they can add another user
+    //     if ($this->per_id === 1) {
+    //         register($user);
+    //     }
+    //     return $success;
+    // }
 
 }

@@ -15,7 +15,7 @@
 				</ul>
 				<ul>
 					<li><a href="<?php echo BASE_URL; ?>pages/events.php">Events</a></li>
-					<li><a href="#fancy" class="get-contact">Contact</a></li>
+					<li><a href="#addform" class="get-contact">Contact</a></li>
 
 					<li><a href="#login" class="get-contact">Login</a></li>
 

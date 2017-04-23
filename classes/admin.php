@@ -13,10 +13,10 @@ include_once("User.php");
 class Admin extends User
 {
   //constructor
-  public function __construct(int $new, string $username, string $fname, string $lname, string $password, string $email, string $gender){
-    User::__construct($new, $username, $fname, $lname, $password, $email, $gender, ADMIN_STATUS);
+  // public function __construct(int $new, string $username, string $fname, string $lname, string $password, string $email, string $gender, ADMIN_STATUS){
+  //   User::__construct($new, $username, $fname, $lname, $password, $email, $gender, ADMIN_STATUS);
 
-  }
+  // }
 
   //method to add course
   public function addCourse($courseCode, $courseName, $courseTeacher, $courseVenue, $class)
@@ -40,7 +40,7 @@ class Admin extends User
   }
 
   //method to add parent or staff
-  public function addUser($id,$firstname,$lastname,$username,$password,$gender,$phone,$address,$status_id)
+  public function addUser1($id,$firstname,$lastname,$username,$password,$gender,$phone,$address,$status_id)
   {
     if($status_id == 1)
     {

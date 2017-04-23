@@ -82,13 +82,13 @@ function verifylogin()
             if (password_verify($pass, $passwd))
             {
                 session_start();
-                if($_SESSION['userid']=$row['staffID'] $$ $_SESSION['per_id']=$row['per_id'])
+                if($_SESSION['userid']=$row['staffID'] && $_SESSION['per_id']=$row['per_id'])
                 {
                 // $_SESSION['userid']=$row['staffID'];
                 // $_SESSION['per_id']=$row['per_id'];
                     header("location: ../index.php");
                 }
-                else if($_SESSION['userid']=$row['pId'] $$ $_SESSION['per_id']=$row['per_id'])
+                else if($_SESSION['userid']=$row['pId'] && $_SESSION['per_id']=$row['per_id'])
                 {
                     header("location: ../index.php");
                 }

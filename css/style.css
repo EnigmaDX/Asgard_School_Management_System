@@ -1436,6 +1436,10 @@ a.btn.blue,
 	padding: 5px 20px;
 	line-height: 24px;
 }
+/***********add student form**********/
+#addform {
+	display: none;
+}
 
 /*login pop-up box*/
 #login {

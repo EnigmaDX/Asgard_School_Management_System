@@ -45,7 +45,7 @@ if(isset($_GET['searchtxt']))
 
 					$output .= 
 					'
-					<tr onclick = "move()">
+					<tr onclick = "move()" target="blank">
 					
 						<td>'.$row["sID"].'</td>
 						<td>'.$row["sFirstName"].'</td>

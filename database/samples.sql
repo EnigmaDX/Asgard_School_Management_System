@@ -1,0 +1,1 @@
+INSERT INTO `parent_or_guardian`(`pId`,`firstName`,`lastName`,`username`,`password`,`gender`,`phoneNum`,`wardID`,) VALUES(11,`James`,`Potter`,``)
