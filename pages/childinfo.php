@@ -11,8 +11,11 @@
         <![endif]-->
     </head>
     <body>
-
-        <?php require_once('../layout/menu.php'); ?>
+        
+        <?php 
+            require_once('../layout/menu.php'); 
+            require_once ('../classes/staff_registration.php');
+        ?>
 
         <div class="divider box">
             <div class="menu-trigg"></div><br>
@@ -60,10 +63,11 @@
             </div><br>
 
             <p id="title-aca">ACADEMIC INFO</p>
+            
 
             <div class="academic-details">
                 <!-- put in academic details of child -->
-                <h4>CURRENT LEVEL: <strong>A</strong> </h4>
+                <h4>CURRENT LEVEL: <strong>A</strong> </h4> 
                 <h4>NUMBER OF COURSES: <strong>5</strong></h4><br>
                 <table class="academic-table">
                     <tr>
@@ -82,14 +86,15 @@
                         <td>C</td>
                     </tr>
                 </table>
-            </div><br>
+            </div><br> 
+            
             <p id="title-finance">FINANCIAL INFO</p>
             <div class="fchart" id="dchart" style="width: 100%; height: 500px;"></div>
 
-
-
-	
-
+            <?php
+                $staff=new Staff(); 
+                $staff->registeredcourses();
+            ?>
         </div><br>
         <!-- end of bodym -->
 

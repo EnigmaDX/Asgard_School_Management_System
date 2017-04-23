@@ -1,8 +1,10 @@
 <?php
 //call the class
 
-require_once("courseClass.php");
+require_once("../classes/staff_registration.php");
 
+$sID="";
+$pID="";
 
 //get unregistered courses for display
 function listUnregisteredCourses()
@@ -32,4 +34,12 @@ function listUnregisteredCourses()
 
   //var_dump($unregistered->fetch());
 }
+
+function listRegisteredCourses()
+{
+  global $sID, $pID;
+  $registerd=new Staff();
+  // $registerd->regcourses
+}
+
 ?>
