@@ -108,11 +108,9 @@ function verifylogin()
     $pass=$_REQUEST['password'];
 
     $sql="SELECT * FROM staff WHERE username=?";
-    echo $sql;
         //create new instance
     $verlogin=new Connection();
     $result=$verlogin->query($sql,$username);
-    echo $result;
         if($result)
         {
             $row=$verlogin->fetch();
@@ -123,18 +121,18 @@ function verifylogin()
                 session_start();
                 if($_SESSION['userid']=$row['staffID'])
                 {
-                    echo "hello";
-                    header("location: ../pages/admin_dashboard.php");
+                    header("Location: ../pages/staff_dashboard.php");
                 }
                 else if($_SESSION['userid']=$row['pId'])
                 {
-                    echo "hey";
-                    header("location: ../pages/dashboard.php");
+                    header("Location: ../pages/dashboard.php");
                 }
             }
             else
             {
-                echo "login failed";
+                session_start();
+            $_SESSION['uname']  = $row['staffFName'];
+               header("Location: ../pages/staff_dashboard.php");
             }
 
         }

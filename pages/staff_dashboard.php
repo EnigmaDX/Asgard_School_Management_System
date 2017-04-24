@@ -11,8 +11,13 @@
     <?php require_once('../layout/menu.php'); ?>
     <body>
         <div class="divider"></div>
-
-        <div style="height: 50px;"></div>
+        <h2 id="stlist" align="center">
+                <?php 
+                session_start();
+                $myuser = $_SESSION['uname'];
+                echo "<strong style='color:white;'>USER: ".$myuser."</strong>"; 
+                ?>
+            </h2>
         
         <div id="wrapper">
             <div>
@@ -26,7 +31,7 @@
                 </nav>
             </div>
             <div class="main-content right">
-                <iframe id="frame" src="../index.php"></iframe>
+                <iframe id="frame" src="view_students.php"></iframe>
             </div>
         </div>
 
