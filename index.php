@@ -1,3 +1,10 @@
+<?php/**
+*@author Nana Kwame Oteng Darkwah
+*@version 1.0
+*
+**/
+?>
+
 <!DOCTYPE html>
 <!--[if IE 8]> <html class="ie8 oldie" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
@@ -89,9 +96,6 @@
 		</a>
 	</div>
 
-
-
-
 	<footer id="footer">
 		<div class="container">
 			<section>
@@ -171,6 +175,3 @@
 	<script src="js/slider.js"></script>
 </body>
 </html>
-
-
-
