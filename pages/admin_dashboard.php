@@ -1,9 +1,10 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Staff-Asgardian Nursery School</title>
+        <title>Admin-Asgardian Nursery School</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
         <link rel="stylesheet" media="all" href="../css/style.css">
+        <script src="../js/dashboard.js"></script>
         <!--<link rel="stylesheet" media="all" href="../css/dashboard.css">-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
@@ -19,9 +20,9 @@
                 <nav class="nav-sidebar left">
                     <ul>
                         <li><a href="https://www.google.com" id="profile">PROFILE</a></li>
-                        <li><a href="https://www.google.com" id="classinfo">CLASS INFO</a></li>
-                        <li><a id="students" onclick="studentsURL()">STUDENTS</a></li>
-                        <li><a href="https://www.google.com" id="instructors">REGISTER STUDENT</a></li>
+                        <li><a onclick="mgstudURL()" id="mgstud">MANAGE STUDENTS</a></li>
+                        <li><a id="mgstaff">MANAGE STAFF</a></li>
+                        <li><a  id="instructors">MANAGE COURSES</a></li>
                     </ul>
                 </nav>
             </div>

@@ -81,7 +81,7 @@ function validateLogin(){
 
         $error[] = "enter a valid username";
 
-    for ($i=0; $i<count($error); i++){
+    for ($i=0; $i<count($error); $i++){
 
         $string .= $error[i];
     }

@@ -15,6 +15,7 @@
 
 	<?php
 			require_once('../layout/menu.php');
+			require_once('../classes/admissions.php');
 		?>
 	<div class="divider"></div>
 
@@ -28,7 +29,7 @@
 	</div>
 
 	<div id = "mid">
-		<form method = "post" action = "admissionsSubmit.php" name = "form">
+		<form method = "post" action = "" name = "form">
 			Child's Blood Type: <input type = "text" name = "bloodType" class = "form-control">
 
 <!--contact information -->
@@ -56,7 +57,7 @@
 				2. Transfer my child to a hospital reasonably accessible for advanced care.<br><br>
 
 				<span style = 'color: blue'> Part 2: Refusal To Grant Consent </span> <br>
-				<input type = "checkbox" id = "part2" value = "no" name = "consent2">
+				<input type = "checkbox" id = "part2" value = "no" name = "consent">
 				<span style = 'color:red'> I DO NOT give consent</span> to Asgardian Nursery School
 				for the emergency treatment of my child. <br> In the event of illness or injury
 				I wish the school authorities to take the following action: <br>

@@ -1,6 +1,5 @@
 
 <?php require_once dirname(__FILE__).'/../controller/define.php'; 
-$_SESSION['user'] = "user";
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +16,7 @@ $_SESSION['user'] = "user";
 				</ul>
 				<ul>
 					<li><a href="<?php echo BASE_URL; ?>pages/events.php">Events</a></li>
+					<li><a href="#addform" class="get-contact">Contact</a></li>
 					<li><a href="#fancy" class="get-contact">Contact</a></li>
                                         <?php 
                                         $base = BASE_URL;
