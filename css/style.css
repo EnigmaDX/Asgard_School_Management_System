@@ -2377,7 +2377,7 @@ input[type=submit]::-moz-focus-inner {
 }
 
 .left #financial:hover{
-    background: url(../images/ic_monetization_on_white_48dp_1x.png) 20px 20px no-repeat;
+    background: url(../images/ic_monetization_on_black_48dp_1x.png) 20px 20px no-repeat;
 }
 
 .left #ward{
@@ -2385,15 +2385,15 @@ input[type=submit]::-moz-focus-inner {
 }
 
 .left #ward:hover{
-    background: url(../images/ic_people_white_48dp_1x.png) 22px 20px no-repeat;
+    background: url(../images/ic_people_black_48dp_1x.png) 22px 20px no-repeat;
 }
 
-.left #instructors{
+.left #teacher{
     background: url(../images/profile_white_24dp_2x.png) 23px 20px no-repeat;
 }
 
-.left #instructors:hover{
-    background: url(../images/profile_white_24dp_2x.png) 23px 20px no-repeat;
+.left #teacher:hover{
+    background: url(../images/ic_person_black_48dp_1x.png) 23px 20px no-repeat;
 }
 
 /*------------STAFF VIEW-----------------*/
