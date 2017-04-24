@@ -26,9 +26,7 @@ class User extends Connection implements Serializable {
     private $password;
     private $email;
     public $gender;
-    public $major_id;
     public $status;
-    public $per_id;
 
     /**
      * 

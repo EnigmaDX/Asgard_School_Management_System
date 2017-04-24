@@ -17,20 +17,6 @@ function getCurrentPage() {
     return basename($_SERVER['PHP_SELF']);
 }
 
-function getHeader($permission) {
-
-    switch ($permission) {
-        case 1:
-            require_once $_SERVER['DOCUMENT_ROOT'] . 'classproject2017/layout/admin_header.php';
-            break;
-        case 2:
-            require_once $_SERVER['DOCUMENT_ROOT'] . 'classproject2017/layout/student_header.php';
-            break;
-        // case 3:
-        //     require_once $_SERVER['DOCUMENT_ROOT'] . 'classproject2017/layout/faculty_header.php';
-        //     break;
-    }
-}
 
 function unserializeUser($session) {
     $user = NULL;
