@@ -2393,7 +2393,7 @@ input[type=submit]::-moz-focus-inner {
 }
 
 .left #teacher:hover{
-    background: url(../images/profile_white_24dp_2x.png) 23px 20px no-repeat;
+    background: url(../images/ic_person_black_48dp_1x.png) 23px 20px no-repeat;
 }
 
 /*------------STAFF VIEW-----------------*/
