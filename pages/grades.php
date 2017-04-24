@@ -16,23 +16,25 @@
 
 
 		<div class="container">
-			<h2 id="stlist" align="center">STUDENTS' LIST</h2><br/>
+			<h2 id="stlist" align="center">courses</h2><br/>
 
 			<div class="form-group">
 				<div class="input-group">
-				<div id="ss">
-					<input type="text" name="searchtxt" id="searchtxt" placeholder="search student by firstname" onkeyup="loadDoc()" class="form-control"  autofocus />
+					<?php
+						require_once ($_SERVER['DOCUMENT_ROOT'].'/asgardschool/controller/staff_regController.php');
+						listRegisteredCourses();
+					?>
+					<br /><br>
+				<div id="result"></div>
+				</div>
 			</div>
-			<br /><br>
-			<div id="result"></div>
 		</div>
-		</div>
-		</div>
-		
+	
+
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-		<script src="../js/ajax.js"></script>
+		
 		<script>window.jQuery || document.write("<script src='js/jquery-1.11.1.min.js'>\x3C/script>")</script>
 		<script src="../js/plugins.js"></script>
 		<script src="../js/main.js"></script>

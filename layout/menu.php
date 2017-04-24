@@ -4,6 +4,7 @@
 
 <!DOCTYPE html>
 <html>
+
     <body>
         <header id="header">
             <div class="container">
@@ -22,10 +23,9 @@
                             if (empty($_SESSION["userid"])) {
                                 echo "<li><a href='#login' class='get-contact'>Login</a></li>";
                             } else {
-                                echo "<li><a href='$base./login/logout.php' class='get-contact'>Logout</a></li>";
+                                echo "<li><a href='.$base.'/login/logout.php' class='get-contact'>Logout</a></li>";
                             }
                             ?>
-
                     </ul>
                 </nav>
                 <!-- / navigation -->

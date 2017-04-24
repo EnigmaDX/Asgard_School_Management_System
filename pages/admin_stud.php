@@ -41,14 +41,6 @@
 		
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-		<script>
-
-function move(){
-
-	window.location = 'childinfo.php';
-}
-		</script>
-
 	</body>
 	
 	</html>

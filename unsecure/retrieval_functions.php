@@ -1,30 +1,24 @@
 <?php
 
-/*
+/**
+ *@author Nana Kwame Oteng Darkwah
+ *@version 1.0
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- */
+ **/
 
 // require_once dirname(__FILE__) . "/../database/init.php";
 require_once dirname(__FILE__) . "/../database/Connection.php";
+$username="";
+$password="";
+
 
 //check for login registration
-if (isset($_POST['login'])) {
+if (isset($_REQUEST['login'])) {
     verifylogin();
-}
 
-/**
- * 
- * @return result
- */
-function fetchMajors() {
-    $sql = "SELECT majorname FROM allmajor WHERE majorid != 99";
-    $con = new Connection();
-    $con->query($sql);
-    return $con->fetch();
 }
-
 
 /**
  * 
@@ -60,67 +54,82 @@ function selectUser(string $username) {
 
 
 function validateLogin(){
-
-    $username= $_REQUEST['Username'];
-    $password= $_REQUEST['Password'];
+    global $username, $password;
+    $username= $_REQUEST['username'];
+    $password= $_REQUEST['password'];
 
     $errors = array();
     $string = "";
 
-    if (empty($username))
+    if (empty($username)){
 
         $error[]= "enter a username";
+    }
 
-    if (empty($password))
+    if (empty($password)){
 
         $error[]= "enter a password";
-
-    if (preg_match("/^[a-zA-Z0-9]*\.[a-zA-Z0-9]*/",$firstname)!=1)
+    }
+    if (preg_match("/^[a-zA-Z0-9]*\.[a-zA-Z0-9]*/",$firstname)!=1){
+    if (preg_match("/^[a-zA-Z0-9]*\.[a-zA-Z0-9]*/",$username)!=1)
 
         $error[] = "enter a valid username";
+    }
+
+    // for ($i=0; $i<count($error); i++){
+    //     $string .= $error[i];
+    // }
+
+    echo $string;
 
     for ($i=0; $i<count($error); $i++){
 
         $string .= $error[i];
+        $string .= "<br>";
     }
 
-    echo $string;
+    if (count($string)==0)
+
+        return true;
+    else
+
+        return false;
 
 }
 
 /**
 *verifies login for the staff and parent
-*/
+**/
 function verifylogin()
 {
-    global $staffId, $pass;
-    $staffId=$_REQUEST['Id'];
-    $parentId=$_REQUEST['Id'];
+    global $username, $password;
+    $username=$_REQUEST['username'];
+    // $parentId=$_REQUEST['Id'];
     $pass=$_REQUEST['password'];
 
-    $sql="SELECT * FROM staff, parent_or_guardian WHERE staffID=? OR pId=? ";
-        
+    $sql="SELECT * FROM staff WHERE username=?";
+    echo $sql;
         //create new instance
     $verlogin=new Connection();
-    $result=$verlogin->query($sql, $staffId);
-    
+    $result=$verlogin->query($sql,$username);
+    echo $result;
         if($result)
         {
             $row=$verlogin->fetch();
-            $passwd=$row['Password'];
+            $passwd=$row['password'];
 
             if (password_verify($pass, $passwd))
             {
                 session_start();
-                if($_SESSION['userid']=$row['staffID'] && $_SESSION['per_id']=$row['per_id'])
+                if($_SESSION['userid']=$row['staffID'])
                 {
-                // $_SESSION['userid']=$row['staffID'];
-                // $_SESSION['per_id']=$row['per_id'];
-                    header("location: ../index.php");
+                    echo "hello";
+                    header("location: ../pages/admin_dashboard.php");
                 }
-                else if($_SESSION['userid']=$row['pId'] && $_SESSION['per_id']=$row['per_id'])
+                else if($_SESSION['userid']=$row['pId'])
                 {
-                    header("location: ../index.php");
+                    echo "hey";
+                    header("location: ../pages/dashboard.php");
                 }
             }
             else
@@ -129,5 +138,4 @@ function verifylogin()
             }
 
         }
-    
-}
+    }

@@ -17,55 +17,55 @@ if(isset($_GET['searchtxt']))
 	$searchsql = "SELECT * FROM student WHERE sFirstName LIKE '%".$search."%'";
 }
 
-	else
-	{
+else
+{
 		//display entire list
-		$searchsql = "SELECT * FROM student";
-	}
+	$searchsql = "SELECT * FROM student";
+}
 
 	//execute query
-	$result = $dbconn->query1($searchsql);
+$result = $dbconn->query1($searchsql);
 
-	if($result)
-	{
+if($result)
+{
 		//display list in a table
-		$output .= '
-			<table class="stable">
-				<tr>
-					<th>SID</th>
-					<th>First Name</th>
-					<th>Middle Name (I)</th>
-					<th>Last Name</th>
-					<th>Gender</th>
-					<th>Place of Birth</th>
-					<th>Nationality</th>
-				</tr>';
-				while ($row = $dbconn->fetch()) {
+	$output .= '
+	<table class="stable">
+		<tr>
+			<th>SID</th>
+			<th>First Name</th>
+			<th>Middle Name</th>
+			<th>Last Name</th>
+			<th>Gender</th>
+			<th>Place of Birth</th>
+			<th>Nationality</th>
+		</tr>';
+		while ($row = $dbconn->fetch()) {
 
-					$output .= 
-					'
-					<tr>
-						<td>'.$row["sID"].'</td>
-						<td>'.$row["sFirstName"].'</td>
-						<td>'.$row["sMiddleInitial"].'</td>
-						<td>'.$row["sLastName"].'</td>
-						<td>'.$row["sGender"].'</td>
-						<td>'.$row["sPlaceOfBirth"].'</td>
-						<td>'.$row["sNationality"].'</td>
-						<td><button id="btnx" value>'.$row["sNationality"].'</td></a>
-					
-					</tr>
-					';
-				}
-				echo $output;
-			}
-			else
-			{
-				echo "No Student Found";	
-			}
-
-
+			$output .= 
+			'
+			<tr>
+				<td>'.$row["sID"].'</td>
+				<td>'.$row["sFirstName"].'</td>
+				<td>'.$row["sMiddleInitial"].'</td>
+				<td>'.$row["sLastName"].'</td>
+				<td>'.$row["sGender"].'</td>
+				<td>'.$row["sPlaceOfBirth"].'</td>
+				<td>'.$row["sNationality"].'</td>
+				<td><button type="submit" id="btnx" name="delbtn" value='.$row["sID"].'>DELETE</button></td>
+				
+			</tr>'
+			;
+		}
+		echo $output;
+	}
+	else
+	{
+		echo "No Student Found";	
+	}
 
 
 
-?>
+
+
+	?>

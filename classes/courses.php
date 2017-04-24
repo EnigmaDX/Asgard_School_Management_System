@@ -5,9 +5,9 @@
 **/
 
 /**
-  @author Nana Adjoa S. Bentil
-  @version 1.1
- * */
+*@author Nana Adjoa S. Bentil
+*@version 1.1
+* */
 //include database file
 include_once("../database/Connection.php");
 

@@ -28,10 +28,10 @@
 			<h3>Parent/Staff Login</h3>
 		</div>
 		<div class="col-md-6 col-md-offset-3 panel-body">
-			<form method="POST">
+			<form action="../unsecure/retrieval_functions.php" method="POST">
 			    <div class="input-group">
 			      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-			      <input id="id" type="text" class="form-control" name="Id" placeholder="Id">
+			      <input id="username" type="text" class="form-control" name="username" placeholder="username">
 			    </div>
 			    <br>
 			    <div class="input-group">
