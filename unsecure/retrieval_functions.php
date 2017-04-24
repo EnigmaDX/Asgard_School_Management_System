@@ -10,10 +10,10 @@
 require_once dirname(__FILE__) . "/../database/Connection.php";
 $username="";
 $password="";
-echo "hi";
+
+
 //check for login registration
 if (isset($_REQUEST['login'])) {
-    echo "hii";
     verifylogin();
 
 }
@@ -83,7 +83,7 @@ function validateLogin(){
 
 /**
 *verifies login for the staff and parent
-*/
+**/
 function verifylogin()
 {
     global $username, $password;
@@ -102,15 +102,13 @@ function verifylogin()
             $row=$verlogin->fetch();
             $passwd=$row['password'];
 
-            echo "man";
             if (password_verify($pass, $passwd))
             {
-                echo "Hi";
                 session_start();
                 if($_SESSION['userid']=$row['staffID'])
                 {
                     echo "hello";
-                    header("location: ../pages/staff_dashboard.php");
+                    header("location: ../pages/admin_dashboard.php");
                 }
                 else if($_SESSION['userid']=$row['pId'])
                 {

@@ -25,7 +25,7 @@ function getuserheader()
     {
         require_once $_SERVER['DOCUMENT_ROOT']."/asgardschool/pages/staff_dashboard.php";
     }
-    else if ($_SESSION['per_id']==2 && ) 
+    else if ($_SESSION['per_id']==2) 
     {
         require_once $_SERVER['DOCUMENT_ROOT']."/asgardschool/pages/dashboard.php";
     }
